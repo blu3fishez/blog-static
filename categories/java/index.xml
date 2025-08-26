@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Java on blog.moozeh</title>
+    <link>https://blog.moozeh.org/categories/java/</link>
+    <description>Recent content in Java on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Fri, 24 Jan 2025 19:31:37 +0900</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>문자열 뒤에 문자를 추가하는 가장 효율적인 방법은</title>
+      <link>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</link>
+      <pubDate>Fri, 24 Jan 2025 19:31:37 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;현재 &lt;code&gt;Java&lt;/code&gt; 로 코딩테스트 준비를 해보고 있습니다. 2025년의 목표가 아무래도 &lt;code&gt;Java&lt;/code&gt; 와 &lt;code&gt;Spring&lt;/code&gt; 에 대해서 깊게 알아보기 이기 때문에 가벼운 문제가 많은 &lt;code&gt;Leetcode&lt;/code&gt; 문제들을 위주로 한번씩 풀어보고 있습니다.&lt;/p&gt;
+&lt;p&gt;아무래도 &lt;code&gt;Java&lt;/code&gt; 에서는 문자열 처리가 최적화로 인해서 생기는 문제가 많다보니 이번 기회에 &lt;code&gt;String&lt;/code&gt; 에 대해서 깊게 알아볼 생각 입니다.&lt;/p&gt;
+&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
+&lt;p&gt;단순히 &lt;strong&gt;문자열&lt;/strong&gt; 이라고 합니다. 문자들의 배열 을 줄여서 이렇게 부르죠.&lt;/p&gt;
+&lt;p&gt;그렇다면, 이 자체로 배열이라는 뜻이 됩니다.&lt;/p&gt;
+&lt;p&gt;생각해봅시다. 배열을 따로 원시 자료형으로 둘 수 있을까요? 아닙니다. 그래서 &lt;code&gt;C++&lt;/code&gt;, &lt;code&gt;Java&lt;/code&gt; 모두 자체적으로 원시타입이 아닙니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Java] String for-each 순회 방법</title>
+      <link>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</link>
+      <pubDate>Sun, 19 Jan 2025 15:22:10 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</guid>
+      <description>&lt;p&gt;Java에서는 스트링 순회를 어떻게 할까?&lt;/p&gt;
+&lt;h2 id=&#34;기존-c-에서의-스트링-순회-방법&#34;&gt;기존 C++ 에서의 스트링 순회 방법&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;C++&lt;/strong&gt; 에서는 &lt;code&gt;char&lt;/code&gt; 형으로 스트링을 순회할 수 있다.&lt;/p&gt;
+&lt;p&gt;(std string 기준)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;java-에서-단순히-for-each를-할-경우&#34;&gt;Java 에서 단순히 for-each를 할 경우&lt;/h2&gt;
+&lt;p&gt;하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.&lt;/p&gt;
+&lt;p&gt;![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]&lt;/p&gt;
+&lt;p&gt;위와같은 에러를 받지 않게 하려면 이렇게 해야한다.&lt;/p&gt;
+&lt;p&gt;그 이유는 &lt;code&gt;const char*&lt;/code&gt; 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.&lt;/p&gt;
+&lt;p&gt;기본적으로 &lt;code&gt;std::string&lt;/code&gt; 에서 제공하는 &lt;code&gt;Iterable&lt;/code&gt; 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.&lt;/p&gt;
+&lt;p&gt;Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

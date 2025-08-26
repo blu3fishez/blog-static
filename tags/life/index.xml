@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Life on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/life/</link>
+    <description>Recent content in Life on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Sun, 02 Feb 2025 11:18:37 +0900</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PRIME 전략을 통해 일상 관리하기</title>
+      <link>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</guid>
+      <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
+&lt;!-- 요약 적기 --&gt;
+&lt;p&gt;걸음걸음 스터디를 진행하면서, 매일 목표를 세우고 분석하는 과정에서 어떻게하면 개선할 수 있을지 고민을 한 결과, 플래너를 사용하는 게 좋다고 생각했다.&lt;/p&gt;
+&lt;p&gt;하지만, 단순히 플래너를 사용하는건,, &lt;del&gt;100% P인&lt;/del&gt; 나에게 있어서 쉽지 않았고, 일을 수행하기 위해서 정신력을 소모하다보니 스트레스가 정말로 이만저만이 아니었다. 그래서 나는 &lt;code&gt;PRIME&lt;/code&gt; 이라는 새로운 플래너 우선순위 작업 처리전략을 세우게 되었는데, 어떤 방식인지 같이 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;!-- 본문  --&gt;
+&lt;h2 id=&#34;배경--걸음-걸음-스터디&#34;&gt;배경 : 걸음 걸음 스터디&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.moozeh.org/posts/2024%EB%85%84-%ED%9A%8C%EA%B3%A0#%EC%8A%A4%ED%84%B0%EB%94%94%EB%A5%BC-%ED%86%B5%ED%95%9C-%EA%BE%B8%EC%A4%80%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9&#34;&gt;네이버 부스트캠프 9기&lt;/a&gt; 를 수료하고 여러 좋은 분들을 만나 스터디를 할 기회가 생겼다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>지속 가능한 개발자란 무엇일까? - 학습 스프린트 회고</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</link>
+      <pubDate>Thu, 24 Oct 2024 11:52:14 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;[!tip] 읽기 전 중요 사항&lt;/p&gt;
+&lt;p&gt;적다보니 부스트캠프의 보안과 관련된 이슈가 있을 수 있습니다.&lt;/p&gt;
+&lt;p&gt;향 후 문제가 될 경우 해당 글이 내려갈 수 있습니다.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;부스트캠프-멤버십에-합격하다&#34;&gt;부스트캠프 멤버십에 합격하다.&lt;/h2&gt;
+&lt;h3 id=&#34;스스로에게-부실하고-아쉬울게-많았던-챌린지&#34;&gt;스스로에게 부실하고 아쉬울게 많았던 챌린지&lt;/h3&gt;
+&lt;p&gt;챌린지는 정말로 배울 기회가 많았고, 값진 기회였다. (챌린지 자체가 아쉽단게 &lt;strong&gt;절대&lt;/strong&gt; 아니다.)&lt;/p&gt;
+&lt;p&gt;사실 한달은 긴 기간이지만, 배우고 실천하기에 있어서는 너무나 짧은 기간이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어느 누가 부트캠프를 통해 한달 과정을 통해 모든 걸 마스터할 수 있다고 하겠는가.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;그것은 나에게도 마찬가지였다.&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

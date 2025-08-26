@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on blog.moozeh</title>
+    <link>https://blog.moozeh.org/posts/</link>
+    <description>Recent content in Posts on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[블로그 개선] 새로운 블로그 리뉴얼을 환영해주세요</title>
+      <link>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</guid>
+      <description>&lt;p&gt;2025학년도 1학기를 보내면서 글을 쓸 기회가 많이 없어졌었습니다. 사실 자잘하게 글을 쓰고 문서를 하는 일은 많이 했으나, 실제로 &lt;code&gt;완벽한 블로그 글을 작성해야한다.&lt;/code&gt; 라는 머릿속의 집착 때문에 글을 쓰는 것이 두려워 진것도 사실입니다.&lt;/p&gt;
+&lt;p&gt;더군다나 불편한 점도 많이 느끼고 있었는데, 이에 블로그 작성 방법을 개선해서 프로젝트(끝이 나는 작업)이 끝나게 되면 자연스럽게 블로그 글도 쓸 수 있도록 환경을 조성하려고 하였고, 그러다보니 블로그 구조를 개선하게 되었습니다.&lt;/p&gt;
+&lt;h2 id=&#34;블로그-개선-이유&#34;&gt;블로그 개선 이유&lt;/h2&gt;
+&lt;h3 id=&#34;1-블로그-빌드-속도-개선&#34;&gt;1. 블로그 빌드 속도 개선&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ruby&lt;/code&gt; 언어로 만들어진 지킬은 &lt;code&gt;Go&lt;/code&gt; 언어로 만들어졌습니다. 그러다보니 &lt;code&gt;Ruby&lt;/code&gt; 를 위한 의존성 설치와 세팅 시간이 많이 잡아먹게 되고, 최종적으로 빌드 시 1분이 걸리는 불상사가 일어납니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] 영속성 컨텍스트 시리즈 (2) - N:M 관계 엔티티로 풀어내기</title>
+      <link>https://blog.moozeh.org/posts/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</link>
+      <pubDate>Fri, 07 Mar 2025 17:00:36 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Porring&lt;/code&gt; 프로젝트를 하면서 다대다 관계를 만들 때 관계에 대한 엔티티를 만들지 말지를 고민했는데, 결국엔 만들었다.&lt;/p&gt;
+&lt;p&gt;왜냐하면, 관계 자체를 검색할 일이 많았으니까 관계가 주를 이룬다고 생각했기 때문에 그렇게 생각했다.&lt;/p&gt;
+&lt;p&gt;하지만 다대다 관계에서는 만들 수도 있고, 만들지 않을 수도 있다. &lt;code&gt;@ManyToMany&lt;/code&gt;  어노테이션을 사용하면 만들 수 있다고 들었다.&lt;/p&gt;
+&lt;p&gt;하지만, 실무에서는 왠만해선 사용하지 말라는 의견이 많은데 그 이유를 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;물론! 이 부분은 &lt;code&gt;JPA&lt;/code&gt; 에 준하는 이야기다. 왜냐하면 &lt;code&gt;JPA&lt;/code&gt; 의 엔티티의 영속성 컨텍스트를 살펴봐야하기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] 영속성 컨텍스트 시리즈 (1) - 영속성 컨텍스트와 1차 캐시</title>
+      <link>https://blog.moozeh.org/posts/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</link>
+      <pubDate>Sat, 22 Feb 2025 16:55:04 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</guid>
+      <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
+&lt;p&gt;&lt;code&gt;JOINED&lt;/code&gt; 를 이용해 상속받은 &lt;code&gt;JPA Entity&lt;/code&gt; 는 어떻게 저장될까라는 궁금증으로 시작했다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Repository&lt;/code&gt; 에서 저장 될 때 기본적인 엔티티가 어떻게 저장되는지가 궁금했고, 이왕 알아보는 김에 &lt;code&gt;Hibernate&lt;/code&gt; 에서 정확하게 어떻게 구현이 되었는지 살펴보는 것까지 목표로 한다.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;![[2025-02-22-spring-jpa-상속받은-엔티티는-어떻게-저장될까-20250222165542877.webp]]&lt;/p&gt;
+&lt;p&gt;결국 문제는 단순 휴먼 에러였다. 왜냐하면, 보이는 것처럼 추측되는 &lt;code&gt;Account&lt;/code&gt; 엔티티를 저장하지 않은 채로,  &lt;code&gt;AUTO INCREMENT&lt;/code&gt; 값을 불러오지 않은채 바로 다른 곳에 사용했기 때문에 일어난 일이었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] @Embeddable 을 이용한 복합 PK 키 설정하기</title>
+      <link>https://blog.moozeh.org/posts/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Kolown-kr/porring-server/pull/9&#34;&gt;Porring 프로젝트를 진행하면서 엔티티 설정을 마치고,&lt;/a&gt; 복합키에 관한 지적을 받았다.&lt;/p&gt;
+&lt;p&gt;AI를 이용해서 만든 코드인데, 미처 검증하지 못한 부분에 대해서 다시 생각해보게 되었고, 복합 PK 키를 JPA 에서 어떻게 설정하는지 한번 알아보려고 한다.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;먼저-복합-키란&#34;&gt;먼저, 복합 키란?&lt;/h2&gt;
+&lt;p&gt;복합키는 말 그대로 여러 개의 컬럼들을 하나로 묶어서 키로 정의한 것을 복합키라고 한다.&lt;/p&gt;
+&lt;p&gt;기본적으로 복합 인덱스 라고 하면, 여러 컬럼에 대한 인덱스를 뜻할 것이고, 복합 키라고 하면, 외래 키 혹은 기본 키(PK) 에 대해서 복합적인 컬럼이 그 기준이 되는 것을 뜻한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] Converter 는 언제 써야하는가</title>
+      <link>https://blog.moozeh.org/posts/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</link>
+      <pubDate>Fri, 07 Feb 2025 00:23:30 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Type&lt;/code&gt; 을 정의하는 테이블을 정의해서 매핑하는데, Entity 와 ManyToOne을 쓰면 적절하지 않을 것 같았다.&lt;/p&gt;
+&lt;p&gt;ENUM 을 쓰면 적절하지 않을 것 같다는 의견을 검색하다가 보았고, 테이블을 정의해서 ENUM 처럼 쓰는게 좋아보일 것이라 판단했는데, &lt;code&gt;Claude&lt;/code&gt; 로부터 &lt;code&gt;@Converter&lt;/code&gt; 를 써보라는 추천을 받아서 알게 되었고 학습하게 되었다.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;converter-란&#34;&gt;@Converter 란&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;@Converter&lt;/code&gt; 어노테이션은 일종의 컴포넌트형 어노테이션의 일종이다.&lt;/p&gt;
+&lt;p&gt;즉, 하나의 클래스에 &lt;code&gt;@Converter&lt;/code&gt; 어노테이션에 붙여야하고, 구현해야하는 여러가지의  컨버터 &lt;code&gt;interface&lt;/code&gt; 르 가져 각각의 &lt;code&gt;Converter&lt;/code&gt;는 여러가지의 종류의 Converter와 느슨하게 결합되어있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] 테이블 상속에 관하여</title>
+      <link>https://blog.moozeh.org/posts/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</link>
+      <pubDate>Tue, 04 Feb 2025 23:30:34 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Porring&lt;/code&gt; 백엔드를 구현하면서, &lt;code&gt;OAuth&lt;/code&gt; 혹은 네이티브 로그인 계정에 대한 ERD 타입을 &lt;a href=&#34;https://blog.moozeh.org/posts/erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90&#34;&gt;슈퍼타입과 서브타입&lt;/a&gt;으로 정의하였다.&lt;/p&gt;
+&lt;p&gt;데이터베이스 상으로만 봤지만, 실제로 어떻게 구현을 해야할까? 단순 쿼리를 한다면 되겠지만, 복잡한 작업이 될 것이며, 쿼리 중간에 예상치 못한 버그가 있을 수 있다. &lt;code&gt;JPA&lt;/code&gt; 에서는 어떻게 되는지 알아보자!&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;inheritance-로-상속하기&#34;&gt;@Inheritance 로 상속하기&lt;/h2&gt;
+&lt;p&gt;다들 알겠지만, ERD 에서 슈퍼타입과 서브타입은 일종의 &lt;code&gt;상속 관계&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;p&gt;JPA에서의 상속은 &lt;code&gt;@Inheritance&lt;/code&gt; 로 구현될 수 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// SINGLE_TABLE 전략&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Entity&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Inheritance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strategy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InheritanceType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SINGLE_TABLE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Item&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@GeneratedValue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// JOINED 전략 - @DiscriminatorColumn 선택사항&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Entity&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Inheritance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strategy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InheritanceType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;JOINED&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Vehicle&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@GeneratedValue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Entity&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Car&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Vehicle&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// TABLE_PER_CLASS 전략 - 자바에서 상속 관계 유지&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Entity&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Inheritance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strategy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InheritanceType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;TABLE_PER_CLASS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;abstract&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Payment&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@GeneratedValue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Long&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Entity&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CardPayment&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Payment&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cardNumber&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;일반적인 &lt;code&gt;JoinedColumn&lt;/code&gt; 등과의 차이점은, &lt;code&gt;PK&lt;/code&gt; 값을 공유한다는 점이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PRIME 전략을 통해 일상 관리하기</title>
+      <link>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</guid>
+      <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
+&lt;!-- 요약 적기 --&gt;
+&lt;p&gt;걸음걸음 스터디를 진행하면서, 매일 목표를 세우고 분석하는 과정에서 어떻게하면 개선할 수 있을지 고민을 한 결과, 플래너를 사용하는 게 좋다고 생각했다.&lt;/p&gt;
+&lt;p&gt;하지만, 단순히 플래너를 사용하는건,, &lt;del&gt;100% P인&lt;/del&gt; 나에게 있어서 쉽지 않았고, 일을 수행하기 위해서 정신력을 소모하다보니 스트레스가 정말로 이만저만이 아니었다. 그래서 나는 &lt;code&gt;PRIME&lt;/code&gt; 이라는 새로운 플래너 우선순위 작업 처리전략을 세우게 되었는데, 어떤 방식인지 같이 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;!-- 본문  --&gt;
+&lt;h2 id=&#34;배경--걸음-걸음-스터디&#34;&gt;배경 : 걸음 걸음 스터디&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.moozeh.org/posts/2024%EB%85%84-%ED%9A%8C%EA%B3%A0#%EC%8A%A4%ED%84%B0%EB%94%94%EB%A5%BC-%ED%86%B5%ED%95%9C-%EA%BE%B8%EC%A4%80%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9&#34;&gt;네이버 부스트캠프 9기&lt;/a&gt; 를 수료하고 여러 좋은 분들을 만나 스터디를 할 기회가 생겼다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring JPA] JPA에 대해 알아보자</title>
+      <link>https://blog.moozeh.org/posts/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <pubDate>Fri, 31 Jan 2025 22:39:35 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
+&lt;p&gt;JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.&lt;/p&gt;
+&lt;!-- more --&gt; 
+&lt;h2 id=&#34;jpa-를-사용하는-이유&#34;&gt;JPA 를 사용하는 이유&lt;/h2&gt;
+&lt;p&gt;JPA를 사용하는 이유는 쿼리를 수행하는 테이블의 개수가 복잡해질수록 간단하게 코드 구현이 가능하기 때문이다.&lt;/p&gt;
+&lt;h2 id=&#34;entity의-정의&#34;&gt;Entity의 정의&lt;/h2&gt;
+&lt;p&gt;JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는데, 이때 이 Bean을 엔티티 라고 부르게 된다. 즉, &lt;code&gt;Entity&lt;/code&gt; 는 &lt;code&gt;Bean&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;추가적으로 더 나아가면 Nest.js 에서 엔티티를 어떻게 정의할지 생각해볼 수 있을 것이다.&lt;/strong&gt;  꼭 Database 코드에 있어야하는 이유가 없고, &lt;code&gt;Bean&lt;/code&gt; 을 어떻게 활용할지 생각해보면 엔티티를 사용하는데 있어서 이해가 빠를 것이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring] Spring JDBC의 특징</title>
+      <link>https://blog.moozeh.org/posts/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</link>
+      <pubDate>Wed, 29 Jan 2025 13:35:24 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;마인크래프트 플러그인을 만들면서 기존 &lt;code&gt;JDBC&lt;/code&gt; 를 썼다. 그런데, &lt;code&gt;Spring JDBC&lt;/code&gt; 와는 무슨 차이일까. 그 차이점을 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;jdbc란&#34;&gt;JDBC란&lt;/h2&gt;
+&lt;p&gt;JDBC는 1997년 Sun Microsystems (현재 Oracle) 에서 개발된 데이터베이스 접근 드라이버다.&lt;/p&gt;
+&lt;p&gt;사실상 자바 플랫폼의 핵심 API로 시작되어 현재까지 표준 데이터베이스 접근 방식으로 사용되고 있다.&lt;/p&gt;
+&lt;h2 id=&#34;spring-jdbc란&#34;&gt;Spring JDBC란&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Spring&lt;/code&gt; 개발팀이 &lt;code&gt;Spring Framework 1.0&lt;/code&gt; 의 일부로 출시하며 같이 개발된 모듈로, &lt;code&gt;JDBC&lt;/code&gt; 의 복잡성을 줄이고 생산성을 높이기 위해 만들어졌다.&lt;/p&gt;
+&lt;p&gt;따라서, &lt;code&gt;Spring JDBC&lt;/code&gt; 라고 해서 특별한게 있는게 아닌, &lt;strong&gt;기존 &lt;code&gt;JDBC&lt;/code&gt; 의 래퍼&lt;/strong&gt;라고 생각하면 좋다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring] Spring 에서 사용하는 로거의 로깅 레벨</title>
+      <link>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</link>
+      <pubDate>Tue, 28 Jan 2025 16:33:03 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</guid>
+      <description>&lt;p&gt;스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;각-로그-단계&#34;&gt;각 로그 단계&lt;/h2&gt;
+&lt;p&gt;각 로그 단계는 아래와 같이 구성되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;trace&lt;/li&gt;
+&lt;li&gt;debug&lt;/li&gt;
+&lt;li&gt;info&lt;/li&gt;
+&lt;li&gt;warning&lt;/li&gt;
+&lt;li&gt;error&lt;/li&gt;
+&lt;li&gt;off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.&lt;/p&gt;
+&lt;p&gt;스프링에서는 해당 로그 단계를 출력 설정하려면, &lt;code&gt;application.properties&lt;/code&gt; 에 아래와 같이 설정값을 추가한다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;logging.level.org.springframework=trace
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;trace&#34;&gt;trace&lt;/h4&gt;
+&lt;p&gt;모든 로그를 출력한다.&lt;/p&gt;
+&lt;p&gt;따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.&lt;/p&gt;
+&lt;p&gt;하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>몰랐던 HTML p 태그에 대한 사실</title>
+      <link>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
+      <pubDate>Sat, 25 Jan 2025 19:06:26 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;&lt;code&gt;Docusaurus&lt;/code&gt; 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;p style=&#34;color: red;&#34;&gt;Asset not found: Pasted%20image%2020250125190702.png&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;즉, 직역해보면 실제로 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.&lt;/p&gt;
+&lt;p&gt;실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.&lt;/p&gt;
+&lt;p&gt;도대체 무슨 일일까?&lt;/p&gt;
+&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
+&lt;p&gt;나는 몰랐던 사실인데, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그 안에 블록 레벨 요소(예: &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;&lt;/code&gt; 등)가 포함되면 브라우저는 자동으로 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그를 닫는다.&lt;/p&gt;
+&lt;p&gt;이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 &amp;ldquo;No p element in scope but a p end tag seen&amp;rdquo; 오류가 발생할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Spring] Spring Stereotype 어노테이션들에 대해 알아보자</title>
+      <link>https://blog.moozeh.org/posts/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <pubDate>Sat, 25 Jan 2025 16:58:09 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;h2 id=&#34;component&#34;&gt;@Component&lt;/h2&gt;
+&lt;p&gt;기본적으로 스프링의 &lt;code&gt;@Bean&lt;/code&gt; 을 나타내며, 범용적으로 사용된다.&lt;/p&gt;
+&lt;p&gt;모든 스프링의 &lt;code&gt;Stereotype Annotation&lt;/code&gt; 의 토대가 된다.&lt;/p&gt;
+&lt;h2 id=&#34;service&#34;&gt;@Service&lt;/h2&gt;
+&lt;p&gt;비즈니스 로직을 표시할 때 사용되는 &lt;code&gt;@Component&lt;/code&gt;이다.&lt;/p&gt;
+&lt;p&gt;클래스에 특정 비즈니스 로직을 작성했다면, 이 어노테이션을 사용하자!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Service&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;BusinessCalculationService&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DataService&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// write access modifier every time.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;BusinessCalculationService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DataService&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;dataService&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;findMax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;retrieveData&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;orElse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;controller&#34;&gt;@Controller&lt;/h2&gt;
+&lt;p&gt;REST API 에서 컨트롤러를 정의하는데 쓰인다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ERD 슈퍼타입-서브타입 관계에 대해서 알아보자</title>
+      <link>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <pubDate>Sat, 25 Jan 2025 15:20:14 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;네이버 부스트캠프 9기 가 끝난 후, 안드로이드 팀의 그룹프로젝트 &lt;code&gt;Porring&lt;/code&gt; 에 리팩토링 프로젝트에 참여하여 백엔드로 참여하면서 생긴 일이다.&lt;/p&gt;
+&lt;h2 id=&#34;슈퍼타입---서브타입-관계란&#34;&gt;슈퍼타입 - 서브타입 관계란?&lt;/h2&gt;
+&lt;p&gt;ERD의 특정 관계를 뜻하는데, 정확하게는 &lt;strong&gt;객체지향의 상속 개념과 유사한 데이터 모델링 패턴&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h3 id=&#34;슈퍼타입&#34;&gt;슈퍼타입&lt;/h3&gt;
+&lt;p&gt;예를 들어, 슈퍼타입은 &lt;strong&gt;부모 클래스&lt;/strong&gt;에 해당하며, 공동 톳것ㅇ을 가진 일반적인 특징이 있다.&lt;/p&gt;
+&lt;p&gt;예를 들면 직원에 해당된다.&lt;/p&gt;
+&lt;h3 id=&#34;서브타입&#34;&gt;서브타입&lt;/h3&gt;
+&lt;p&gt;서브타입은 슈퍼 타입의 &lt;strong&gt;특수한 형태&lt;/strong&gt;로, 고유 속성을 추가로 지니는 특성이 있다.&lt;/p&gt;
+&lt;p&gt;예를 들면 그 직원이 정규직인지, 계약직인지 여부를 나타내는 세부 정보들을 뜻한다. 이때, &lt;strong&gt;세부 정보에 해당되는 정보만 남기도록 한다.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>문자열 뒤에 문자를 추가하는 가장 효율적인 방법은</title>
+      <link>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</link>
+      <pubDate>Fri, 24 Jan 2025 19:31:37 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;현재 &lt;code&gt;Java&lt;/code&gt; 로 코딩테스트 준비를 해보고 있습니다. 2025년의 목표가 아무래도 &lt;code&gt;Java&lt;/code&gt; 와 &lt;code&gt;Spring&lt;/code&gt; 에 대해서 깊게 알아보기 이기 때문에 가벼운 문제가 많은 &lt;code&gt;Leetcode&lt;/code&gt; 문제들을 위주로 한번씩 풀어보고 있습니다.&lt;/p&gt;
+&lt;p&gt;아무래도 &lt;code&gt;Java&lt;/code&gt; 에서는 문자열 처리가 최적화로 인해서 생기는 문제가 많다보니 이번 기회에 &lt;code&gt;String&lt;/code&gt; 에 대해서 깊게 알아볼 생각 입니다.&lt;/p&gt;
+&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
+&lt;p&gt;단순히 &lt;strong&gt;문자열&lt;/strong&gt; 이라고 합니다. 문자들의 배열 을 줄여서 이렇게 부르죠.&lt;/p&gt;
+&lt;p&gt;그렇다면, 이 자체로 배열이라는 뜻이 됩니다.&lt;/p&gt;
+&lt;p&gt;생각해봅시다. 배열을 따로 원시 자료형으로 둘 수 있을까요? 아닙니다. 그래서 &lt;code&gt;C++&lt;/code&gt;, &lt;code&gt;Java&lt;/code&gt; 모두 자체적으로 원시타입이 아닙니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Java] String for-each 순회 방법</title>
+      <link>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</link>
+      <pubDate>Sun, 19 Jan 2025 15:22:10 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</guid>
+      <description>&lt;p&gt;Java에서는 스트링 순회를 어떻게 할까?&lt;/p&gt;
+&lt;h2 id=&#34;기존-c-에서의-스트링-순회-방법&#34;&gt;기존 C++ 에서의 스트링 순회 방법&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;C++&lt;/strong&gt; 에서는 &lt;code&gt;char&lt;/code&gt; 형으로 스트링을 순회할 수 있다.&lt;/p&gt;
+&lt;p&gt;(std string 기준)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;java-에서-단순히-for-each를-할-경우&#34;&gt;Java 에서 단순히 for-each를 할 경우&lt;/h2&gt;
+&lt;p&gt;하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.&lt;/p&gt;
+&lt;p&gt;![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]&lt;/p&gt;
+&lt;p&gt;위와같은 에러를 받지 않게 하려면 이렇게 해야한다.&lt;/p&gt;
+&lt;p&gt;그 이유는 &lt;code&gt;const char*&lt;/code&gt; 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.&lt;/p&gt;
+&lt;p&gt;기본적으로 &lt;code&gt;std::string&lt;/code&gt; 에서 제공하는 &lt;code&gt;Iterable&lt;/code&gt; 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.&lt;/p&gt;
+&lt;p&gt;Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2024년 회고</title>
+      <link>https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
+      <description>&lt;p&gt;2024년은 나에게 있어 &lt;code&gt;밖으로 나가는 문&lt;/code&gt; 을 연 것 같은 느낌이다.&lt;/p&gt;
+&lt;p&gt;프로그래밍에 있어서 당연히 나 혼자라도 열심히 개발해보고 공부해보는 것은 좋지만, 여러 사람들과 함께 해보며 특히 협업하는 것과는 확실히 다르다는 걸 인지하게 해준 한 해 같다.&lt;/p&gt;
+&lt;p&gt;여러 사람을 만나고 사람과 제대로된 커뮤니케이션을 통해서 나 스스로 부족한 점을 많이 찾았기도 했고, 반대로 다른 분들에게 긍정적 영향을 끼친적도 많았던 것 같다. 소중한 동료들을 만나서 네트워킹하고 있다.&lt;/p&gt;
+&lt;h2 id=&#34;처음-해본-캡스톤-프로젝트-다사다난-했던-1학기&#34;&gt;처음 해본 캡스톤 프로젝트, 다사다난 했던 1학기&lt;/h2&gt;
+&lt;p&gt;나에게 있어 2024년은 협업과 커뮤니케이션에 대해 한 발짝 앞서나간 정말 뜻깊은 해라고 생각한다. 사실 2022년부터 좋지 못한 나날들을 보냈었는데, 3학년 1학기 시절에 처음으로 제대로 된 팀프로젝트 (그 이전에는 무언가 완성품을 내놓는 팀 프로젝트는 하지 않았었다.) 를 해보게 되었고, &lt;code&gt;내가 상당히 협업에 있어서 부족하구나&lt;/code&gt; 라는 걸 조금 느꼈던 경험이었다고 생각한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>명세서를 현명하게 바꾸려면</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</link>
+      <pubDate>Sun, 29 Dec 2024 13:42:48 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</guid>
+      <description>&lt;p&gt;![[Pasted image 20241229134612.webp]]
+&lt;em&gt;저희 그래도&amp;hellip; 친하죠?&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;웹소켓의 이벤트 명세를 바꾸게 되었는데, 프론트 - 백 간의 연동 과정에서 엄청난 실수를 저지르고 말았습니다. 바로 반환되는 데이터를 바꿔버린 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;반환되는 데이터만 바뀌면, 그냥 알려주면 되는 것 아닌가?&lt;/code&gt; 라는 생각이 드실 수 있습니다. 그런데 문제는, &lt;code&gt;반환되는 데이터의 기준&lt;/code&gt; 을 바꿔버렸던 것입니다.&lt;/p&gt;
+&lt;p&gt;API를 정의할때 &lt;code&gt;입력&lt;/code&gt; 과 &lt;code&gt;출력&lt;/code&gt; 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The redirect_uri is not associated with this application 오류 해결</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-28-the-redirect_uri-is-not-associated-with-this-application-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0/</link>
+      <pubDate>Sat, 28 Dec 2024 23:04:54 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-28-the-redirect_uri-is-not-associated-with-this-application-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0/</guid>
+      <description>&lt;p&gt;블로그 설명 글 등에서 OAuth 앱에서 &lt;code&gt;URI&lt;/code&gt; 를 설정할 때  왜 &lt;a href=&#34;http://localhost:8080&#34;&gt;&lt;code&gt;localhost:8080&lt;/code&gt;&lt;/a&gt; 등으로 로컬 호스트로 설정을 해두었는지 알 수 있게 된 문제 해결 과정이었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;URI&lt;/code&gt; 설정을 잠깐 바꾸었다가 &lt;code&gt;OAuth&lt;/code&gt; 요청을 보냈는데, 해당 오류페이지로 리다이렉팅되는 문제가 있었다. 이는 실제로 &lt;code&gt;callback&lt;/code&gt; uri와 실제 리디렉션 URI 가 일치하지 않을때 발생하는 문제였습니다.&lt;/p&gt;
+&lt;p&gt;이는 OAuth 에서는 XSS 등의 웹 공격을 방지하기 위해 깃허브로부터 OAuth 요청을 할 때, 우리 사이트를 통해 OAuth 를 한 후 어떤 사이트 (혹시나 해킹사이트로 가지진 않을지)에 대한 방어책이었습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JWT 토큰 파싱 변경 과정과 협업의 가치에 대한 고민</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-28-jwt-%ED%86%A0%ED%81%B0-%ED%8C%8C%EC%8B%B1-%EB%B3%80%EA%B2%BD-%EA%B3%BC%EC%A0%95%EA%B3%BC-%ED%98%91%EC%97%85%EC%9D%98-%EA%B0%80%EC%B9%98%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%AF%BC/</link>
+      <pubDate>Sat, 28 Dec 2024 22:46:02 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-28-jwt-%ED%86%A0%ED%81%B0-%ED%8C%8C%EC%8B%B1-%EB%B3%80%EA%B2%BD-%EA%B3%BC%EC%A0%95%EA%B3%BC-%ED%98%91%EC%97%85%EC%9D%98-%EA%B0%80%EC%B9%98%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%AF%BC/</guid>
+      <description>&lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;저는 &lt;code&gt;토큰 인증방식&lt;/code&gt; 을 이용하여서 구현했습니다. 토큰 방식으로 해서 세션을 저장할 필요가 없어서 확장성 있게 설계할 수 있어서 좋았습니다.&lt;/p&gt;
+&lt;p&gt;하지만 문제가 생겼습니다. 기능 확장을 하는데 있어서 문제가 생겼는데요, 문제 상황은 이렇습니다. 질문지 개발을 다른 캠퍼께서하고 계셨는데, 질문지 스크랩에 대한 내용을 리턴해야합니다.&lt;/p&gt;
+&lt;p&gt;만약 로그인한 유저가 질문지(대충 리소스) 리스트를 받아오는데 있어서 자신이 어떤 질문지를 스크랩했는지 보여주는 식으로 질문지 리스트를 리턴해야한다 하는 유즈 케이스가 있습니다. 문제는 이때, 로그인하지 않은 유저는 모든 질문지 리스트에 스크랩 여부를 &lt;code&gt;false&lt;/code&gt; 로 하여 리턴하려고 했었는데요.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Custom Passport 로 Github OAuth 로직을 직접 구현하기</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-21-custom-passport-%EB%A1%9C-github-oauth-%EB%A1%9C%EC%A7%81%EC%9D%84-%EC%A7%81%EC%A0%91-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sat, 21 Dec 2024 12:36:32 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-21-custom-passport-%EB%A1%9C-github-oauth-%EB%A1%9C%EC%A7%81%EC%9D%84-%EC%A7%81%EC%A0%91-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;개요&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;OAuth&lt;/code&gt; 가 조금 어렵다고 해서 솔직히 하루 걸릴 줄 알았습니다. 하지만 차근차근 진행해보니 수월하게 진행할 수 있었는데, 그 과정을 개발일지로 남겨주는게 좋을 것 같아 미리 남겨봅니다.&lt;/p&gt;
+&lt;p&gt;실제로 OAuth 를 예제로 만들어보는 &lt;code&gt;블로그 글&lt;/code&gt; 들이 상당 수 존재하였으며, 이것들을 바탕으로 단순히 따라가기만 하면 될 것 같았습니다. 하지만 그 과정에서 이해되지 않는 부분이 존재하였고, 이 부분에서 트러블 슈팅이 조금 있었습니다.&lt;/p&gt;
+&lt;p&gt;제가 &lt;code&gt;어떻게 OAuth를 하는지 알려주어야 앞으로 OAuth 관련 기능 구현에 있어서 도움이 될 수 있을 것이라 판단하였기에 문서로 기록하고자 합니다.&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>협업을 위한 더러운 코드</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/</link>
+      <pubDate>Sat, 21 Dec 2024 12:34:38 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/</guid>
+      <description>&lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;스터디 세션을 리팩토링 과정에서 코드가 길어져서 고민을 했었습니다. 특히나 &lt;code&gt;비즈니스 로직과 레포지토리 코드가 혼재&lt;/code&gt; 해 있었고, 그 부분에서 하나의 핸들러가 호출하는 로직에서 서비스.. 레포지토리.. 이렇게 다양한 계층을 따라 로직이 퍼져있었습니다.&lt;/p&gt;
+&lt;p&gt;예를 들면, 레포지토리에서는 데이터 베이스 (혹은 자료 저장소) 에 관해서 어떤 정보가 저장되어 있어야하는지&lt;/p&gt;
+&lt;p&gt;그래서 해당 부분을 리팩토링을 시도했으나, 오히려 팀의 성장에 방해가 되었습니다. 그 부분에 있어서는 &lt;code&gt;조금 더 깔끔한 코드와 프로토콜을 만들고자 하는 욕심&lt;/code&gt; 이 1순위로 작용했던 것이 아닐까 하고 회고하면서 판단해봅니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</link>
+      <pubDate>Sun, 27 Oct 2024 20:34:24 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</guid>
+      <description>&lt;h2 id=&#34;문제-링크&#34;&gt;문제 링크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://boj.kr/6064&#34;&gt;이동하기!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;해결-과정&#34;&gt;해결 과정&lt;/h2&gt;
+&lt;p&gt;최소 공배수 이용하는 문제입니다!&lt;/p&gt;
+&lt;p&gt;최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.&lt;/p&gt;
+&lt;h2 id=&#34;소스-코드&#34;&gt;소스 코드&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;gcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync_with_stdio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;larger&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;larger_remain&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_num&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;found&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;larger_remain&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;larger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;found&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;found&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;-1&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>도커 네트워크 인터페이스를 알아보자</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-26-%EB%8F%84%EC%BB%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <pubDate>Sat, 26 Oct 2024 14:58:10 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-26-%EB%8F%84%EC%BB%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <description>&lt;h2 id=&#34;-문제-상황&#34;&gt;❕ 문제 상황&lt;/h2&gt;
+&lt;p&gt;Nest.js 를 배우다가 데이터베이스를 사용할 일이 생겼다.&lt;/p&gt;
+&lt;p&gt;보통 나는 환경이 분리되는 걸 선호한다. 그래서 전역적으로 설치되는걸 좋아하지 않는다. &lt;code&gt;pip&lt;/code&gt; 같은 것들 말이다.&lt;/p&gt;
+&lt;p&gt;그래서 찾아보니, &lt;code&gt;Docker&lt;/code&gt; 위에 &lt;code&gt;MySQL&lt;/code&gt; 컨테이너를 올려서 사용하면 환경 분리가 된다고 하더라.&lt;/p&gt;
+&lt;p&gt;![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]
+&lt;em&gt;Docker 로고&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;도커와 관련해서는 &lt;code&gt;CLI&lt;/code&gt; 환경에서 결국엔 다루는게 맞다고 생각했다. 그런데, 일단은 도커가 처음이기에 아직 내가 많이 몰라서 &lt;code&gt;Docker Desktop&lt;/code&gt; 을 이용해서 문제를 해결하려고 한다.&lt;/p&gt;
+&lt;h3 id=&#34;mysql-에-접속이-안되는-문제&#34;&gt;MySQL 에 접속이 안되는 문제&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mysql -u root -p&amp;#39;root&amp;#39; -h 172.17.0.2
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2003 (HY000): Can&amp;#39;t connect to MySQL server on &amp;#39;172.17.0.2:3306&amp;#39; (60)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;위와 같이, &lt;code&gt;root&lt;/code&gt; 계정으로 직접적으로 접속하려고 했었다. 그런데, &lt;code&gt;mysql&lt;/code&gt; 클라이언트 단에서 서버로 연결을 하지 못하는 상황이었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nest.js Modules 를 통해 배우는 의존성 주입</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-25-nestjs-modules-%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85/</link>
+      <pubDate>Fri, 25 Oct 2024 12:10:38 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-25-nestjs-modules-%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;[!important]&lt;/p&gt;
+&lt;p&gt;제가 몰랐던 백엔드 지식 위주로 이야기 합니다.
+Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Express 를 배우고, 보다 좀 더 정형화된 형식이 필요함을 느꼈다.&lt;/p&gt;
+&lt;p&gt;코드를 보다 견고하게 짜는 것에 대한 욕심이 생겼고, 에러 처리 등 다양한 예외 처리 로직들을 수행해보면서, 코드의 안정성이 중요하다는 걸 느꼈다.&lt;/p&gt;
+&lt;p&gt;그래서 이번에 Nest.js 를 배우기 시작했는데, &lt;code&gt;Controller&lt;/code&gt; &lt;code&gt;Service&lt;/code&gt; 등등.. 유명한 계층은 내가 아는 일들을 그대로 수행하고 있어서 배우는데 문제가 없었다.&lt;/p&gt;
+&lt;p&gt;그런데, 왜 &lt;code&gt;@Module&lt;/code&gt; 데코레이터라는 계층이 있는 걸까? 궁금해져서 조금 알아보았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>지속 가능한 개발자란 무엇일까? - 학습 스프린트 회고</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</link>
+      <pubDate>Thu, 24 Oct 2024 11:52:14 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;[!tip] 읽기 전 중요 사항&lt;/p&gt;
+&lt;p&gt;적다보니 부스트캠프의 보안과 관련된 이슈가 있을 수 있습니다.&lt;/p&gt;
+&lt;p&gt;향 후 문제가 될 경우 해당 글이 내려갈 수 있습니다.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;부스트캠프-멤버십에-합격하다&#34;&gt;부스트캠프 멤버십에 합격하다.&lt;/h2&gt;
+&lt;h3 id=&#34;스스로에게-부실하고-아쉬울게-많았던-챌린지&#34;&gt;스스로에게 부실하고 아쉬울게 많았던 챌린지&lt;/h3&gt;
+&lt;p&gt;챌린지는 정말로 배울 기회가 많았고, 값진 기회였다. (챌린지 자체가 아쉽단게 &lt;strong&gt;절대&lt;/strong&gt; 아니다.)&lt;/p&gt;
+&lt;p&gt;사실 한달은 긴 기간이지만, 배우고 실천하기에 있어서는 너무나 짧은 기간이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어느 누가 부트캠프를 통해 한달 과정을 통해 모든 걸 마스터할 수 있다고 하겠는가.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;그것은 나에게도 마찬가지였다.&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Nest.js] Nest.js 에서의 DTO</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/</link>
+      <pubDate>Wed, 23 Oct 2024 18:46:23 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/</guid>
+      <description>&lt;h2 id=&#34;dto-란&#34;&gt;DTO 란?&lt;/h2&gt;
+&lt;p&gt;이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.&lt;/p&gt;
+&lt;p&gt;여기에 더 나아가서, &lt;code&gt;DTO&lt;/code&gt;란, &lt;code&gt;네트워크&lt;/code&gt; 를 통해 전송되는 방법 또한 정의할 수 있다.&lt;/p&gt;
+&lt;p&gt;말 그대로 데이터 전송 객체이다.&lt;/p&gt;
+&lt;h3 id=&#34;nestjs-에서의-dto&#34;&gt;Nest.js 에서의 DTO&lt;/h3&gt;
+&lt;p&gt;Nest.js 에서는 &lt;code&gt;Class&lt;/code&gt; 를 이용하여 정의하는 것을 추천하고 있으며, &lt;code&gt;interface&lt;/code&gt; 로도 가능하다.&lt;/p&gt;
+&lt;p&gt;그 이유는 &lt;code&gt;class&lt;/code&gt; 는 &lt;code&gt;interface&lt;/code&gt; 와 달리, 런타임 내에 정의 되어 있기 때문에 &lt;code&gt;pipe&lt;/code&gt; 등의 기능도 활용 가능하다고 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이는 &lt;strong&gt;반대로 얘기하면, 굳이 상태를 보존할 이유가 없다면 인터페이스를 쓰는게 낫다는 뜻으로도 해석할 수 있겠다.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/</link>
+      <pubDate>Sun, 06 Oct 2024 21:57:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/</guid>
+      <description>&lt;h2 id=&#34;http-그-다음은&#34;&gt;🧵 HTTP, 그 다음은?&lt;/h2&gt;
+&lt;p&gt;HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으로 소통한다고 깨달았습니다.&lt;/p&gt;
+&lt;p&gt;무언가 특수한 포맷팅을 이용해서..? 바이너리로 인코딩하여 전송할 줄 알았는데 문자였던 것이지요..&lt;/p&gt;
+&lt;p&gt;그래서 이렇게 간단하게 문자열로 소통하니, 보안에 정말로 취약할 수 밖에 없음을 또 인지할 수 밖에 없었습니다. 역시 무언가를 사용할 때에는 보안을 의식할 수 밖에 없습니다.&lt;/p&gt;
+&lt;p&gt;그래서 우리가 흔하게 사용하지만, 당연하다고 여기는 HTTPS 에 대해 더 공부를 하게 되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;https-프로토콜&#34;&gt;HTTPS 프로토콜&lt;/h3&gt;
+&lt;p&gt;그럼 HTTPS란 뭘까요?&lt;/p&gt;
+&lt;p&gt;HTTP + S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니다. 우리가 C언어에서 MSVC 에서 사용할 수 있는 scanf_s 와 같은 s 처럼 보안을 의식하여 보안 계층을 한층 더 감싼 HTTP 통신이라고 생각하면 됩니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>API의 응답 바디는 커도 좋을까
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-09-01-api-response/</link>
+      <pubDate>Sun, 01 Sep 2024 23:30:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-09-01-api-response/</guid>
+      <description>&lt;h2 id=&#34;서론--api-설계-시-든-의문&#34;&gt;서론 : API 설계 시 든 의문&lt;/h2&gt;
+&lt;p&gt;API 응답과 요청 과정에서의 오버헤드는 얼마나 성능에 영향을 끼칠까요?&lt;/p&gt;
+&lt;p&gt;예를 들어 여러 카테고리 열에 담긴 카드 정보를 불러오는 API를 작성해야할 때가 있었는데, 저는 전체 데이터를 한번에 가져오는게 아니라, 열의 인덱스 번호를 URL에 담아서 보내고, 해당 열에 대응하는 카드들을 가져오는 API 로 설계를 했었습니다.&lt;/p&gt;
+&lt;p&gt;이렇게 설계를 했던 이유는 사실 REST 원칙에서 &amp;ldquo;API 계층적으로 구성해야한다&amp;quot;는 원칙에 따라 구성을 하였기 때문입니다. 사실 카드 인덱싱을 하는데 있어서 계층적으로 구성하려면 URL 파라미터를 &lt;code&gt;/columns/cards&lt;/code&gt; 이런식으로 불러오도록 만드는게 좋지 않았을까 하는 생각이 듭니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[부스트캠프 챌린지] 3주차 후기 및 회고
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-08-03-boostcamp-3/</link>
+      <pubDate>Sat, 03 Aug 2024 14:51:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-08-03-boostcamp-3/</guid>
+      <description>&lt;h2 id=&#34;2주차가-훌쩍-지나갔다&#34;&gt;2주차가 훌쩍 지나갔다.&lt;/h2&gt;
+&lt;p&gt;3주차부터는 문제를 단순히 바라보는 것에서 나아가 내가 해결한 것들에 대해 개선해보는 시간을 위주로 가졌다. 이번주는 특히 생각하는 것과 문제해결 로직(알고리즘)을 엄밀하게 구상하고 나면 코드를 짜는 시간이 생각보다 짧아졌음을 실감한 것 같다. 전부터 해오던 설계를 잘 하려는 노력과 함께 개선시간에서 피드백을 받으니, 설계를 하는 데 있어서 실력이 늘어나고 있음을 직감할 수 있었다.&lt;/p&gt;
+&lt;h3 id=&#34;사라진-2주차-후기&#34;&gt;사라진 2주차 후기?&lt;/h3&gt;
+&lt;p&gt;2주차 없이 3주차 회고부터 벌써 올라오다니, 이상하다? 그만큼 힘들었다! 사실 솔직히 말하자면 매일 새벽 3시에 잘 정도로 매번 열심히했고, 결과와 상관없이 계속 구현과 정리에 정진했던 것 같다. 물론 블로그에 관련 내용을 올리면 당연히 유추가 되기 쉽기 때문에 내용은 업로드하지 않으려고 한다. 원래 나는 옵시디언을 좋아하는데 제출용으로 내 개인 노션에 고이 모셔둔 상태이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[부스트캠프 챌린지] 1주차 후기 및 회고
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-07-20-boostcamp-1/</link>
+      <pubDate>Sat, 20 Jul 2024 02:33:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-07-20-boostcamp-1/</guid>
+      <description>&lt;h2 id=&#34;챌린지에-합격하다-7월-14일&#34;&gt;챌린지에 합격하다. (7월 14일)&lt;/h2&gt;
+&lt;p&gt;베이직 과정을 뒤늦게 지원이 안됨을 확인(&amp;hellip;) 하며 2차 시험 때는 &amp;ldquo;아 여기까지인가보다&amp;rdquo; 했었다.&lt;/p&gt;
+&lt;p&gt;그런데 2차 시험을 치면서 엥? 싶은 수준으로 문제가 생각보다 나에게는 쉽게 나왔다. 규정상 더이상 자세한 내용은 생략하도록 하겠지만, 어쨌건 내 입장에서 회고만 해보았을 땐 생각보단 쉽게 나왔었다.&lt;/p&gt;
+&lt;p&gt;하여간 우여곡절 끝에 고맙게도(..!!) 부스트캠프 챌린지 과정에 합격하여 작성일(7월 14일)기준 내일(!!)부터 해당 과정을 시작한다. 사실 쉽게 나와서 다 풀긴 했었는데, 내가 잘 풀면 아마 여러분들도 시험을 치는 데에는 문제 없을거라 장담한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[알고리즘] Chapter 1 &amp; 2</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-1/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-1/</guid>
+      <description>알고리즘 정리</description>
+    </item>
+    <item>
+      <title>[알고리즘] Chapter 3</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-2/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-2/</guid>
+      <description>알고리즘 정리</description>
+    </item>
+    <item>
+      <title>Factory Method 패턴 살펴보기</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-03-16-factory-method-pattern/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-03-16-factory-method-pattern/</guid>
+      <description>`react-diagrams` 에서 커스텀 노드를 만들일이 생겨 커스텀 노드 패턴을 알아보던중 엥? Factory? 리액트에선 분명 deprecated 됐을텐데… 뭔가 이상하다 싶어서 알아보았고, 리액트의 그것을 사용하는게 아닌 정말로 디자인 패턴이라는 것을 알게 되었다.</description>
+    </item>
+    <item>
+      <title>[ 선형대수 ] 1. 행렬</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-1/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-1/</guid>
+      <description>선형 대수 독학하며 배운 정리 자료입니다.</description>
+    </item>
+    <item>
+      <title>[ 선형대수 ] 2. 행렬 대수</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-2/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-2/</guid>
+      <description>선형 대수 독학하며 배운 정리 자료입니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-12-26-boj1006/</link>
+      <pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-12-26-boj1006/</guid>
+      <description>백준 1006번 문제 풀이 입니다.</description>
+    </item>
+    <item>
+      <title>다크모드 테마 시 깜빡거리는 증상</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-12-25-darkmode-flickering/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-12-25-darkmode-flickering/</guid>
+      <description>내가 시스템에서 설정한 테마 색이 먼저 적용이 되고, 그 다음에 다크 모드로 설정된 테마가 나중에 적용되는 현상</description>
+    </item>
+    <item>
+      <title>[ 백준 26087 ] 피보나치와 마지막 수열과 쿼리 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-11-16-boj26087/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-11-16-boj26087/</guid>
+      <description>백준 26087 풀이입니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 2818 ] 숙제하기 싫을 때 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-11-16-boj2818/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-11-16-boj2818/</guid>
+      <description>백준 2818 풀이입니다.</description>
+    </item>
+    <item>
+      <title>[ CSS ] text underline 의 높이 조절, 굵기 설정하기</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-11-15-text-underline/</link>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-11-15-text-underline/</guid>
+      <description>text-underline의 상세한 스타일을 조절할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-11-12-query-tree/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-11-12-query-tree/</guid>
+      <description>트리의 특성을 이용한 연결그래프 탐색문제입니다.</description>
+    </item>
+    <item>
+      <title>[ TS ] 타입스크립트에서 타이핑 하기 귀찮은데요 (Typescript as 키워드)</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-11-03-typescript-interface/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-11-03-typescript-interface/</guid>
+      <description>TypeScript에서 as 키워드는 타입 단언(type assertion)을 사용하기 위한 것입니다.</description>
+    </item>
+    <item>
+      <title>[ React ] 이벤트 탈착할 때 주의 사항</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-31-remove-event/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-31-remove-event/</guid>
+      <description>드로우 온 웹 크롬 익스텐션 사이드 프로젝트 중에 생긴 문제입니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 17298 ] 오큰수 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</guid>
+      <description>이분탐색도 생각해보고, 뒤에서부터 진행도 생각해봤는데 도저히 감이 잡히질 않아서 주제를 봤더니 스택문제였습니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 13330 ] 유사 팰린드롬 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-24-boj13330/</link>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-24-boj13330/</guid>
+      <description>소스코드만 있습니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 3697 ] 정상 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</guid>
+      <description>d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생각을 해서 땅에서부터 그냥 bfs하면 되는것 아닌가 싶은데, 잘못된 방법이였습니다.</description>
+    </item>
+    <item>
+      <title>[ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/</guid>
+      <description>알고리즘을 하다보면 저희가 모든 경우의 수를 뽑아서 봐야할 때가 있습니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/</guid>
+      <description>소스코드만 있습니다.</description>
+    </item>
+    <item>
+      <title>LIS 알고리즘 개념</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-14-lis/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-14-lis/</guid>
+      <description>풀이는 제 이전 블로그에서 확인 가능합니다.</description>
+    </item>
+    <item>
+      <title>[ 백준 11401 ] 이항 계수 3 : C&#43;&#43; 풀이</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-12-boj11401/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-12-boj11401/</guid>
+      <description>일단 이 문제를 풀기 위해선 페르마의 소정리와 모듈러 역원을 구하는 연산을 할줄 알아야한다.</description>
+    </item>
+    <item>
+      <title>깃허브 페이지에서 _next/ 폴더에 접근할 수 없는 경우</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-12-nojekyll/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-12-nojekyll/</guid>
+      <description>.nojekyll 설정하기</description>
+    </item>
+    <item>
+      <title>[Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/</guid>
+      <description>이미지 가져오기, 동적 라우팅, 페이지 타이틀 변경 등</description>
+    </item>
+    <item>
+      <title>분리 집합 구현 시 주의 점</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/</guid>
+      <description>분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.</description>
+    </item>
+  </channel>
+</rss>

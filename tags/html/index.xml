@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HTML on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/html/</link>
+    <description>Recent content in HTML on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Sat, 25 Jan 2025 19:06:26 +0900</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>몰랐던 HTML p 태그에 대한 사실</title>
+      <link>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
+      <pubDate>Sat, 25 Jan 2025 19:06:26 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
+      <description>&lt;!-- truncate --&gt;
+&lt;p&gt;&lt;code&gt;Docusaurus&lt;/code&gt; 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;p style=&#34;color: red;&#34;&gt;Asset not found: Pasted%20image%2020250125190702.png&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;즉, 직역해보면 실제로 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.&lt;/p&gt;
+&lt;p&gt;실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.&lt;/p&gt;
+&lt;p&gt;도대체 무슨 일일까?&lt;/p&gt;
+&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
+&lt;p&gt;나는 몰랐던 사실인데, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그 안에 블록 레벨 요소(예: &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;&lt;/code&gt; 등)가 포함되면 브라우저는 자동으로 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그를 닫는다.&lt;/p&gt;
+&lt;p&gt;이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 &amp;ldquo;No p element in scope but a p end tag seen&amp;rdquo; 오류가 발생할 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

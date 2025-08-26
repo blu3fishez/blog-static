@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Logger on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/logger/</link>
+    <description>Recent content in Logger on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Tue, 28 Jan 2025 16:33:03 +0900</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/logger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Spring] Spring 에서 사용하는 로거의 로깅 레벨</title>
+      <link>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</link>
+      <pubDate>Tue, 28 Jan 2025 16:33:03 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</guid>
+      <description>&lt;p&gt;스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;각-로그-단계&#34;&gt;각 로그 단계&lt;/h2&gt;
+&lt;p&gt;각 로그 단계는 아래와 같이 구성되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;trace&lt;/li&gt;
+&lt;li&gt;debug&lt;/li&gt;
+&lt;li&gt;info&lt;/li&gt;
+&lt;li&gt;warning&lt;/li&gt;
+&lt;li&gt;error&lt;/li&gt;
+&lt;li&gt;off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.&lt;/p&gt;
+&lt;p&gt;스프링에서는 해당 로그 단계를 출력 설정하려면, &lt;code&gt;application.properties&lt;/code&gt; 에 아래와 같이 설정값을 추가한다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;logging.level.org.springframework=trace
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;trace&#34;&gt;trace&lt;/h4&gt;
+&lt;p&gt;모든 로그를 출력한다.&lt;/p&gt;
+&lt;p&gt;따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.&lt;/p&gt;
+&lt;p&gt;하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

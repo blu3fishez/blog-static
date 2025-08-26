@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Nestjs | blog.moozeh</title>
+<meta name="keywords" content="">
+<meta name="description" content="moozeh blog">
+<meta name="author" content="moozeh">
+<link rel="canonical" href="https://blog.moozeh.org/categories/nestjs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://blog.moozeh.org/categories/nestjs/index.xml">
+<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/categories/nestjs/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.moozeh.org/categories/nestjs/">
+  <meta property="og:site_name" content="blog.moozeh">
+  <meta property="og:title" content="Nestjs">
+  <meta property="og:description" content="moozeh blog">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:title" content="Nestjs">
+<meta name="twitter:description" content="moozeh blog">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/categories/">Categories</a></div>
+  <h1>
+    Nestjs
+    <a href="/categories/nestjs/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Custom Passport 로 Github OAuth 로직을 직접 구현하기
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>개요 OAuth 가 조금 어렵다고 해서 솔직히 하루 걸릴 줄 알았습니다. 하지만 차근차근 진행해보니 수월하게 진행할 수 있었는데, 그 과정을 개발일지로 남겨주는게 좋을 것 같아 미리 남겨봅니다.
+실제로 OAuth 를 예제로 만들어보는 블로그 글 들이 상당 수 존재하였으며, 이것들을 바탕으로 단순히 따라가기만 하면 될 것 같았습니다. 하지만 그 과정에서 이해되지 않는 부분이 존재하였고, 이 부분에서 트러블 슈팅이 조금 있었습니다.
+제가 어떻게 OAuth를 하는지 알려주어야 앞으로 OAuth 관련 기능 구현에 있어서 도움이 될 수 있을 것이라 판단하였기에 문서로 기록하고자 합니다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-21 12:36:32 +0900 KST'>December 21, 2024</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to Custom Passport 로 Github OAuth 로직을 직접 구현하기" href="https://blog.moozeh.org/posts/2024/2024-12-21-custom-passport-%EB%A1%9C-github-oauth-%EB%A1%9C%EC%A7%81%EC%9D%84-%EC%A7%81%EC%A0%91-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Nest.js Modules 를 통해 배우는 의존성 주입
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> [!important]
+제가 몰랐던 백엔드 지식 위주로 이야기 합니다. Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.
+Express 를 배우고, 보다 좀 더 정형화된 형식이 필요함을 느꼈다.
+코드를 보다 견고하게 짜는 것에 대한 욕심이 생겼고, 에러 처리 등 다양한 예외 처리 로직들을 수행해보면서, 코드의 안정성이 중요하다는 걸 느꼈다.
+그래서 이번에 Nest.js 를 배우기 시작했는데, Controller Service 등등.. 유명한 계층은 내가 아는 일들을 그대로 수행하고 있어서 배우는데 문제가 없었다.
+그런데, 왜 @Module 데코레이터라는 계층이 있는 걸까? 궁금해져서 조금 알아보았다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-25 12:10:38 +0900 KST'>October 25, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to Nest.js Modules 를 통해 배우는 의존성 주입" href="https://blog.moozeh.org/posts/2024/2024-10-25-nestjs-modules-%EB%A5%BC-%ED%86%B5%ED%95%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[Nest.js] Nest.js 에서의 DTO
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>DTO 란? 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.
+여기에 더 나아가서, DTO란, 네트워크 를 통해 전송되는 방법 또한 정의할 수 있다.
+말 그대로 데이터 전송 객체이다.
+Nest.js 에서의 DTO Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으며, interface 로도 가능하다.
+그 이유는 class 는 interface 와 달리, 런타임 내에 정의 되어 있기 때문에 pipe 등의 기능도 활용 가능하다고 한다.
+이는 반대로 얘기하면, 굳이 상태를 보존할 이유가 없다면 인터페이스를 쓰는게 낫다는 뜻으로도 해석할 수 있겠다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-23 18:46:23 +0900 KST'>October 23, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [Nest.js] Nest.js 에서의 DTO" href="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

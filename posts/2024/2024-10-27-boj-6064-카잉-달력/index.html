@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이 | blog.moozeh</title>
+<meta name="keywords" content="ps">
+<meta name="description" content="문제 링크
+
+이동하기!
+
+
+해결 과정
+최소 공배수 이용하는 문제입니다!
+최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.
+소스 코드
+#include&lt;iostream&gt;
+using namespace std;
+
+int gcd(int a, int b) {
+    int tmp;
+    
+    if(b &gt; a) {
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    while(b != 0) {
+        tmp = a % b;
+        a = b;
+        b = tmp;
+    }
+    return a;
+}
+
+int main() {
+    cout.tie(0); cin.tie(0)-&gt;sync_with_stdio(0);
+    int t; cin&gt;&gt;t;
+    while(t--) {
+        int m,n,x,y; cin&gt;&gt;m&gt;&gt;n&gt;&gt;x&gt;&gt;y;
+        int larger = m &gt; n ? m : n;
+        int larger_remain = m &gt; n ? x : y;
+        int max_num = m*n / gcd(m, n);
+        bool found = false;
+        
+        for(int i=larger_remain; i&lt;=max_num; i &#43;= larger) {
+
+            if (i%m == x%m &amp;&amp; i%n == y%n) {
+                found = true;
+                cout&lt;&lt;i&lt;&lt;&#39;\n&#39;;
+                break;
+            }
+        }
+        if(!found) cout&lt;&lt;&#34;-1\n&#34;;
+    }
+}
+">
+<meta name="author" content="moozeh">
+<link rel="canonical" href="https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/">
+  <meta property="og:site_name" content="blog.moozeh">
+  <meta property="og:title" content="[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이">
+  <meta property="og:description" content="문제 링크 이동하기! 해결 과정 최소 공배수 이용하는 문제입니다!
+최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.
+소스 코드 #include&lt;iostream&gt; using namespace std; int gcd(int a, int b) { int tmp; if(b &gt; a) { tmp = a; a = b; b = tmp; } while(b != 0) { tmp = a % b; a = b; b = tmp; } return a; } int main() { cout.tie(0); cin.tie(0)-&gt;sync_with_stdio(0); int t; cin&gt;&gt;t; while(t--) { int m,n,x,y; cin&gt;&gt;m&gt;&gt;n&gt;&gt;x&gt;&gt;y; int larger = m &gt; n ? m : n; int larger_remain = m &gt; n ? x : y; int max_num = m*n / gcd(m, n); bool found = false; for(int i=larger_remain; i&lt;=max_num; i &#43;= larger) { if (i%m == x%m &amp;&amp; i%n == y%n) { found = true; cout&lt;&lt;i&lt;&lt;&#39;\n&#39;; break; } } if(!found) cout&lt;&lt;&#34;-1\n&#34;; } } ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-27T20:34:24+09:00">
+    <meta property="article:modified_time" content="2024-10-27T20:34:24+09:00">
+    <meta property="article:tag" content="Ps">
+      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:title" content="[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이">
+<meta name="twitter:description" content="문제 링크
+
+이동하기!
+
+
+해결 과정
+최소 공배수 이용하는 문제입니다!
+최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.
+소스 코드
+#include&lt;iostream&gt;
+using namespace std;
+
+int gcd(int a, int b) {
+    int tmp;
+    
+    if(b &gt; a) {
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    while(b != 0) {
+        tmp = a % b;
+        a = b;
+        b = tmp;
+    }
+    return a;
+}
+
+int main() {
+    cout.tie(0); cin.tie(0)-&gt;sync_with_stdio(0);
+    int t; cin&gt;&gt;t;
+    while(t--) {
+        int m,n,x,y; cin&gt;&gt;m&gt;&gt;n&gt;&gt;x&gt;&gt;y;
+        int larger = m &gt; n ? m : n;
+        int larger_remain = m &gt; n ? x : y;
+        int max_num = m*n / gcd(m, n);
+        bool found = false;
+        
+        for(int i=larger_remain; i&lt;=max_num; i &#43;= larger) {
+
+            if (i%m == x%m &amp;&amp; i%n == y%n) {
+                found = true;
+                cout&lt;&lt;i&lt;&lt;&#39;\n&#39;;
+                break;
+            }
+        }
+        if(!found) cout&lt;&lt;&#34;-1\n&#34;;
+    }
+}
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.moozeh.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[ 백준 6064 ] 카잉 달력 : C++ 풀이",
+      "item": "https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[ 백준 6064 ] 카잉 달력 : C++ 풀이",
+  "name": "[ 백준 6064 ] 카잉 달력 : C\u002b\u002b 풀이",
+  "description": "문제 링크 이동하기! 해결 과정 최소 공배수 이용하는 문제입니다!\n최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.\n소스 코드 #include\u0026lt;iostream\u0026gt; using namespace std; int gcd(int a, int b) { int tmp; if(b \u0026gt; a) { tmp = a; a = b; b = tmp; } while(b != 0) { tmp = a % b; a = b; b = tmp; } return a; } int main() { cout.tie(0); cin.tie(0)-\u0026gt;sync_with_stdio(0); int t; cin\u0026gt;\u0026gt;t; while(t--) { int m,n,x,y; cin\u0026gt;\u0026gt;m\u0026gt;\u0026gt;n\u0026gt;\u0026gt;x\u0026gt;\u0026gt;y; int larger = m \u0026gt; n ? m : n; int larger_remain = m \u0026gt; n ? x : y; int max_num = m*n / gcd(m, n); bool found = false; for(int i=larger_remain; i\u0026lt;=max_num; i += larger) { if (i%m == x%m \u0026amp;\u0026amp; i%n == y%n) { found = true; cout\u0026lt;\u0026lt;i\u0026lt;\u0026lt;\u0026#39;\\n\u0026#39;; break; } } if(!found) cout\u0026lt;\u0026lt;\u0026#34;-1\\n\u0026#34;; } } ",
+  "keywords": [
+    "ps"
+  ],
+  "articleBody": "문제 링크 이동하기! 해결 과정 최소 공배수 이용하는 문제입니다!\n최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.\n소스 코드 #include using namespace std; int gcd(int a, int b) { int tmp; if(b \u003e a) { tmp = a; a = b; b = tmp; } while(b != 0) { tmp = a % b; a = b; b = tmp; } return a; } int main() { cout.tie(0); cin.tie(0)-\u003esync_with_stdio(0); int t; cin\u003e\u003et; while(t--) { int m,n,x,y; cin\u003e\u003em\u003e\u003en\u003e\u003ex\u003e\u003ey; int larger = m \u003e n ? m : n; int larger_remain = m \u003e n ? x : y; int max_num = m*n / gcd(m, n); bool found = false; for(int i=larger_remain; i\u003c=max_num; i += larger) { if (i%m == x%m \u0026\u0026 i%n == y%n) { found = true; cout\u003c\u003ci\u003c\u003c'\\n'; break; } } if(!found) cout\u003c\u003c\"-1\\n\"; } } ",
+  "wordCount" : "134",
+  "inLanguage": "en",
+  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2024-10-27T20:34:24+09:00",
+  "dateModified": "2024-10-27T20:34:24+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "moozeh"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "blog.moozeh",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.moozeh.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      [ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이
+    </h1>
+    <div class="post-meta"><span title='2024-10-27 20:34:24 +0900 KST'>October 27, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac" aria-label="문제 링크">문제 링크</a></li>
+                <li>
+                    <a href="#%ed%95%b4%ea%b2%b0-%ea%b3%bc%ec%a0%95" aria-label="해결 과정">해결 과정</a></li>
+                <li>
+                    <a href="#%ec%86%8c%ec%8a%a4-%ec%bd%94%eb%93%9c" aria-label="소스 코드">소스 코드</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+<div class="post-content"><h2 id="문제-링크">문제 링크<a hidden class="anchor" aria-hidden="true" href="#문제-링크">#</a></h2>
+<ul>
+<li><a href="https://boj.kr/6064">이동하기!</a></li>
+</ul>
+<hr>
+<h2 id="해결-과정">해결 과정<a hidden class="anchor" aria-hidden="true" href="#해결-과정">#</a></h2>
+<p>최소 공배수 이용하는 문제입니다!</p>
+<p>최소 공배수까지 탐색을 그리디 하게 이용하면 됩니다.</p>
+<h2 id="소스-코드">소스 코드<a hidden class="anchor" aria-hidden="true" href="#소스-코드">#</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span> <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span> <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">x</span><span class="o">&gt;&gt;</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">larger</span> <span class="o">=</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">?</span> <span class="nl">m</span> <span class="p">:</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">larger_remain</span> <span class="o">=</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">?</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">max_num</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">n</span> <span class="o">/</span> <span class="n">gcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">larger_remain</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">max_num</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">larger</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">m</span> <span class="o">==</span> <span class="n">x</span><span class="o">%</span><span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">%</span><span class="n">n</span> <span class="o">==</span> <span class="n">y</span><span class="o">%</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">found</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+    </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.moozeh.org/tags/ps/">Ps</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>협업을 위한 더러운 코드</span>
+  </a>
+  <a class="next" href="https://blog.moozeh.org/posts/2024/2024-10-26-%EB%8F%84%EC%BB%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+    <span class="title">Next »</span>
+    <br>
+    <span>도커 네트워크 인터페이스를 알아보자</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

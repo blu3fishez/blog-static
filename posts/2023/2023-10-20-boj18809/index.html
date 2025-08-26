@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이 | blog.moozeh</title>
+<meta name="keywords" content="">
+<meta name="description" content="소스코드만 있습니다.">
+<meta name="author" content="moozeh">
+<link rel="canonical" href="https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/">
+  <meta property="og:site_name" content="blog.moozeh">
+  <meta property="og:title" content="[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이">
+  <meta property="og:description" content="소스코드만 있습니다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-10-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-10-20T00:00:00+00:00">
+      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:title" content="[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이">
+<meta name="twitter:description" content="소스코드만 있습니다.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.moozeh.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[ 백준 18809 ] Gaaaaarden : C++ 풀이",
+      "item": "https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[ 백준 18809 ] Gaaaaarden : C++ 풀이",
+  "name": "[ 백준 18809 ] Gaaaaarden : C\u002b\u002b 풀이",
+  "description": "소스코드만 있습니다.",
+  "keywords": [
+    
+  ],
+  "articleBody": "소스코드 #include #include #include #include using namespace std; int n, m; int r, g; int board[52][52]; // 맵 vector\u003cpair\u003cint, int\u003e\u003e able_list; // 배양액 뿌릴 수 있는 땅 정보 int dir[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} }; int flowers; // 꽃의 개수 void bfs(vector\u003cpair\u003cint, int\u003e\u003e\u0026 gv, vector\u003cpair\u003cint, int\u003e\u003e\u0026 rv) { int visit[52][52] = { 0, }; // 빨간색 -t 값. 초록색 t 값으로 시간을 표현. 1초부터 시작. 0이면 닿지않은 경우임. int f = 0; // 현재 꽃 queue\u003cpair\u003cint, pair\u003cint, int\u003e\u003e\u003e q; // bfs q for (auto t : gv) { visit[t.first][t.second] = -1; q.push({ -1, t }); } for (auto t : rv) { visit[t.first][t.second] = 1; q.push({ 1, t }); } while (!q.empty()) { int time = q.front().first; pair\u003cint, int\u003e node = q.front().second; q.pop(); int y = node.first; int x = node.second; if (visit[y][x] == 9999) continue; // 꽃은 퍼지지 않음. visit[y][x] = time; if (time \u003e 0) time++; else time--; for (int i = 0; i \u003c 4; ++i) { int dy = y + dir[i][0]; int dx = x + dir[i][1]; if (visit[dy][dx] + time == 0) { visit[dy][dx] = 9999; f++; continue; } if (board[dy][dx] \u0026\u0026 visit[dy][dx] == 0) { q.push({ time, {dy, dx} }); visit[dy][dx] = time; } } } flowers = flowers \u003c f ? f : flowers; } int main() { ios::sync_with_stdio(0); cin.tie(0); cin \u003e\u003e n \u003e\u003e m \u003e\u003e r \u003e\u003e g; for (int i = 1; i \u003c= n; ++i) { for (int j = 1; j \u003c= m; ++j) { cin \u003e\u003e board[i][j]; if (board[i][j] == 2) { able_list.push_back({ i, j }); } } } vector\u003cint\u003e p; for (int i = 0; i \u003c able_list.size() - r - g; ++i) p.push_back(0); for (int i = 0; i \u003c r; ++i) p.push_back(1); for (int i = 0; i \u003c g; ++i) p.push_back(2); do { vector\u003cpair\u003cint, int\u003e\u003e r_list; vector\u003cpair\u003cint, int\u003e\u003e g_list; for (int i = 0; i \u003c p.size(); ++i) { if (p[i] == 1) r_list.push_back(able_list[i]); if (p[i] == 2) g_list.push_back(able_list[i]); } bfs(g_list, r_list); } while (next_permutation(p.begin(), p.end())); cout \u003c\u003c flowers; } ",
+  "wordCount" : "343",
+  "inLanguage": "en",
+  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2023-10-20T00:00:00Z",
+  "dateModified": "2023-10-20T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "moozeh"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "blog.moozeh",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.moozeh.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      [ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이
+    </h1>
+    <div class="post-description">
+      소스코드만 있습니다.
+    </div>
+    <div class="post-meta"><span title='2023-10-20 00:00:00 +0000 UTC'>October 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%ec%86%8c%ec%8a%a4%ec%bd%94%eb%93%9c" aria-label="소스코드">소스코드</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+<div class="post-content"><h3 id="소스코드">소스코드<a hidden class="anchor" aria-hidden="true" href="#소스코드">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include&lt;algorithm&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include&lt;cstring&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include&lt;queue&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">board</span><span class="p">[</span><span class="mi">52</span><span class="p">][</span><span class="mi">52</span><span class="p">];</span> <span class="c1">// 맵
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">able_list</span><span class="p">;</span> <span class="c1">// 배양액 뿌릴 수 있는 땅 정보
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dir</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">flowers</span><span class="p">;</span> <span class="c1">// 꽃의 개수
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">gv</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">rv</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">visit</span><span class="p">[</span><span class="mi">52</span><span class="p">][</span><span class="mi">52</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="p">};</span> <span class="c1">// 빨간색 -t 값. 초록색 t 값으로 시간을 표현. 1초부터 시작. 0이면 닿지않은 경우임.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 현재 꽃
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">q</span><span class="p">;</span> <span class="c1">// bfs q
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">t</span> <span class="p">:</span> <span class="n">gv</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">visit</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">t</span> <span class="p">:</span> <span class="n">rv</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">visit</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">time</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="p">;</span> <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">visit</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">9999</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span> <span class="c1">// 꽃은 퍼지지 않음.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="n">visit</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">time</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">time</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="n">time</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="kt">int</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dir</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="kt">int</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dir</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">visit</span><span class="p">[</span><span class="n">dy</span><span class="p">][</span><span class="n">dx</span><span class="p">]</span> <span class="o">+</span> <span class="n">time</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">visit</span><span class="p">[</span><span class="n">dy</span><span class="p">][</span><span class="n">dx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9999</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">f</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">dy</span><span class="p">][</span><span class="n">dx</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">visit</span><span class="p">[</span><span class="n">dy</span><span class="p">][</span><span class="n">dx</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({</span> <span class="n">time</span><span class="p">,</span> <span class="p">{</span><span class="n">dy</span><span class="p">,</span> <span class="n">dx</span><span class="p">}</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">				<span class="n">visit</span><span class="p">[</span><span class="n">dy</span><span class="p">][</span><span class="n">dx</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">flowers</span> <span class="o">=</span> <span class="n">flowers</span> <span class="o">&lt;</span> <span class="n">f</span> <span class="o">?</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">flowers</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="n">g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">able_list</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">able_list</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">r</span> <span class="o">-</span> <span class="n">g</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">p</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">p</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">g</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">p</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">r_list</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">g_list</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">r_list</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">able_list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">g_list</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">able_list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">bfs</span><span class="p">(</span><span class="n">g_list</span><span class="p">,</span> <span class="n">r_list</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">p</span><span class="p">.</span><span class="n">end</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">flowers</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+    </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>[ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기</span>
+  </a>
+  <a class="next" href="https://blog.moozeh.org/posts/2023/2023-10-14-lis/">
+    <span class="title">Next »</span>
+    <br>
+    <span>LIS 알고리즘 개념</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
