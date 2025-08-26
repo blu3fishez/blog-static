@@ -15,7 +15,7 @@
     <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.moozeh.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[블로그 개선] 새로운 블로그 리뉴얼을 환영해주세요</title>
+      <title>[블로그 개선] Hugo 블로그를 만들어보았습니다</title>
       <link>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</link>
       <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</guid>
@@ -124,20 +124,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;일반적인 &lt;code&gt;JoinedColumn&lt;/code&gt; 등과의 차이점은, &lt;code&gt;PK&lt;/code&gt; 값을 공유한다는 점이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>PRIME 전략을 통해 일상 관리하기</title>
-      <link>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</link>
-      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-02-02-prime-%EC%A0%84%EB%9E%B5%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9D%BC%EC%83%81-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0/</guid>
-      <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
-&lt;!-- 요약 적기 --&gt;
-&lt;p&gt;걸음걸음 스터디를 진행하면서, 매일 목표를 세우고 분석하는 과정에서 어떻게하면 개선할 수 있을지 고민을 한 결과, 플래너를 사용하는 게 좋다고 생각했다.&lt;/p&gt;
-&lt;p&gt;하지만, 단순히 플래너를 사용하는건,, &lt;del&gt;100% P인&lt;/del&gt; 나에게 있어서 쉽지 않았고, 일을 수행하기 위해서 정신력을 소모하다보니 스트레스가 정말로 이만저만이 아니었다. 그래서 나는 &lt;code&gt;PRIME&lt;/code&gt; 이라는 새로운 플래너 우선순위 작업 처리전략을 세우게 되었는데, 어떤 방식인지 같이 알아보자.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;!-- 본문  --&gt;
-&lt;h2 id=&#34;배경--걸음-걸음-스터디&#34;&gt;배경 : 걸음 걸음 스터디&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.moozeh.org/posts/2024%EB%85%84-%ED%9A%8C%EA%B3%A0#%EC%8A%A4%ED%84%B0%EB%94%94%EB%A5%BC-%ED%86%B5%ED%95%9C-%EA%BE%B8%EC%A4%80%ED%95%9C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9&#34;&gt;네이버 부스트캠프 9기&lt;/a&gt; 를 수료하고 여러 좋은 분들을 만나 스터디를 할 기회가 생겼다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>[Spring JPA] JPA에 대해 알아보자</title>
       <link>https://blog.moozeh.org/posts/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
       <pubDate>Fri, 31 Jan 2025 22:39:35 +0900</pubDate>
@@ -198,7 +184,7 @@
       <guid>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;&lt;code&gt;Docusaurus&lt;/code&gt; 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;p style=&#34;color: red;&#34;&gt;Asset not found: Pasted%20image%2020250125190702.png&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250125190702.png]]&lt;/p&gt;
 &lt;p&gt;즉, 직역해보면 실제로 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.&lt;/p&gt;
 &lt;p&gt;실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.&lt;/p&gt;
 &lt;p&gt;도대체 무슨 일일까?&lt;/p&gt;
@@ -296,12 +282,12 @@
       <link>https://blog.moozeh.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</link>
       <pubDate>Sun, 29 Dec 2024 13:42:48 +0900</pubDate>
       <guid>https://blog.moozeh.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</guid>
-      <description>&lt;p&gt;![[Pasted image 20241229134612.webp]]
-&lt;em&gt;저희 그래도&amp;hellip; 친하죠?&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;p&gt;![[Pasted image 20241229134612.webp]]&lt;/p&gt;
 &lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
 &lt;p&gt;웹소켓의 이벤트 명세를 바꾸게 되었는데, 프론트 - 백 간의 연동 과정에서 엄청난 실수를 저지르고 말았습니다. 바로 반환되는 데이터를 바꿔버린 것입니다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;반환되는 데이터만 바뀌면, 그냥 알려주면 되는 것 아닌가?&lt;/code&gt; 라는 생각이 드실 수 있습니다. 그런데 문제는, &lt;code&gt;반환되는 데이터의 기준&lt;/code&gt; 을 바꿔버렸던 것입니다.&lt;/p&gt;
-&lt;p&gt;API를 정의할때 &lt;code&gt;입력&lt;/code&gt; 과 &lt;code&gt;출력&lt;/code&gt; 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.&lt;/p&gt;</description>
+&lt;p&gt;API를 정의할때 &lt;code&gt;입력&lt;/code&gt; 과 &lt;code&gt;출력&lt;/code&gt; 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.&lt;/p&gt;
+&lt;p&gt;“바뀐 명세를 확인해주세요!” 라고 말하고 너무 프론트 분에게 맡겼던 것이 큰 실책이었던 것입니다. 바뀐 명세가 제대로 작동되지 않거나, 충분히 설명되지 않았습니다. 글을 쓰는 것이 많이 어려웠는데, 계속된 문서화랑 코딩으로 인해 체력이 바닥이 나서 제대로 글을 못쓴 것도 원인 같습니다. 이런 상황에서도 문서를 잘 쓸 수 있어야 개발자일까.. 고민하게 됐습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The redirect_uri is not associated with this application 오류 해결</title>
@@ -408,8 +394,7 @@
 &lt;p&gt;Nest.js 를 배우다가 데이터베이스를 사용할 일이 생겼다.&lt;/p&gt;
 &lt;p&gt;보통 나는 환경이 분리되는 걸 선호한다. 그래서 전역적으로 설치되는걸 좋아하지 않는다. &lt;code&gt;pip&lt;/code&gt; 같은 것들 말이다.&lt;/p&gt;
 &lt;p&gt;그래서 찾아보니, &lt;code&gt;Docker&lt;/code&gt; 위에 &lt;code&gt;MySQL&lt;/code&gt; 컨테이너를 올려서 사용하면 환경 분리가 된다고 하더라.&lt;/p&gt;
-&lt;p&gt;![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]
-&lt;em&gt;Docker 로고&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]&lt;/p&gt;
 &lt;p&gt;도커와 관련해서는 &lt;code&gt;CLI&lt;/code&gt; 환경에서 결국엔 다루는게 맞다고 생각했다. 그런데, 일단은 도커가 처음이기에 아직 내가 많이 몰라서 &lt;code&gt;Docker Desktop&lt;/code&gt; 을 이용해서 문제를 해결하려고 한다.&lt;/p&gt;
 &lt;h3 id=&#34;mysql-에-접속이-안되는-문제&#34;&gt;MySQL 에 접속이 안되는 문제&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mysql -u root -p&amp;#39;root&amp;#39; -h 172.17.0.2
@@ -436,17 +421,14 @@ Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.
       <link>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</link>
       <pubDate>Thu, 24 Oct 2024 11:52:14 +0900</pubDate>
       <guid>https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;[!tip] 읽기 전 중요 사항&lt;/p&gt;
-&lt;p&gt;적다보니 부스트캠프의 보안과 관련된 이슈가 있을 수 있습니다.&lt;/p&gt;
-&lt;p&gt;향 후 문제가 될 경우 해당 글이 내려갈 수 있습니다.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;부스트캠프-멤버십에-합격하다&#34;&gt;부스트캠프 멤버십에 합격하다.&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;부스트캠프-멤버십에-합격하다&#34;&gt;부스트캠프 멤버십에 합격하다.&lt;/h2&gt;
 &lt;h3 id=&#34;스스로에게-부실하고-아쉬울게-많았던-챌린지&#34;&gt;스스로에게 부실하고 아쉬울게 많았던 챌린지&lt;/h3&gt;
 &lt;p&gt;챌린지는 정말로 배울 기회가 많았고, 값진 기회였다. (챌린지 자체가 아쉽단게 &lt;strong&gt;절대&lt;/strong&gt; 아니다.)&lt;/p&gt;
 &lt;p&gt;사실 한달은 긴 기간이지만, 배우고 실천하기에 있어서는 너무나 짧은 기간이다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;어느 누가 부트캠프를 통해 한달 과정을 통해 모든 걸 마스터할 수 있다고 하겠는가.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;그것은 나에게도 마찬가지였다.&lt;/code&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;그것은 나에게도 마찬가지였다.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;솔직히 말해서 모든 주차별로 회고를 썼어야 했는데 다 쓰지 못해서 아쉬움이 많이 남았다. 그만큼 내가 여태 뼈저리게 느끼지 못했던 학구열과 실천을 하지 못했던 게으름에 대한 &lt;code&gt;성장통&lt;/code&gt; 이라고 생각한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[Nest.js] Nest.js 에서의 DTO</title>
@@ -510,20 +492,6 @@ Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.
 &lt;p&gt;베이직 과정을 뒤늦게 지원이 안됨을 확인(&amp;hellip;) 하며 2차 시험 때는 &amp;ldquo;아 여기까지인가보다&amp;rdquo; 했었다.&lt;/p&gt;
 &lt;p&gt;그런데 2차 시험을 치면서 엥? 싶은 수준으로 문제가 생각보다 나에게는 쉽게 나왔다. 규정상 더이상 자세한 내용은 생략하도록 하겠지만, 어쨌건 내 입장에서 회고만 해보았을 땐 생각보단 쉽게 나왔었다.&lt;/p&gt;
 &lt;p&gt;하여간 우여곡절 끝에 고맙게도(..!!) 부스트캠프 챌린지 과정에 합격하여 작성일(7월 14일)기준 내일(!!)부터 해당 과정을 시작한다. 사실 쉽게 나와서 다 풀긴 했었는데, 내가 잘 풀면 아마 여러분들도 시험을 치는 데에는 문제 없을거라 장담한다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>[알고리즘] Chapter 1 &amp; 2</title>
-      <link>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-1/</link>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-1/</guid>
-      <description>알고리즘 정리</description>
-    </item>
-    <item>
-      <title>[알고리즘] Chapter 3</title>
-      <link>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-2/</link>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2024/2024-03-24-algorithm-2/</guid>
-      <description>알고리즘 정리</description>
     </item>
     <item>
       <title>Factory Method 패턴 살펴보기</title>
@@ -607,7 +575,22 @@ Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.
       <link>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</guid>
-      <description>이분탐색도 생각해보고, 뒤에서부터 진행도 생각해봤는데 도저히 감이 잡히질 않아서 주제를 봤더니 스택문제였습니다.</description>
+      <description>&lt;h2 id=&#34;나의-접근&#34;&gt;나의 접근&lt;/h2&gt;
+&lt;p&gt;이분탐색도 생각해보고, 뒤에서부터 진행도 생각해봤는데
+도저히 감이 잡히질 않아서 주제를 봤더니 스택문제였습니다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;스택의 특징을 아직 잘 몰라서 실수를 했는데, 스택이 사용될 수 있는 상황은 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;현재 문제 상황이 선형적이지만, 여태까지 내가 &amp;ldquo;탐색&amp;quot;했던 정보들을 바탕으로 판단해야할 때,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;혹은 탐색했지만 정답을 찾지못한 정보들을 모아두었다가 나중에 일괄적으로 문제를 해결할 수 있을 때,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;그 외 느낌상으로 모아두었다가 해결할 수 있을 것 같을 때&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;한번 쯤 생각해보면 좋을 것 같습니다. 스택..실제로 활용 문제를 실전풀이로 할 때 상당히 어려운 것 같습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[ 백준 13330 ] 유사 팰린드롬 : C&#43;&#43; 풀이</title>
@@ -621,7 +604,12 @@ Express, MVC 패턴에 관해 공부하고 오셔야 이해할 수 있습니다.
       <link>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</guid>
-      <description>d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생각을 해서 땅에서부터 그냥 bfs하면 되는것 아닌가 싶은데, 잘못된 방법이였습니다.</description>
+      <description>&lt;h2 id=&#34;접근&#34;&gt;접근&lt;/h2&gt;
+&lt;p&gt;처음 접근은 이랬습니다. 사실 제일 처음에 어려웠던 부분은 d-정상이 무엇인지 이해를 하는 것이였습니다.&lt;/p&gt;
+&lt;p&gt;d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생각을 해서 땅에서부터 그냥 bfs하면 되는것 아닌가 싶은데,
+잘못된 방법이였습니다.&lt;/p&gt;
+&lt;p&gt;땅에서부터 d 만큼의 높이차가 존재하는 지역이 정상이라고 생각할 수 없는 이유는, 해당하는 높은 지역 사이에 그 지역보다 더 높은 지역이 있을지도 모르기 때문입니다.&lt;/p&gt;
+&lt;p&gt;예를들어, 해당 지점이 땅이 아닌 지점이면서 (h-d)보다 더 낮은 지점이 방문 가능한 봉우리 h가 있다고 하면 어떻게 될까요?&lt;/p&gt;</description>
     </item>
     <item>
       <title>[ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기</title>

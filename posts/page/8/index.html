@@ -160,55 +160,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">[ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>문제 접근 원형 타일채우기 DP 라고 생각하면 쉽다. 발상이 어려워서 플레티넘3 이 아닌가 조심스레 추측한다.
-해결방법 타일 채우기 문제와 같이 생각을 해보자. 타일을 채우거나 그렇지 않거나만을 따져서 DP 테이블을 잘 짰다면, 경계선에 대한 부분은 경우의 수로 아예 나누어 선형 DP 로 바꾸어 풀어보도록 하자. 타일을 나누는 법? 내가 이부분을 생각못해서, 다른 블로그를 참고했다.
-타일을 나누는 방법에는 총 3가지 경우의 수가 있을 것이다.
-현재 열을 기준으로 윗쪽만 채웠을 경우 (1행만) - a 현재 열을 기준으로 아랫쪽만 채웠을 경우 (2행만) - b 현재 열을 기준으로 윗쪽 아랫쪽 둘다 채웠을 경우 (둘다) - c 이런식으로 열을 1부터 N열 까지 채워나가다보면 선형적으로 풀 수가 있다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-12-26 00:00:00 +0000 UTC'>December 26, 2023</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to [ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이" href="https://blog.moozeh.org/posts/2023/2023-12-26-boj1006/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">다크모드 테마 시 깜빡거리는 증상
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>증상 원인 내 마크다운 블로그를 개발하던 중 이게 왠일?
-블로그에 테마 토글 기능을 추가해서 다크모드를 사용할 때에도 라이트 모드를, 또는 그 반대를 활용할 수 있도록 만들었는데, 내가 시스템에서 설정한 테마 색이 시스템 설정을 따라 가다보니 시스템 테마가 먼저 적용이 되고, 그 다음에 토글 기능으로 설정된 테마가 나중에 적용된다.
-일명 깜빡거리는 증상인데 어떻게 된일인지 생각해봤다.
-HTML Blocking 보통 DOM 이 생성될 때, 중간에 script 태그를 만나게 되면 DOM 생성 과정이 중단됩니다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-12-25 00:00:00 +0000 UTC'>December 25, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to 다크모드 테마 시 깜빡거리는 증상" href="https://blog.moozeh.org/posts/2023/2023-12-25-darkmode-flickering/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[ 백준 26087 ] 피보나치와 마지막 수열과 쿼리 : C&#43;&#43; 풀이
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>문제 접근 오프라인 쿼리라는 개념을 알고 접근해보도록 합시다.
-오프라인 쿼리란 간략히 말해서, 쿼리의 전체 적용 결과 값만 알고 싶을 때 사용하는 전략으로, 쿼리의 순서를 모두 받은 뒤, 역순으로 처리할 때, 중복처리가 되지 않는 경우 그 점을 이용하는 전략입니다.
-이 점을 이용해서 문제를 풀 수 있습니다.
-솔루션 단, 위 개념을 알아도, 칠해져있는지 일일이 매 역순 쿼리마다 확인해나가다 보면 시간초과하기 마련입니다.
-따라서 space[1 to N] 라는 이름의 배열을 생성하여 현재 위치를 기록해도 되는지, 그게 아니라면 다음 위치는 어디가 되는지를 기록해두어야합니다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-11-16 00:00:00 +0000 UTC'>November 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to [ 백준 26087 ] 피보나치와 마지막 수열과 쿼리 : C&#43;&#43; 풀이" href="https://blog.moozeh.org/posts/2023/2023-11-16-boj26087/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[ 백준 2818 ] 숙제하기 싫을 때 : C&#43;&#43; 풀이
     </h2>
   </header>
@@ -238,12 +189,62 @@ underline의 굵기 설정 text-decoration-thickness: 0; underline의 위치 조
   <footer class="entry-footer"><span title='2023-11-15 00:00:00 +0000 UTC'>November 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to [ CSS ] text underline 의 높이 조절, 굵기 설정하기" href="https://blog.moozeh.org/posts/2023/2023-11-15-text-underline/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>내가 생각한 솔루션 1. 분리집합 문제를 보자마자 일단 아! 분리집합 문제구나 라고 생각은 했음.
+각 영역의 분리집합을 구한 후, 분리집합의 개수 별로 nC2의 값을 표현하기 가 구현내용이 아닐지.. 하고.
+예를들면, 문제 예시의 트리와, K = 6, S_k = { 1,2,3,4,5,6 } 인 경우
+{ 1, 2, 3, 5 } 와 {4, 6}으로 두 영역이 나뉘므로,
+4C2 &#43; 2C2 = 6 &#43; 1 = 7 가 정답인 것이다.
+각 영역별로 수행한다고 치면 최악의 경우 O(N) 만큼 걸릴 것임.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-12 00:00:00 +0000 UTC'>November 12, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이" href="https://blog.moozeh.org/posts/2023/2023-11-12-query-tree/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[ TS ] 타입스크립트에서 타이핑 하기 귀찮은데요 (Typescript as 키워드)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>주의사항 본 문서는 Bing AI로 작성되었으며, 작성자 참고용으로 제작된 문서입니다. 향후 저작권 이슈가 있을 경우 바로 내릴 수 있도록 하겠습니다.
+본문 TypeScript에서 as 키워드는 타입 단언(type assertion)을 사용하기 위한 것입니다. 타입 단언은 컴파일러에게 변수나 속성의 타입을 우리가 지정해주는 것이며, 컴파일러가 스스로 추론하는 것을 방지합니다. 타입 단언은 any 타입을 특정 타입으로 다루는 데 자주 사용됩니다. 예를 들어, 다음과 같은 코드가 있습니다.
+let x: any = &#34;Hello&#34;; let y = x as string; 여기서 x는 any 타입이므로, 컴파일러는 x가 가지고 있는 메서드나 속성에 대해 알 수 없습니다. 그래서 x.length나 x.toUpperCase()와 같은 코드는 오류를 발생시킬 수 있습니다. 하지만 y는 x를 string 타입으로 단언한 것이므로, 컴파일러는 y가 string 타입이라고 인식하고, string 타입의 메서드나 속성을 사용할 수 있습니다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-03 00:00:00 +0000 UTC'>November 3, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [ TS ] 타입스크립트에서 타이핑 하기 귀찮은데요 (Typescript as 키워드)" href="https://blog.moozeh.org/posts/2023/2023-11-03-typescript-interface/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[ React ] 이벤트 탈착할 때 주의 사항
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>드로우 온 웹 프로젝트를 현재 vite &#43; react &#43; typescript로 진행중입니다.
+하다가 문제점이 생긴게, 캔버스 토글을 animation을 주면서 껐다켰다하는 기능을 만드는 중이넫 여기서 문제가 생기더라고요
+eventlistener 를 삭제하려면 해당 함수가 무결해야 하고, 함수가 특정 변수에 정의되어 있어 지정할 수 있어야합니다..
+그런데, 제가 마우스 이벤트를 사용하던 함수들은 모두 리액트 훅으로 반환되는 ref 객체를 사용하고 있었습니다…
+이렇게 되면 해당 함수들을 모두 toggleCanvas 내에 정의를 해야하는데, 그렇게되면 함수가 너무 길어져서 코드의 가독성이 작살나버리더라고요.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-31 00:00:00 +0000 UTC'>October 31, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [ React ] 이벤트 탈착할 때 주의 사항" href="https://blog.moozeh.org/posts/2023/2023-10-31-remove-event/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.moozeh.org/posts/page/7/">
-      «&nbsp;Prev&nbsp;7/11
+      «&nbsp;Prev&nbsp;7/10
     </a>
-    <a class="next" href="https://blog.moozeh.org/posts/page/9/">Next&nbsp;9/11&nbsp;»
+    <a class="next" href="https://blog.moozeh.org/posts/page/9/">Next&nbsp;9/10&nbsp;»
     </a>
   </nav>
 </footer>

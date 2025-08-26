@@ -160,25 +160,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">몰랐던 HTML p 태그에 대한 사실
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
-Asset not found: Pasted%20image%2020250125190702.png
-즉, 직역해보면 실제로 &lt;p&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.
-실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.
-도대체 무슨 일일까?
-원인 나는 몰랐던 사실인데, &lt;p&gt; 태그 안에 블록 레벨 요소(예: &lt;div&gt;, &lt;table&gt;, &lt;h1&gt;-&lt;h6&gt; 등)가 포함되면 브라우저는 자동으로 &lt;p&gt; 태그를 닫는다.
-이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 “No p element in scope but a p end tag seen” 오류가 발생할 수 있다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-25 19:06:26 +0900 KST'>January 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to 몰랐던 HTML p 태그에 대한 사실" href="https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[Spring] Spring Stereotype 어노테이션들에 대해 알아보자
     </h2>
   </header>
@@ -249,12 +230,28 @@ Java에서는 String 클래스는 내부적으로 문자들의 배열을 private
   <footer class="entry-footer"><span title='2025-01-19 15:22:10 +0900 KST'>January 19, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to [Java] String for-each 순회 방법" href="https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">2024년 회고
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>2024년은 나에게 있어 밖으로 나가는 문 을 연 것 같은 느낌이다.
+프로그래밍에 있어서 당연히 나 혼자라도 열심히 개발해보고 공부해보는 것은 좋지만, 여러 사람들과 함께 해보며 특히 협업하는 것과는 확실히 다르다는 걸 인지하게 해준 한 해 같다.
+여러 사람을 만나고 사람과 제대로된 커뮤니케이션을 통해서 나 스스로 부족한 점을 많이 찾았기도 했고, 반대로 다른 분들에게 긍정적 영향을 끼친적도 많았던 것 같다. 소중한 동료들을 만나서 네트워킹하고 있다.
+처음 해본 캡스톤 프로젝트, 다사다난 했던 1학기 나에게 있어 2024년은 협업과 커뮤니케이션에 대해 한 발짝 앞서나간 정말 뜻깊은 해라고 생각한다. 사실 2022년부터 좋지 못한 나날들을 보냈었는데, 3학년 1학기 시절에 처음으로 제대로 된 팀프로젝트 (그 이전에는 무언가 완성품을 내놓는 팀 프로젝트는 하지 않았었다.) 를 해보게 되었고, 내가 상당히 협업에 있어서 부족하구나 라는 걸 조금 느꼈던 경험이었다고 생각한다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-05 00:00:00 +0000 UTC'>January 5, 2025</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to 2024년 회고" href="https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.moozeh.org/posts/page/2/">
-      «&nbsp;Prev&nbsp;2/11
+      «&nbsp;Prev&nbsp;2/10
     </a>
-    <a class="next" href="https://blog.moozeh.org/posts/page/4/">Next&nbsp;4/11&nbsp;»
+    <a class="next" href="https://blog.moozeh.org/posts/page/4/">Next&nbsp;4/10&nbsp;»
     </a>
   </nav>
 </footer>

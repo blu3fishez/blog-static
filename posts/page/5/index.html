@@ -160,21 +160,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">협업을 위한 더러운 코드
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>문제 상황 스터디 세션을 리팩토링 과정에서 코드가 길어져서 고민을 했었습니다. 특히나 비즈니스 로직과 레포지토리 코드가 혼재 해 있었고, 그 부분에서 하나의 핸들러가 호출하는 로직에서 서비스.. 레포지토리.. 이렇게 다양한 계층을 따라 로직이 퍼져있었습니다.
-예를 들면, 레포지토리에서는 데이터 베이스 (혹은 자료 저장소) 에 관해서 어떤 정보가 저장되어 있어야하는지
-그래서 해당 부분을 리팩토링을 시도했으나, 오히려 팀의 성장에 방해가 되었습니다. 그 부분에 있어서는 조금 더 깔끔한 코드와 프로토콜을 만들고자 하는 욕심 이 1순위로 작용했던 것이 아닐까 하고 회고하면서 판단해봅니다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-21 12:34:38 +0900 KST'>December 21, 2024</span>&nbsp;·&nbsp;22 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to 협업을 위한 더러운 코드" href="https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이
     </h2>
   </header>
@@ -196,7 +181,7 @@
     <p>❕ 문제 상황 Nest.js 를 배우다가 데이터베이스를 사용할 일이 생겼다.
 보통 나는 환경이 분리되는 걸 선호한다. 그래서 전역적으로 설치되는걸 좋아하지 않는다. pip 같은 것들 말이다.
 그래서 찾아보니, Docker 위에 MySQL 컨테이너를 올려서 사용하면 환경 분리가 된다고 하더라.
-![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]] Docker 로고
+![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]
 도커와 관련해서는 CLI 환경에서 결국엔 다루는게 맞다고 생각했다. 그런데, 일단은 도커가 처음이기에 아직 내가 많이 몰라서 Docker Desktop 을 이용해서 문제를 해결하려고 한다.
 MySQL 에 접속이 안되는 문제 mysql -u root -p&#39;root&#39; -h 172.17.0.2 mysql: [Warning] Using a password on the command line interface can be insecure. ERROR 2003 (HY000): Can&#39;t connect to MySQL server on &#39;172.17.0.2:3306&#39; (60) 위와 같이, root 계정으로 직접적으로 접속하려고 했었다. 그런데, mysql 클라이언트 단에서 서버로 연결을 하지 못하는 상황이었다.
 ...</p>
@@ -229,24 +214,40 @@ Express 를 배우고, 보다 좀 더 정형화된 형식이 필요함을 느꼈
     </h2>
   </header>
   <div class="entry-content">
-    <p> [!tip] 읽기 전 중요 사항
-적다보니 부스트캠프의 보안과 관련된 이슈가 있을 수 있습니다.
-향 후 문제가 될 경우 해당 글이 내려갈 수 있습니다.
-부스트캠프 멤버십에 합격하다. 스스로에게 부실하고 아쉬울게 많았던 챌린지 챌린지는 정말로 배울 기회가 많았고, 값진 기회였다. (챌린지 자체가 아쉽단게 절대 아니다.)
+    <p>부스트캠프 멤버십에 합격하다. 스스로에게 부실하고 아쉬울게 많았던 챌린지 챌린지는 정말로 배울 기회가 많았고, 값진 기회였다. (챌린지 자체가 아쉽단게 절대 아니다.)
 사실 한달은 긴 기간이지만, 배우고 실천하기에 있어서는 너무나 짧은 기간이다.
 어느 누가 부트캠프를 통해 한달 과정을 통해 모든 걸 마스터할 수 있다고 하겠는가.
 그것은 나에게도 마찬가지였다.
+솔직히 말해서 모든 주차별로 회고를 썼어야 했는데 다 쓰지 못해서 아쉬움이 많이 남았다. 그만큼 내가 여태 뼈저리게 느끼지 못했던 학구열과 실천을 하지 못했던 게으름에 대한 성장통 이라고 생각한다.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-10-24 11:52:14 +0900 KST'>October 24, 2024</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to 지속 가능한 개발자란 무엇일까? - 학습 스프린트 회고" href="https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[Nest.js] Nest.js 에서의 DTO
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>DTO 란? 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.
+여기에 더 나아가서, DTO란, 네트워크 를 통해 전송되는 방법 또한 정의할 수 있다.
+말 그대로 데이터 전송 객체이다.
+Nest.js 에서의 DTO Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으며, interface 로도 가능하다.
+그 이유는 class 는 interface 와 달리, 런타임 내에 정의 되어 있기 때문에 pipe 등의 기능도 활용 가능하다고 한다.
+이는 반대로 얘기하면, 굳이 상태를 보존할 이유가 없다면 인터페이스를 쓰는게 낫다는 뜻으로도 해석할 수 있겠다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-23 18:46:23 +0900 KST'>October 23, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [Nest.js] Nest.js 에서의 DTO" href="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.moozeh.org/posts/page/4/">
-      «&nbsp;Prev&nbsp;4/11
+      «&nbsp;Prev&nbsp;4/10
     </a>
-    <a class="next" href="https://blog.moozeh.org/posts/page/6/">Next&nbsp;6/11&nbsp;»
+    <a class="next" href="https://blog.moozeh.org/posts/page/6/">Next&nbsp;6/10&nbsp;»
     </a>
   </nav>
 </footer>

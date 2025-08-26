@@ -36,20 +36,6 @@
       <description></description>
     </item>
     <item>
-      <title>Life</title>
-      <link>https://blog.moozeh.org/tags/life/</link>
-      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
-      <guid>https://blog.moozeh.org/tags/life/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reminder</title>
-      <link>https://blog.moozeh.org/tags/reminder/</link>
-      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
-      <guid>https://blog.moozeh.org/tags/reminder/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Backend</title>
       <link>https://blog.moozeh.org/tags/backend/</link>
       <pubDate>Fri, 31 Jan 2025 22:39:35 +0900</pubDate>
@@ -187,6 +173,13 @@
       <link>https://blog.moozeh.org/tags/network/</link>
       <pubDate>Sat, 26 Oct 2024 14:58:10 +0900</pubDate>
       <guid>https://blog.moozeh.org/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://blog.moozeh.org/tags/life/</link>
+      <pubDate>Thu, 24 Oct 2024 11:52:14 +0900</pubDate>
+      <guid>https://blog.moozeh.org/tags/life/</guid>
       <description></description>
     </item>
   </channel>

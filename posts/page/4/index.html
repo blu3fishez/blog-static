@@ -160,30 +160,15 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">2024년 회고
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>2024년은 나에게 있어 밖으로 나가는 문 을 연 것 같은 느낌이다.
-프로그래밍에 있어서 당연히 나 혼자라도 열심히 개발해보고 공부해보는 것은 좋지만, 여러 사람들과 함께 해보며 특히 협업하는 것과는 확실히 다르다는 걸 인지하게 해준 한 해 같다.
-여러 사람을 만나고 사람과 제대로된 커뮤니케이션을 통해서 나 스스로 부족한 점을 많이 찾았기도 했고, 반대로 다른 분들에게 긍정적 영향을 끼친적도 많았던 것 같다. 소중한 동료들을 만나서 네트워킹하고 있다.
-처음 해본 캡스톤 프로젝트, 다사다난 했던 1학기 나에게 있어 2024년은 협업과 커뮤니케이션에 대해 한 발짝 앞서나간 정말 뜻깊은 해라고 생각한다. 사실 2022년부터 좋지 못한 나날들을 보냈었는데, 3학년 1학기 시절에 처음으로 제대로 된 팀프로젝트 (그 이전에는 무언가 완성품을 내놓는 팀 프로젝트는 하지 않았었다.) 를 해보게 되었고, 내가 상당히 협업에 있어서 부족하구나 라는 걸 조금 느꼈던 경험이었다고 생각한다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-05 00:00:00 +0000 UTC'>January 5, 2025</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to 2024년 회고" href="https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">명세서를 현명하게 바꾸려면
     </h2>
   </header>
   <div class="entry-content">
-    <p>![[Pasted image 20241229134612.webp]] 저희 그래도… 친하죠?
+    <p>![[Pasted image 20241229134612.webp]]
 문제 상황 웹소켓의 이벤트 명세를 바꾸게 되었는데, 프론트 - 백 간의 연동 과정에서 엄청난 실수를 저지르고 말았습니다. 바로 반환되는 데이터를 바꿔버린 것입니다.
 반환되는 데이터만 바뀌면, 그냥 알려주면 되는 것 아닌가? 라는 생각이 드실 수 있습니다. 그런데 문제는, 반환되는 데이터의 기준 을 바꿔버렸던 것입니다.
 API를 정의할때 입력 과 출력 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.
+“바뀐 명세를 확인해주세요!” 라고 말하고 너무 프론트 분에게 맡겼던 것이 큰 실책이었던 것입니다. 바뀐 명세가 제대로 작동되지 않거나, 충분히 설명되지 않았습니다. 글을 쓰는 것이 많이 어려웠는데, 계속된 문서화랑 코딩으로 인해 체력이 바닥이 나서 제대로 글을 못쓴 것도 원인 같습니다. 이런 상황에서도 문서를 잘 쓸 수 있어야 개발자일까.. 고민하게 됐습니다.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-12-29 13:42:48 +0900 KST'>December 29, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;moozeh</footer>
@@ -234,12 +219,27 @@ URI 설정을 잠깐 바꾸었다가 OAuth 요청을 보냈는데, 해당 오류
   <footer class="entry-footer"><span title='2024-12-21 12:36:32 +0900 KST'>December 21, 2024</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to Custom Passport 로 Github OAuth 로직을 직접 구현하기" href="https://blog.moozeh.org/posts/2024/2024-12-21-custom-passport-%EB%A1%9C-github-oauth-%EB%A1%9C%EC%A7%81%EC%9D%84-%EC%A7%81%EC%A0%91-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">협업을 위한 더러운 코드
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>문제 상황 스터디 세션을 리팩토링 과정에서 코드가 길어져서 고민을 했었습니다. 특히나 비즈니스 로직과 레포지토리 코드가 혼재 해 있었고, 그 부분에서 하나의 핸들러가 호출하는 로직에서 서비스.. 레포지토리.. 이렇게 다양한 계층을 따라 로직이 퍼져있었습니다.
+예를 들면, 레포지토리에서는 데이터 베이스 (혹은 자료 저장소) 에 관해서 어떤 정보가 저장되어 있어야하는지
+그래서 해당 부분을 리팩토링을 시도했으나, 오히려 팀의 성장에 방해가 되었습니다. 그 부분에 있어서는 조금 더 깔끔한 코드와 프로토콜을 만들고자 하는 욕심 이 1순위로 작용했던 것이 아닐까 하고 회고하면서 판단해봅니다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-21 12:34:38 +0900 KST'>December 21, 2024</span>&nbsp;·&nbsp;22 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to 협업을 위한 더러운 코드" href="https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.moozeh.org/posts/page/3/">
-      «&nbsp;Prev&nbsp;3/11
+      «&nbsp;Prev&nbsp;3/10
     </a>
-    <a class="next" href="https://blog.moozeh.org/posts/page/5/">Next&nbsp;5/11&nbsp;»
+    <a class="next" href="https://blog.moozeh.org/posts/page/5/">Next&nbsp;5/10&nbsp;»
     </a>
   </nav>
 </footer>

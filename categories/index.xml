@@ -29,13 +29,6 @@
       <description></description>
     </item>
     <item>
-      <title>Life</title>
-      <link>https://blog.moozeh.org/categories/life/</link>
-      <pubDate>Sun, 02 Feb 2025 11:18:37 +0900</pubDate>
-      <guid>https://blog.moozeh.org/categories/life/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>HTML</title>
       <link>https://blog.moozeh.org/categories/html/</link>
       <pubDate>Sat, 25 Jan 2025 19:06:26 +0900</pubDate>
@@ -54,6 +47,13 @@
       <link>https://blog.moozeh.org/categories/java/</link>
       <pubDate>Fri, 24 Jan 2025 19:31:37 +0900</pubDate>
       <guid>https://blog.moozeh.org/categories/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://blog.moozeh.org/categories/life/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/categories/life/</guid>
       <description></description>
     </item>
     <item>
