@@ -147,6 +147,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>소스코드 #include&lt;iostream&gt; #include&lt;algorithm&gt; #include&lt;cstring&gt; #include&lt;queue&gt; using namespace std; int n, m; int r, g; int board[52][52]; // 맵 vector&lt;pair&lt;int, int&gt;&gt; able_list; // 배양액 뿌릴 수 있는 땅 정보 int dir[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} }; int flowers; // 꽃의 개수 void bfs(vector&lt;pair&lt;int, int&gt;&gt;&amp; gv, vector&lt;pair&lt;int, int&gt;&gt;&amp; rv) { int visit[52][52] = { 0, }; // 빨간색 -t 값. 초록색 t 값으로 시간을 표현. 1초부터 시작. 0이면 닿지않은 경우임. int f = 0; // 현재 꽃 queue&lt;pair&lt;int, pair&lt;int, int&gt;&gt;&gt; q; // bfs q for (auto t : gv) { visit[t.first][t.second] = -1; q.push({ -1, t }); } for (auto t : rv) { visit[t.first][t.second] = 1; q.push({ 1, t }); } while (!q.empty()) { int time = q.front().first; pair&lt;int, int&gt; node = q.front().second; q.pop(); int y = node.first; int x = node.second; if (visit[y][x] == 9999) continue; // 꽃은 퍼지지 않음. visit[y][x] = time; if (time &gt; 0) time&#43;&#43;; else time--; for (int i = 0; i &lt; 4; &#43;&#43;i) { int dy = y &#43; dir[i][0]; int dx = x &#43; dir[i][1]; if (visit[dy][dx] &#43; time == 0) { visit[dy][dx] = 9999; f&#43;&#43;; continue; } if (board[dy][dx] &amp;&amp; visit[dy][dx] == 0) { q.push({ time, {dy, dx} }); visit[dy][dx] = time; } } } flowers = flowers &lt; f ? f : flowers; } int main() { ios::sync_with_stdio(0); cin.tie(0); cin &gt;&gt; n &gt;&gt; m &gt;&gt; r &gt;&gt; g; for (int i = 1; i &lt;= n; &#43;&#43;i) { for (int j = 1; j &lt;= m; &#43;&#43;j) { cin &gt;&gt; board[i][j]; if (board[i][j] == 2) { able_list.push_back({ i, j }); } } } vector&lt;int&gt; p; for (int i = 0; i &lt; able_list.size() - r - g; &#43;&#43;i) p.push_back(0); for (int i = 0; i &lt; r; &#43;&#43;i) p.push_back(1); for (int i = 0; i &lt; g; &#43;&#43;i) p.push_back(2); do { vector&lt;pair&lt;int, int&gt;&gt; r_list; vector&lt;pair&lt;int, int&gt;&gt; g_list; for (int i = 0; i &lt; p.size(); &#43;&#43;i) { if (p[i] == 1) r_list.push_back(able_list[i]); if (p[i] == 2) g_list.push_back(able_list[i]); } bfs(g_list, r_list); } while (next_permutation(p.begin(), p.end())); cout &lt;&lt; flowers; } </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-20 00:00:00 +0000 UTC'>October 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이" href="https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">LIS 알고리즘 개념
     </h2>
   </header>
@@ -201,26 +213,12 @@ gh-pages 를 통해 호스팅하는 모든 페이지들은 jekyll 블로그 설�
   <footer class="entry-footer"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to [Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모" href="https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">분리 집합 구현 시 주의 점
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.
-문제를 풀다가 이번에도 같은 방식으로 틀려서 기록하게 되었다.
-parent[t1] = p2; 위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.
-따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.
-int t1 = edges[i - 1].first, t2 = edges[i - 1].second; int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 &lt; p2) { parent[p2] = p1; } else { parent[p1] = p2; } </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to 분리 집합 구현 시 주의 점" href="https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.moozeh.org/page/9/">
-      «&nbsp;Prev&nbsp;9/10
+      «&nbsp;Prev&nbsp;9/11
+    </a>
+    <a class="next" href="https://blog.moozeh.org/page/11/">Next&nbsp;11/11&nbsp;»
     </a>
   </nav>
 </footer>

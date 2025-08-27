@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Retrospect on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/retrospect/</link>
+    <description>Recent content in Retrospect on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/retrospect/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025년 상반기 회고</title>
+      <link>https://blog.moozeh.org/posts/2025%EB%85%84-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</link>
+      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025%EB%85%84-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</guid>
+      <description>&lt;p&gt;![[2025년 상반기 회고-1756309826191.webp]]&lt;/p&gt;
+&lt;p&gt;정말. 많은 일들이 있었다. 2025년 상반기 한학기 짧은 시간과 방학 2달 총 6달동안 많은 것들을 해낸 것 같았지만, 동시에 아쉬운 것들도 많았다.&lt;/p&gt;
+&lt;h2 id=&#34;2025년-상반기-목표-체크리스트&#34;&gt;2025년 상반기 목표 체크리스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 알고리즘 스터디
+&lt;ul&gt;
+&lt;li&gt;경북대학교 알고리즘 동아리 &lt;code&gt;고리&lt;/code&gt; 에 들어가서 다양한 사람들과 네트워크 할 수 있었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 오픽 IH 이상 따기&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 미국 가보기
+&lt;ul&gt;
+&lt;li&gt;학교에서 미국 샌디에이고에 3주 &lt;code&gt;AI&lt;/code&gt; 프로그램을 체험할 수 있었다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ML&lt;/code&gt;, &lt;code&gt;LLM&lt;/code&gt;  지식 등 백엔드 개발 지식 뿐만 아니라 나중에 &lt;code&gt;AI&lt;/code&gt; 기능들을 접목할 때 어떻게 할 수 있을지 배울 수 있었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 자취 생활 잘 해내기
+&lt;ul&gt;
+&lt;li&gt;첫 자취 생활이라 우여곡절이 많았다.&lt;/li&gt;
+&lt;li&gt;자취를 해서 혼자 생활하다보니 우울한 적도 많았다.&lt;/li&gt;
+&lt;li&gt;늦은 나이에 처음 겪는 생활과 사회의 쓴맛을 많이 보았다..&lt;/li&gt;
+&lt;li&gt;그래도 미리 느끼고 큰 문제는 없었어서 다행이라고 생각한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 방학동안 자격증 따기
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sqld&lt;/code&gt; 자격증을 땄다. (일단 시험을 쳤고, 결과는 나중에 … ^^)&lt;/li&gt;
+&lt;li&gt;그리고 미국 가면서 &lt;code&gt;GCP ML Engineer Certificate&lt;/code&gt; 자격증도 땄다!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 학점 4점대 방어하기
+&lt;ul&gt;
+&lt;li&gt;이번 학기 평균 학점은 &lt;code&gt;4/4.3&lt;/code&gt; 으로 총 평점 &lt;code&gt;4.04/4.3&lt;/code&gt; 으로 방어에 성공..!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 도메인 정해서 공부하기
+&lt;ul&gt;
+&lt;li&gt;백엔드 개발자로 바꾸었는데, 생각보다 잘 되지 않았음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 학교 선배님들과 네트워킹하기
+&lt;ul&gt;
+&lt;li&gt;적극적으로 참여해서 많은 좋은 분들과 네트워킹을 했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 해달 해커톤 결과물 적극 활용하기
+&lt;ul&gt;
+&lt;li&gt;생각보다 결과물이 좋지 않았어서 어떻게 활용할지 고민해보기로 했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qi-ai-프로그램&#34;&gt;QI AI 프로그램&lt;/h2&gt;
+&lt;p&gt;이번에 무려 &lt;code&gt;UC San Diego&lt;/code&gt;의  하위 연구기관 &lt;code&gt;Qualcomm Institute&lt;/code&gt; 연구소에서 진행하는 &lt;code&gt;AI Entrepreneurship&lt;/code&gt; 프로그램에 참여할 수 있었다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

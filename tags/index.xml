@@ -12,8 +12,15 @@
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
     <copyright>moozeh</copyright>
-    <lastBuildDate>Fri, 07 Mar 2025 17:00:36 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.moozeh.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retrospect</title>
+      <link>https://blog.moozeh.org/tags/retrospect/</link>
+      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/tags/retrospect/</guid>
+      <description></description>
+    </item>
     <item>
       <title>JPA</title>
       <link>https://blog.moozeh.org/tags/jpa/</link>
