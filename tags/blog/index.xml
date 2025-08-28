@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/blog/</link>
+    <description>Recent content in Blog on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[블로그 개선] Hugo 블로그를 만들어보았습니다</title>
+      <link>https://blog.moozeh.org/posts/2025/20250824-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025/20250824-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</guid>
+      <description>&lt;p&gt;2025학년도 1학기를 보내면서 글을 쓸 기회가 많이 없어졌었습니다. 사실 자잘하게 글을 쓰고 문서를 하는 일은 많이 했으나, 실제로 &lt;code&gt;완벽한 블로그 글을 작성해야한다.&lt;/code&gt; 라는 머릿속의 집착 때문에 글을 쓰는 것이 두려워 진것도 사실입니다.&lt;/p&gt;
+&lt;p&gt;더군다나 불편한 점도 많이 느끼고 있었는데, 이에 블로그 작성 방법을 개선해서 프로젝트(끝이 나는 작업)이 끝나게 되면 자연스럽게 블로그 글도 쓸 수 있도록 환경을 조성하려고 하였고, 그러다보니 블로그 구조를 개선하게 되었습니다.&lt;/p&gt;
+&lt;h2 id=&#34;블로그-개선-이유&#34;&gt;블로그 개선 이유&lt;/h2&gt;
+&lt;h3 id=&#34;1-블로그-빌드-속도-개선&#34;&gt;1. 블로그 빌드 속도 개선&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ruby&lt;/code&gt; 언어로 만들어진 지킬은 &lt;code&gt;Go&lt;/code&gt; 언어로 만들어졌습니다. 그러다보니 &lt;code&gt;Ruby&lt;/code&gt; 를 위한 의존성 설치와 세팅 시간이 많이 잡아먹게 되고, 최종적으로 빌드 시 1분이 걸리는 불상사가 일어납니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>깃허브 페이지에서 _next/ 폴더에 접근할 수 없는 경우</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-12-nojekyll/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-12-nojekyll/</guid>
+      <description>.nojekyll 설정하기</description>
+    </item>
+    <item>
+      <title>[Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모</title>
+      <link>https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/</guid>
+      <description>이미지 가져오기, 동적 라우팅, 페이지 타이틀 변경 등</description>
+    </item>
+  </channel>
+</rss>

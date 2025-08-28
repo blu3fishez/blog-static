@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ERD on blog.moozeh</title>
-    <link>https://blog.moozeh.org/tags/erd/</link>
+    <link>http://localhost:1313/tags/erd/</link>
     <description>Recent content in ERD on blog.moozeh</description>
     <image>
       <title>blog.moozeh</title>
-      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
-      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
     <copyright>moozeh</copyright>
     <lastBuildDate>Sat, 25 Jan 2025 15:20:14 +0900</lastBuildDate>
-    <atom:link href="https://blog.moozeh.org/tags/erd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/erd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ERD 슈퍼타입-서브타입 관계에 대해서 알아보자</title>
-      <link>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <link>http://localhost:1313/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
       <pubDate>Sat, 25 Jan 2025 15:20:14 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <guid>http://localhost:1313/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;네이버 부스트캠프 9기 가 끝난 후, 안드로이드 팀의 그룹프로젝트 &lt;code&gt;Porring&lt;/code&gt; 에 리팩토링 프로젝트에 참여하여 백엔드로 참여하면서 생긴 일이다.&lt;/p&gt;
 &lt;h2 id=&#34;슈퍼타입---서브타입-관계란&#34;&gt;슈퍼타입 - 서브타입 관계란?&lt;/h2&gt;

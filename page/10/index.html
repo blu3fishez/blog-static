@@ -147,6 +147,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">[ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>next_permutation() 이란? 알고리즘을 하다보면 저희가 모든 경우의 수를 뽑아서 봐야할 때가 있습니다. 물론 이런 경우는 사실 대부분 재귀함수를 사용하다보면 해결이 되는 경우가 많습니다.
+하지만 재귀를 통한 경우의 수 추출의 경우, 모든 경우의 수의 처리를 위해서는 해당 함수 호출스택 내에서 외부 변수에 모두 모아놓거나, 각각의 경우의 수가 완성된 경우의 함수 스택 상태 위에서 작업을 실행해야 모든 경우의 수에 대한 대응이 가능합니다.
+간단한 처리의 경우는 상관 없지만, 스택 오버플로우 와 같은 오류를 내고 싶지 않은 상황이거나 재귀 함수를 사용 하는 것에 대해 약간 민감한 상황이라면, next_permutation 을 사용하는 것이 좋다고 생각합니다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-21 00:00:00 +0000 UTC'>October 21, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;moozeh</footer>
+  <a class="entry-link" aria-label="post link to [ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기" href="https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이
     </h2>
   </header>
@@ -197,21 +212,6 @@ gh-pages 를 통해 호스팅하는 모든 페이지들은 jekyll 블로그 설�
   </div>
   <footer class="entry-footer"><span title='2023-10-12 00:00:00 +0000 UTC'>October 12, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh</footer>
   <a class="entry-link" aria-label="post link to 깃허브 페이지에서 _next/ 폴더에 접근할 수 없는 경우" href="https://blog.moozeh.org/posts/2023/2023-10-12-nojekyll/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>이미지 가져오기 이미지를 가져오는 건 리액트처럼 그냥 해당 프로젝트 내에서도 가져올 수 있는데 문제는 asset들은 모두 public 폴더 를 root로 하기 때문에 해당 폴더 내에만 배치를 해야한다.
-본 문서들도 모두 public 에 배치된 이유가 그렇기 때문이다.
-동적 라우팅 동적 라우팅은 app router 에서는 이전 레거시 버전처럼 폴더 이름의 양 끝을 대괄호로 감싼 다음, 그 안의 page.ts 에서 params 라는 속성을 받게 만든다면 알아서 서버 컴포넌트에서 params 에 폴더 이름에 대응하는 값을 params 에 해당 폴더 이름으로 속성으로 넣어준다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;moozeh</footer>
-  <a class="entry-link" aria-label="post link to [Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모" href="https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

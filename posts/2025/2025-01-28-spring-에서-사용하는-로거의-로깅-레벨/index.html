@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[Spring] Spring 에서 사용하는 로거의 로깅 레벨 | blog.moozeh</title>
+<meta name="keywords" content="Spring">
+<meta name="description" content="스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.
+
+각 로그 단계
+각 로그 단계는 아래와 같이 구성되어 있다.
+
+trace
+debug
+info
+warning
+error
+off
+
+위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.
+스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.
+logging.level.org.springframework=trace
+trace
+모든 로그를 출력한다.
+따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.
+하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.">
+<meta name="author" content="moozeh">
+<link rel="canonical" href="https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/">
+  <meta property="og:site_name" content="blog.moozeh">
+  <meta property="og:title" content="[Spring] Spring 에서 사용하는 로거의 로깅 레벨">
+  <meta property="og:description" content="스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.
+각 로그 단계 각 로그 단계는 아래와 같이 구성되어 있다.
+trace debug info warning error off 위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.
+스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.
+logging.level.org.springframework=trace trace 모든 로그를 출력한다.
+따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.
+하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-28T16:33:03+09:00">
+    <meta property="article:modified_time" content="2025-01-28T16:33:03+09:00">
+    <meta property="article:tag" content="Spring">
+      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:title" content="[Spring] Spring 에서 사용하는 로거의 로깅 레벨">
+<meta name="twitter:description" content="스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.
+
+각 로그 단계
+각 로그 단계는 아래와 같이 구성되어 있다.
+
+trace
+debug
+info
+warning
+error
+off
+
+위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.
+스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.
+logging.level.org.springframework=trace
+trace
+모든 로그를 출력한다.
+따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.
+하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.moozeh.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[Spring] Spring 에서 사용하는 로거의 로깅 레벨",
+      "item": "https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[Spring] Spring 에서 사용하는 로거의 로깅 레벨",
+  "name": "[Spring] Spring 에서 사용하는 로거의 로깅 레벨",
+  "description": "스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.\n각 로그 단계 각 로그 단계는 아래와 같이 구성되어 있다.\ntrace debug info warning error off 위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.\n스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.\nlogging.level.org.springframework=trace trace 모든 로그를 출력한다.\n따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.\n하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.\n",
+  "keywords": [
+    "Spring"
+  ],
+  "articleBody": "스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.\n각 로그 단계 각 로그 단계는 아래와 같이 구성되어 있다.\ntrace debug info warning error off 위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.\n스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.\nlogging.level.org.springframework=trace trace 모든 로그를 출력한다.\n따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.\n하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.\n프로덕트를 개발하는데 있어서 구체적인 문제해결이 필요할 경우 사용하자.\ndebug debug 단계의 로그와 아래 info, warning, error 단계의 에러의 차이점은 무엇인가?\ndebug는 오류가 없더라도, 상세한 내부동작을 추적하고 문제를 해결하기 위해 출력되는 로그 정보들을 해당 레벨로 출력하게 한다.\n따라서, debug 단계의 로깅 레벨에선 왠만한 내용을 출력한다고 보면 되고, 일반적인 개발환경에서는 debug로 설정하게 된다.\ninfo 일반적인 로그 정보를 출력하며, warning, error 의 경우도 출력하게 된다. 따라서 일반적인 프로덕션 환경에서는 해당 레벨로 사용하게 된다.\nwarning 프로그램에 심각한 문제는 주지 않지만, 말 그대로 경고하는 로그들을 출력하는 레벨이다. warning 또한 하위 단계의 로그 내용을 포함하게 된다. warning, error 단계 로그들을 출력하게 된다.\nerror 프로그램을 돌아가는데 있어서 말 그대로 오류가 일어났을 때 출력되는 로그 단계이다.\noff 말 그대로 로깅을 하지 않는다!\n",
+  "wordCount" : "187",
+  "inLanguage": "en",
+  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2025-01-28T16:33:03+09:00",
+  "dateModified": "2025-01-28T16:33:03+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "moozeh"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "blog.moozeh",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.moozeh.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      [Spring] Spring 에서 사용하는 로거의 로깅 레벨
+    </h1>
+    <div class="post-meta"><span title='2025-01-28 16:33:03 +0900 KST'>January 28, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%ea%b0%81-%eb%a1%9c%ea%b7%b8-%eb%8b%a8%ea%b3%84" aria-label="각 로그 단계">각 로그 단계</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#trace" aria-label="trace">trace</a></li>
+                <li>
+                    <a href="#debug" aria-label="debug">debug</a></li>
+                <li>
+                    <a href="#info" aria-label="info">info</a></li>
+                <li>
+                    <a href="#warning" aria-label="warning">warning</a></li>
+                <li>
+                    <a href="#error" aria-label="error">error</a></li>
+                <li>
+                    <a href="#off" aria-label="off">off</a>
+                </li>
+            </ul>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+<div class="post-content"><p>스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.</p>
+<!-- more -->
+<h2 id="각-로그-단계">각 로그 단계<a hidden class="anchor" aria-hidden="true" href="#각-로그-단계">#</a></h2>
+<p>각 로그 단계는 아래와 같이 구성되어 있다.</p>
+<ul>
+<li>trace</li>
+<li>debug</li>
+<li>info</li>
+<li>warning</li>
+<li>error</li>
+<li>off</li>
+</ul>
+<p>위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.</p>
+<p>스프링에서는 해당 로그 단계를 출력 설정하려면, <code>application.properties</code> 에 아래와 같이 설정값을 추가한다.</p>
+<pre tabindex="0"><code>logging.level.org.springframework=trace
+</code></pre><h4 id="trace">trace<a hidden class="anchor" aria-hidden="true" href="#trace">#</a></h4>
+<p>모든 로그를 출력한다.</p>
+<p>따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.</p>
+<p>하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.</p>
+<p>프로덕트를 개발하는데 있어서 구체적인 문제해결이 필요할 경우 사용하자.</p>
+<h4 id="debug">debug<a hidden class="anchor" aria-hidden="true" href="#debug">#</a></h4>
+<p>debug 단계의 로그와 아래 info, warning, error 단계의 에러의 차이점은 무엇인가?</p>
+<p>debug는 오류가 없더라도, 상세한 내부동작을 추적하고 <strong>문제를 해결하기 위해 출력되는 로그 정보</strong>들을 해당 레벨로 출력하게 한다.</p>
+<p>따라서, debug 단계의 로깅 레벨에선 왠만한 내용을 출력한다고 보면 되고, 일반적인 개발환경에서는 debug로 설정하게 된다.</p>
+<h4 id="info">info<a hidden class="anchor" aria-hidden="true" href="#info">#</a></h4>
+<p>일반적인 로그 정보를 출력하며, warning, error 의 경우도 출력하게 된다. 따라서 일반적인 프로덕션 환경에서는 해당 레벨로 사용하게 된다.</p>
+<h4 id="warning">warning<a hidden class="anchor" aria-hidden="true" href="#warning">#</a></h4>
+<p>프로그램에 심각한 문제는 주지 않지만, 말 그대로 경고하는 로그들을 출력하는 레벨이다. warning 또한 하위 단계의 로그 내용을 포함하게 된다. warning, error 단계 로그들을 출력하게 된다.</p>
+<h4 id="error">error<a hidden class="anchor" aria-hidden="true" href="#error">#</a></h4>
+<p>프로그램을 돌아가는데 있어서 말 그대로 오류가 일어났을 때 출력되는 로그 단계이다.</p>
+<h4 id="off">off<a hidden class="anchor" aria-hidden="true" href="#off">#</a></h4>
+<p>말 그대로 로깅을 하지 않는다!</p>
+
+
+    </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.moozeh.org/tags/spring/">Spring</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://blog.moozeh.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>[Spring] Spring JDBC의 특징</span>
+  </a>
+  <a class="next" href="https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/">
+    <span class="title">Next »</span>
+    <br>
+    <span>몰랐던 HTML p 태그에 대한 사실</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

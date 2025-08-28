@@ -16,9 +16,9 @@
     <atom:link href="https://blog.moozeh.org/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>몰랐던 HTML p 태그에 대한 사실</title>
-      <link>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
       <pubDate>Sat, 25 Jan 2025 19:06:26 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;&lt;code&gt;Docusaurus&lt;/code&gt; 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.&lt;/p&gt;
 &lt;p&gt;![[Pasted image 20250125190702.png]]&lt;/p&gt;

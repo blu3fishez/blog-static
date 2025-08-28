@@ -31,5 +31,31 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 ERROR 2003 (HY000): Can&amp;#39;t connect to MySQL server on &amp;#39;172.17.0.2:3306&amp;#39; (60)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;위와 같이, &lt;code&gt;root&lt;/code&gt; 계정으로 직접적으로 접속하려고 했었다. 그런데, &lt;code&gt;mysql&lt;/code&gt; 클라이언트 단에서 서버로 연결을 하지 못하는 상황이었다.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/</link>
+      <pubDate>Sun, 06 Oct 2024 21:57:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/</guid>
+      <description>&lt;h2 id=&#34;http-그-다음은&#34;&gt;🧵 HTTP, 그 다음은?&lt;/h2&gt;
+&lt;p&gt;HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으로 소통한다고 깨달았습니다.&lt;/p&gt;
+&lt;p&gt;무언가 특수한 포맷팅을 이용해서..? 바이너리로 인코딩하여 전송할 줄 알았는데 문자였던 것이지요..&lt;/p&gt;
+&lt;p&gt;그래서 이렇게 간단하게 문자열로 소통하니, 보안에 정말로 취약할 수 밖에 없음을 또 인지할 수 밖에 없었습니다. 역시 무언가를 사용할 때에는 보안을 의식할 수 밖에 없습니다.&lt;/p&gt;
+&lt;p&gt;그래서 우리가 흔하게 사용하지만, 당연하다고 여기는 HTTPS 에 대해 더 공부를 하게 되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;https-프로토콜&#34;&gt;HTTPS 프로토콜&lt;/h3&gt;
+&lt;p&gt;그럼 HTTPS란 뭘까요?&lt;/p&gt;
+&lt;p&gt;HTTP + S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니다. 우리가 C언어에서 MSVC 에서 사용할 수 있는 scanf_s 와 같은 s 처럼 보안을 의식하여 보안 계층을 한층 더 감싼 HTTP 통신이라고 생각하면 됩니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>API의 응답 바디는 커도 좋을까
+</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-09-01-api-response/</link>
+      <pubDate>Sun, 01 Sep 2024 23:30:00 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-09-01-api-response/</guid>
+      <description>&lt;h2 id=&#34;서론--api-설계-시-든-의문&#34;&gt;서론 : API 설계 시 든 의문&lt;/h2&gt;
+&lt;p&gt;API 응답과 요청 과정에서의 오버헤드는 얼마나 성능에 영향을 끼칠까요?&lt;/p&gt;
+&lt;p&gt;예를 들어 여러 카테고리 열에 담긴 카드 정보를 불러오는 API를 작성해야할 때가 있었는데, 저는 전체 데이터를 한번에 가져오는게 아니라, 열의 인덱스 번호를 URL에 담아서 보내고, 해당 열에 대응하는 카드들을 가져오는 API 로 설계를 했었습니다.&lt;/p&gt;
+&lt;p&gt;이렇게 설계를 했던 이유는 사실 REST 원칙에서 &amp;ldquo;API 계층적으로 구성해야한다&amp;quot;는 원칙에 따라 구성을 하였기 때문입니다. 사실 카드 인덱싱을 하는데 있어서 계층적으로 구성하려면 URL 파라미터를 &lt;code&gt;/columns/cards&lt;/code&gt; 이런식으로 불러오도록 만드는게 좋지 않았을까 하는 생각이 듭니다.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

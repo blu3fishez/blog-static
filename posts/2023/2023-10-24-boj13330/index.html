@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>[ 백준 13330 ] 유사 팰린드롬 : C&#43;&#43; 풀이 | blog.moozeh</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="ps">
 <meta name="description" content="소스코드만 있습니다.">
 <meta name="author" content="moozeh">
 <link rel="canonical" href="https://blog.moozeh.org/posts/2023/2023-10-24-boj13330/">
@@ -64,6 +64,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-10-24T00:00:00+00:00">
     <meta property="article:modified_time" content="2023-10-24T00:00:00+00:00">
+    <meta property="article:tag" content="Ps">
       <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
@@ -99,7 +100,7 @@
   "name": "[ 백준 13330 ] 유사 팰린드롬 : C\u002b\u002b 풀이",
   "description": "소스코드만 있습니다.",
   "keywords": [
-    
+    "ps"
   ],
   "articleBody": "소스 코드 #include using namespace std; int n, k, l; string input; int u[10001][10001]; int dp[10001]; // 유사 펠린드롬의 여부 = 1 이상이면 해당, 또 1 이상인 값이 여러개 일 경우 가장 적은 값 입니다. int getU(int s, int e) { if (s \u003e= e) return 0; if (u[s][e]) return u[s][e]; if (input[s] != input[e]) return 0; return u[s][e] = 1 + getU(s + 1, e - 1); } bool is_theta(int s, int e) { if (s == e) return false; int len = e - s + 1; int v_len = getU(s, e); if (k*len \u003c= 2 * v_len * l) return true; return false; } int main() { cin \u003e\u003e n \u003e\u003e k \u003e\u003e l \u003e\u003e input; for (int i = 0; i \u003c n; ++i) { dp[i] = -1; if (is_theta(0, i)) dp[i] = 1; for (int j = 1; j \u003c i; ++j) { // 끝점이 i인 경우를 모두 검색하다보면 dp 값을 한번만 방문할 수 있을 것이다. // 1 ~ j / j + 1 ~ i 이렇게 두개로 나눔. // 더 작은 segment로 나뉠 수 있는 것 아닌가? -\u003e 그 경우는 이미 dp[a][b] : b가 i보다 작은 경우에서 모두 구했음. if (is_theta(j, i) \u0026\u0026 dp[j - 1] \u003e 0) { if (dp[i] \u003e 1 + dp[j - 1] || dp[i] == -1) { dp[i] = dp[j - 1] + 1; } } } } cout \u003c\u003c ((dp[n - 1] == -1) ? 0 : dp[n - 1]); } ",
   "wordCount" : "243",
@@ -268,6 +269,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://blog.moozeh.org/tags/ps/">Ps</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/">

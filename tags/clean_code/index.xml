@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Clean_code on blog.moozeh</title>
+    <link>https://blog.moozeh.org/tags/clean_code/</link>
+    <description>Recent content in Clean_code on blog.moozeh</description>
+    <image>
+      <title>blog.moozeh</title>
+      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
+      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <copyright>moozeh</copyright>
+    <lastBuildDate>Sat, 21 Dec 2024 12:34:38 +0900</lastBuildDate>
+    <atom:link href="https://blog.moozeh.org/tags/clean_code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>협업을 위한 더러운 코드</title>
+      <link>https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/</link>
+      <pubDate>Sat, 21 Dec 2024 12:34:38 +0900</pubDate>
+      <guid>https://blog.moozeh.org/posts/2024/2024-12-21-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%94%EB%9F%AC%EC%9A%B4-%EC%BD%94%EB%93%9C/</guid>
+      <description>&lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;스터디 세션을 리팩토링 과정에서 코드가 길어져서 고민을 했었습니다. 특히나 &lt;code&gt;비즈니스 로직과 레포지토리 코드가 혼재&lt;/code&gt; 해 있었고, 그 부분에서 하나의 핸들러가 호출하는 로직에서 서비스.. 레포지토리.. 이렇게 다양한 계층을 따라 로직이 퍼져있었습니다.&lt;/p&gt;
+&lt;p&gt;예를 들면, 레포지토리에서는 데이터 베이스 (혹은 자료 저장소) 에 관해서 어떤 정보가 저장되어 있어야하는지&lt;/p&gt;
+&lt;p&gt;그래서 해당 부분을 리팩토링을 시도했으나, 오히려 팀의 성장에 방해가 되었습니다. 그 부분에 있어서는 &lt;code&gt;조금 더 깔끔한 코드와 프로토콜을 만들고자 하는 욕심&lt;/code&gt; 이 1순위로 작용했던 것이 아닐까 하고 회고하면서 판단해봅니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

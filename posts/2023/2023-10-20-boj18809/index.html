@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이 | blog.moozeh</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="ps">
 <meta name="description" content="소스코드만 있습니다.">
 <meta name="author" content="moozeh">
 <link rel="canonical" href="https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/">
@@ -64,6 +64,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-10-20T00:00:00+00:00">
     <meta property="article:modified_time" content="2023-10-20T00:00:00+00:00">
+    <meta property="article:tag" content="Ps">
       <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
@@ -99,7 +100,7 @@
   "name": "[ 백준 18809 ] Gaaaaarden : C\u002b\u002b 풀이",
   "description": "소스코드만 있습니다.",
   "keywords": [
-    
+    "ps"
   ],
   "articleBody": "소스코드 #include #include #include #include using namespace std; int n, m; int r, g; int board[52][52]; // 맵 vector\u003cpair\u003cint, int\u003e\u003e able_list; // 배양액 뿌릴 수 있는 땅 정보 int dir[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} }; int flowers; // 꽃의 개수 void bfs(vector\u003cpair\u003cint, int\u003e\u003e\u0026 gv, vector\u003cpair\u003cint, int\u003e\u003e\u0026 rv) { int visit[52][52] = { 0, }; // 빨간색 -t 값. 초록색 t 값으로 시간을 표현. 1초부터 시작. 0이면 닿지않은 경우임. int f = 0; // 현재 꽃 queue\u003cpair\u003cint, pair\u003cint, int\u003e\u003e\u003e q; // bfs q for (auto t : gv) { visit[t.first][t.second] = -1; q.push({ -1, t }); } for (auto t : rv) { visit[t.first][t.second] = 1; q.push({ 1, t }); } while (!q.empty()) { int time = q.front().first; pair\u003cint, int\u003e node = q.front().second; q.pop(); int y = node.first; int x = node.second; if (visit[y][x] == 9999) continue; // 꽃은 퍼지지 않음. visit[y][x] = time; if (time \u003e 0) time++; else time--; for (int i = 0; i \u003c 4; ++i) { int dy = y + dir[i][0]; int dx = x + dir[i][1]; if (visit[dy][dx] + time == 0) { visit[dy][dx] = 9999; f++; continue; } if (board[dy][dx] \u0026\u0026 visit[dy][dx] == 0) { q.push({ time, {dy, dx} }); visit[dy][dx] = time; } } } flowers = flowers \u003c f ? f : flowers; } int main() { ios::sync_with_stdio(0); cin.tie(0); cin \u003e\u003e n \u003e\u003e m \u003e\u003e r \u003e\u003e g; for (int i = 1; i \u003c= n; ++i) { for (int j = 1; j \u003c= m; ++j) { cin \u003e\u003e board[i][j]; if (board[i][j] == 2) { able_list.push_back({ i, j }); } } } vector\u003cint\u003e p; for (int i = 0; i \u003c able_list.size() - r - g; ++i) p.push_back(0); for (int i = 0; i \u003c r; ++i) p.push_back(1); for (int i = 0; i \u003c g; ++i) p.push_back(2); do { vector\u003cpair\u003cint, int\u003e\u003e r_list; vector\u003cpair\u003cint, int\u003e\u003e g_list; for (int i = 0; i \u003c p.size(); ++i) { if (p[i] == 1) r_list.push_back(able_list[i]); if (p[i] == 2) g_list.push_back(able_list[i]); } bfs(g_list, r_list); } while (next_permutation(p.begin(), p.end())); cout \u003c\u003c flowers; } ",
   "wordCount" : "343",
@@ -323,6 +324,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://blog.moozeh.org/tags/ps/">Ps</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/">

@@ -12,13 +12,27 @@
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
     <copyright>moozeh</copyright>
-    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.moozeh.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[오픈소스 기여 도전기] 처음하는데 어떻게 할까</title>
+      <link>https://blog.moozeh.org/posts/2025/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/20250828-%EC%B2%98%EC%9D%8C-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%A0%EA%B9%8C/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.moozeh.org/posts/2025/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/20250828-%EC%B2%98%EC%9D%8C-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%A0%EA%B9%8C/</guid>
+      <description>&lt;h2 id=&#34;계기&#34;&gt;계기&lt;/h2&gt;
+&lt;p&gt;![[오픈소스 기여 도전기 - 처음 하는데 어떻게 할까-1756368209011.webp]]&lt;/p&gt;
+&lt;p&gt;오랜만에 깃헙 프로필을 보았다. 내 소개문구 쪽에 지우긴 했지만, 내가 이전에 올려놓은 소개 문구에서 &amp;lsquo;오픈소스 기여에 관심이 있다&amp;rsquo;고 말해두었었다.&lt;/p&gt;
+&lt;p&gt;빈말이 아니라 정말로 오픈소스 쪽에 기여를 해보면서 &lt;code&gt;커뮤니티&lt;/code&gt; 경험을 쌓고 싶었고, 한번 이제 도전해보려고 한다. 백수(?)가 되기 전에 오픈소스에서라도 취업(?)을 해야하지 않을까?&lt;/p&gt;
+&lt;h2 id=&#34;처음은-아니다&#34;&gt;처음은 아니다&lt;/h2&gt;
+&lt;p&gt;사실 지인의 추천으로 간단하게 리액트의 전화번호 컴포넌트 라이브러리의 한국어 번역을 조금 도와주긴 했다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jackocnr/intl-tel-input&#34;&gt;https://github.com/jackocnr/intl-tel-input&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;![[오픈소스 기여 도전기 &lt;em&gt;1&lt;/em&gt; - 처음 하는데 어떻게 할까-1756367033466.webp]]&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>2025년 상반기 회고</title>
-      <link>https://blog.moozeh.org/posts/2025%EB%85%84-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</link>
+      <link>https://blog.moozeh.org/posts/2025/20250827-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</link>
       <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025%EB%85%84-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/20250827-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</guid>
       <description>&lt;p&gt;![[2025년 상반기 회고-1756309826191.webp]]&lt;/p&gt;
 &lt;p&gt;정말. 많은 일들이 있었다. 2025년 상반기 한학기 짧은 시간과 방학 2달 총 6달동안 많은 것들을 해낸 것 같았지만, 동시에 아쉬운 것들도 많았다.&lt;/p&gt;
 &lt;h2 id=&#34;2025년-상반기-목표-체크리스트&#34;&gt;2025년 상반기 목표 체크리스트&lt;/h2&gt;
@@ -75,9 +89,9 @@
     </item>
     <item>
       <title>[블로그 개선] Hugo 블로그를 만들어보았습니다</title>
-      <link>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</link>
+      <link>https://blog.moozeh.org/posts/2025/20250824-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</link>
       <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/20250824-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A6%AC%EB%89%B4%EC%96%BC%EC%9D%84-%ED%99%98%EC%98%81%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94/</guid>
       <description>&lt;p&gt;2025학년도 1학기를 보내면서 글을 쓸 기회가 많이 없어졌었습니다. 사실 자잘하게 글을 쓰고 문서를 하는 일은 많이 했으나, 실제로 &lt;code&gt;완벽한 블로그 글을 작성해야한다.&lt;/code&gt; 라는 머릿속의 집착 때문에 글을 쓰는 것이 두려워 진것도 사실입니다.&lt;/p&gt;
 &lt;p&gt;더군다나 불편한 점도 많이 느끼고 있었는데, 이에 블로그 작성 방법을 개선해서 프로젝트(끝이 나는 작업)이 끝나게 되면 자연스럽게 블로그 글도 쓸 수 있도록 환경을 조성하려고 하였고, 그러다보니 블로그 구조를 개선하게 되었습니다.&lt;/p&gt;
 &lt;h2 id=&#34;블로그-개선-이유&#34;&gt;블로그 개선 이유&lt;/h2&gt;
@@ -86,9 +100,9 @@
     </item>
     <item>
       <title>[Spring JPA] 영속성 컨텍스트 시리즈 (2) - N:M 관계 엔티티로 풀어내기</title>
-      <link>https://blog.moozeh.org/posts/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</link>
       <pubDate>Fri, 07 Mar 2025 17:00:36 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-03-07-spring-jpa-nm-%EA%B4%80%EA%B3%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0-1-%EC%97%94%ED%8B%B0%ED%8B%B0%EC%97%90-%EA%B1%B8%EB%A6%B0-%EA%B4%80%EA%B3%84-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%ED%92%80%EC%96%B4%EB%82%B4%EA%B8%B0/</guid>
       <description>&lt;p&gt;&lt;code&gt;Porring&lt;/code&gt; 프로젝트를 하면서 다대다 관계를 만들 때 관계에 대한 엔티티를 만들지 말지를 고민했는데, 결국엔 만들었다.&lt;/p&gt;
 &lt;p&gt;왜냐하면, 관계 자체를 검색할 일이 많았으니까 관계가 주를 이룬다고 생각했기 때문에 그렇게 생각했다.&lt;/p&gt;
 &lt;p&gt;하지만 다대다 관계에서는 만들 수도 있고, 만들지 않을 수도 있다. &lt;code&gt;@ManyToMany&lt;/code&gt;  어노테이션을 사용하면 만들 수 있다고 들었다.&lt;/p&gt;
@@ -98,9 +112,9 @@
     </item>
     <item>
       <title>[Spring JPA] 영속성 컨텍스트 시리즈 (1) - 영속성 컨텍스트와 1차 캐시</title>
-      <link>https://blog.moozeh.org/posts/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</link>
       <pubDate>Sat, 22 Feb 2025 16:55:04 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</guid>
       <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
 &lt;p&gt;&lt;code&gt;JOINED&lt;/code&gt; 를 이용해 상속받은 &lt;code&gt;JPA Entity&lt;/code&gt; 는 어떻게 저장될까라는 궁금증으로 시작했다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Repository&lt;/code&gt; 에서 저장 될 때 기본적인 엔티티가 어떻게 저장되는지가 궁금했고, 이왕 알아보는 김에 &lt;code&gt;Hibernate&lt;/code&gt; 에서 정확하게 어떻게 구현이 되었는지 살펴보는 것까지 목표로 한다.&lt;/p&gt;
@@ -111,9 +125,9 @@
     </item>
     <item>
       <title>[Spring JPA] @Embeddable 을 이용한 복합 PK 키 설정하기</title>
-      <link>https://blog.moozeh.org/posts/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Kolown-kr/porring-server/pull/9&#34;&gt;Porring 프로젝트를 진행하면서 엔티티 설정을 마치고,&lt;/a&gt; 복합키에 관한 지적을 받았다.&lt;/p&gt;
 &lt;p&gt;AI를 이용해서 만든 코드인데, 미처 검증하지 못한 부분에 대해서 다시 생각해보게 되었고, 복합 PK 키를 JPA 에서 어떻게 설정하는지 한번 알아보려고 한다.&lt;/p&gt;
 &lt;!-- more --&gt;
@@ -123,9 +137,9 @@
     </item>
     <item>
       <title>[Spring JPA] Converter 는 언제 써야하는가</title>
-      <link>https://blog.moozeh.org/posts/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</link>
       <pubDate>Fri, 07 Feb 2025 00:23:30 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/</guid>
       <description>&lt;p&gt;&lt;code&gt;Type&lt;/code&gt; 을 정의하는 테이블을 정의해서 매핑하는데, Entity 와 ManyToOne을 쓰면 적절하지 않을 것 같았다.&lt;/p&gt;
 &lt;p&gt;ENUM 을 쓰면 적절하지 않을 것 같다는 의견을 검색하다가 보았고, 테이블을 정의해서 ENUM 처럼 쓰는게 좋아보일 것이라 판단했는데, &lt;code&gt;Claude&lt;/code&gt; 로부터 &lt;code&gt;@Converter&lt;/code&gt; 를 써보라는 추천을 받아서 알게 되었고 학습하게 되었다.&lt;/p&gt;
 &lt;!-- more --&gt;
@@ -135,9 +149,9 @@
     </item>
     <item>
       <title>[Spring JPA] 테이블 상속에 관하여</title>
-      <link>https://blog.moozeh.org/posts/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</link>
       <pubDate>Tue, 04 Feb 2025 23:30:34 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</guid>
       <description>&lt;p&gt;&lt;code&gt;Porring&lt;/code&gt; 백엔드를 구현하면서, &lt;code&gt;OAuth&lt;/code&gt; 혹은 네이티브 로그인 계정에 대한 ERD 타입을 &lt;a href=&#34;https://blog.moozeh.org/posts/erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90&#34;&gt;슈퍼타입과 서브타입&lt;/a&gt;으로 정의하였다.&lt;/p&gt;
 &lt;p&gt;데이터베이스 상으로만 봤지만, 실제로 어떻게 구현을 해야할까? 단순 쿼리를 한다면 되겠지만, 복잡한 작업이 될 것이며, 쿼리 중간에 예상치 못한 버그가 있을 수 있다. &lt;code&gt;JPA&lt;/code&gt; 에서는 어떻게 되는지 알아보자!&lt;/p&gt;
 &lt;!-- more --&gt;
@@ -184,9 +198,9 @@
     </item>
     <item>
       <title>[Spring JPA] JPA에 대해 알아보자</title>
-      <link>https://blog.moozeh.org/posts/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
       <pubDate>Fri, 31 Jan 2025 22:39:35 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
       <description>&lt;!-- draft 값을 false 혹은 제거해야 게시됩니다!!! --&gt;
 &lt;p&gt;JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.&lt;/p&gt;
 &lt;!-- more --&gt; 
@@ -198,9 +212,9 @@
     </item>
     <item>
       <title>[Spring] Spring JDBC의 특징</title>
-      <link>https://blog.moozeh.org/posts/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</link>
       <pubDate>Wed, 29 Jan 2025 13:35:24 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;마인크래프트 플러그인을 만들면서 기존 &lt;code&gt;JDBC&lt;/code&gt; 를 썼다. 그런데, &lt;code&gt;Spring JDBC&lt;/code&gt; 와는 무슨 차이일까. 그 차이점을 알아보자.&lt;/p&gt;
 &lt;!-- more --&gt;
@@ -213,9 +227,9 @@
     </item>
     <item>
       <title>[Spring] Spring 에서 사용하는 로거의 로깅 레벨</title>
-      <link>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</link>
       <pubDate>Tue, 28 Jan 2025 16:33:03 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/</guid>
       <description>&lt;p&gt;스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;h2 id=&#34;각-로그-단계&#34;&gt;각 로그 단계&lt;/h2&gt;
@@ -238,9 +252,9 @@
     </item>
     <item>
       <title>몰랐던 HTML p 태그에 대한 사실</title>
-      <link>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</link>
       <pubDate>Sat, 25 Jan 2025 19:06:26 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;&lt;code&gt;Docusaurus&lt;/code&gt; 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.&lt;/p&gt;
 &lt;p&gt;![[Pasted image 20250125190702.png]]&lt;/p&gt;
@@ -253,9 +267,9 @@
     </item>
     <item>
       <title>[Spring] Spring Stereotype 어노테이션들에 대해 알아보자</title>
-      <link>https://blog.moozeh.org/posts/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
       <pubDate>Sat, 25 Jan 2025 16:58:09 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;h2 id=&#34;component&#34;&gt;@Component&lt;/h2&gt;
 &lt;p&gt;기본적으로 스프링의 &lt;code&gt;@Bean&lt;/code&gt; 을 나타내며, 범용적으로 사용된다.&lt;/p&gt;
@@ -280,9 +294,9 @@
     </item>
     <item>
       <title>ERD 슈퍼타입-서브타입 관계에 대해서 알아보자</title>
-      <link>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</link>
       <pubDate>Sat, 25 Jan 2025 15:20:14 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;네이버 부스트캠프 9기 가 끝난 후, 안드로이드 팀의 그룹프로젝트 &lt;code&gt;Porring&lt;/code&gt; 에 리팩토링 프로젝트에 참여하여 백엔드로 참여하면서 생긴 일이다.&lt;/p&gt;
 &lt;h2 id=&#34;슈퍼타입---서브타입-관계란&#34;&gt;슈퍼타입 - 서브타입 관계란?&lt;/h2&gt;
@@ -296,9 +310,9 @@
     </item>
     <item>
       <title>문자열 뒤에 문자를 추가하는 가장 효율적인 방법은</title>
-      <link>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</link>
       <pubDate>Fri, 24 Jan 2025 19:31:37 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/</guid>
       <description>&lt;!-- truncate --&gt;
 &lt;p&gt;현재 &lt;code&gt;Java&lt;/code&gt; 로 코딩테스트 준비를 해보고 있습니다. 2025년의 목표가 아무래도 &lt;code&gt;Java&lt;/code&gt; 와 &lt;code&gt;Spring&lt;/code&gt; 에 대해서 깊게 알아보기 이기 때문에 가벼운 문제가 많은 &lt;code&gt;Leetcode&lt;/code&gt; 문제들을 위주로 한번씩 풀어보고 있습니다.&lt;/p&gt;
 &lt;p&gt;아무래도 &lt;code&gt;Java&lt;/code&gt; 에서는 문자열 처리가 최적화로 인해서 생기는 문제가 많다보니 이번 기회에 &lt;code&gt;String&lt;/code&gt; 에 대해서 깊게 알아볼 생각 입니다.&lt;/p&gt;
@@ -309,9 +323,9 @@
     </item>
     <item>
       <title>[Java] String for-each 순회 방법</title>
-      <link>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</link>
       <pubDate>Sun, 19 Jan 2025 15:22:10 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/</guid>
       <description>&lt;p&gt;Java에서는 스트링 순회를 어떻게 할까?&lt;/p&gt;
 &lt;h2 id=&#34;기존-c-에서의-스트링-순회-방법&#34;&gt;기존 C++ 에서의 스트링 순회 방법&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;C++&lt;/strong&gt; 에서는 &lt;code&gt;char&lt;/code&gt; 형으로 스트링을 순회할 수 있다.&lt;/p&gt;
@@ -327,9 +341,9 @@
     </item>
     <item>
       <title>2024년 회고</title>
-      <link>https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+      <link>https://blog.moozeh.org/posts/2025/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
+      <guid>https://blog.moozeh.org/posts/2025/2025-01-05-2024%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
       <description>&lt;p&gt;2024년은 나에게 있어 &lt;code&gt;밖으로 나가는 문&lt;/code&gt; 을 연 것 같은 느낌이다.&lt;/p&gt;
 &lt;p&gt;프로그래밍에 있어서 당연히 나 혼자라도 열심히 개발해보고 공부해보는 것은 좋지만, 여러 사람들과 함께 해보며 특히 협업하는 것과는 확실히 다르다는 걸 인지하게 해준 한 해 같다.&lt;/p&gt;
 &lt;p&gt;여러 사람을 만나고 사람과 제대로된 커뮤니케이션을 통해서 나 스스로 부족한 점을 많이 찾았기도 했고, 반대로 다른 분들에게 긍정적 영향을 끼친적도 많았던 것 같다. 소중한 동료들을 만나서 네트워킹하고 있다.&lt;/p&gt;
