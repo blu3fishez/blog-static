@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Design_pattern on blog.moozeh</title>
-    <link>https://blog.moozeh.org/tags/design_pattern/</link>
-    <description>Recent content in Design_pattern on blog.moozeh</description>
+    <title>Design_pattern on blog.blu3fishez</title>
+    <link>https://blog.blu3fishez.org/tags/design_pattern/</link>
+    <description>Recent content in Design_pattern on blog.blu3fishez</description>
     <image>
-      <title>blog.moozeh</title>
-      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
-      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+      <title>blog.blu3fishez</title>
+      <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
+      <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <copyright>moozeh</copyright>
+    <copyright>blu3fishez</copyright>
     <lastBuildDate>Sat, 16 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.moozeh.org/tags/design_pattern/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.blu3fishez.org/tags/design_pattern/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Factory Method 패턴 살펴보기</title>
-      <link>https://blog.moozeh.org/posts/2024/2024-03-16-factory-method-pattern/</link>
+      <link>https://blog.blu3fishez.org/posts/2024/2024-03-16-factory-method-pattern/</link>
       <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2024/2024-03-16-factory-method-pattern/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2024/2024-03-16-factory-method-pattern/</guid>
       <description>`react-diagrams` 에서 커스텀 노드를 만들일이 생겨 커스텀 노드 패턴을 알아보던중 엥? Factory? 리액트에선 분명 deprecated 됐을텐데… 뭔가 이상하다 싶어서 알아보았고, 리액트의 그것을 사용하는게 아닌 정말로 디자인 패턴이라는 것을 알게 되었다.</description>
     </item>
   </channel>

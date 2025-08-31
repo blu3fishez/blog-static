@@ -5,20 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>분리 집합 구현 시 주의 점 | blog.moozeh</title>
+<title>분리 집합 구현 시 주의 점 | blog.blu3fishez</title>
 <meta name="keywords" content="ps, algorithm">
 <meta name="description" content="분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.">
-<meta name="author" content="moozeh">
-<link rel="canonical" href="https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/">
+<meta name="author" content="blu3fishez">
+<link rel="canonical" href="https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.blu3fishez.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.blu3fishez.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/">
+<link rel="alternate" hreflang="en" href="https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,8 +55,8 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/">
-  <meta property="og:site_name" content="blog.moozeh">
+</noscript><meta property="og:url" content="https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/">
+  <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="분리 집합 구현 시 주의 점">
   <meta property="og:description" content="분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.">
   <meta property="og:locale" content="en">
@@ -66,9 +66,9 @@
     <meta property="article:modified_time" content="2023-10-11T00:00:00+00:00">
     <meta property="article:tag" content="Ps">
     <meta property="article:tag" content="Algorithm">
-      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+      <meta property="og:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:title" content="분리 집합 구현 시 주의 점">
 <meta name="twitter:description" content="분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.">
 
@@ -82,13 +82,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://blog.moozeh.org/posts/"
+      "item": "https://blog.blu3fishez.org/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "분리 집합 구현 시 주의 점",
-      "item": "https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/"
+      "item": "https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/"
     }
   ]
 }
@@ -106,22 +106,22 @@
   "articleBody": "분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.\n문제를 풀다가 이번에도 같은 방식으로 틀려서 기록하게 되었다.\nparent[t1] = p2; 위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.\n따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.\nint t1 = edges[i - 1].first, t2 = edges[i - 1].second; int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 \u003c p2) { parent[p2] = p1; } else { parent[p1] = p2; } ",
   "wordCount" : "101",
   "inLanguage": "en",
-  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2023-10-11T00:00:00Z",
+  "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2023-10-11T00:00:00Z",
   "dateModified": "2023-10-11T00:00:00Z",
   "author":{
     "@type": "Person",
-    "name": "moozeh"
+    "name": "blu3fishez"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/"
+    "@id": "https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "blog.moozeh",
+    "name": "blog.blu3fishez",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.moozeh.org/favicon.ico"
+      "url": "https://blog.blu3fishez.org/favicon.ico"
     }
   }
 }
@@ -143,7 +143,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <a href="https://blog.blu3fishez.org/" accesskey="h" title="blog.blu3fishez (Alt + H)">blog.blu3fishez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -169,17 +169,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                <a href="https://blog.blu3fishez.org/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.blu3fishez.org/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                <a href="https://blog.blu3fishez.org/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -190,14 +190,14 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://blog.blu3fishez.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.blu3fishez.org/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       분리 집합 구현 시 주의 점
     </h1>
     <div class="post-description">
       분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.
     </div>
-    <div class="post-meta"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh
+    <div class="post-meta"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez
 
 </div>
   </header> 
@@ -226,11 +226,11 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://blog.moozeh.org/tags/ps/">Ps</a></li>
-      <li><a href="https://blog.moozeh.org/tags/algorithm/">Algorithm</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/ps/">Ps</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/algorithm/">Algorithm</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://blog.moozeh.org/posts/2023/2023-10-11-next-js-blog/">
+  <a class="prev" href="https://blog.blu3fishez.org/posts/2023/2023-10-11-next-js-blog/">
     <span class="title">« Prev</span>
     <br>
     <span>[Next.js] 블로그 만들 때 생긴 에러 해결방안들 임시 메모</span>
@@ -242,7 +242,7 @@
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+        <span>© <a href="https://github.com/blu3fishez">blu3fishez</a></span> · 
 
     <span>
         Powered by

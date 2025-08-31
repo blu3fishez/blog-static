@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>[Spring] Spring Stereotype 어노테이션들에 대해 알아보자 | blog.moozeh</title>
+<title>[Spring] Spring Stereotype 어노테이션들에 대해 알아보자 | blog.blu3fishez</title>
 <meta name="keywords" content="Spring">
 <meta name="description" content="
 @Component
@@ -28,17 +28,17 @@ public class BusinessCalculationService {
 }
 @Controller
 REST API 에서 컨트롤러를 정의하는데 쓰인다.">
-<meta name="author" content="moozeh">
-<link rel="canonical" href="https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+<meta name="author" content="blu3fishez">
+<link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.blu3fishez.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.blu3fishez.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+<link rel="alternate" hreflang="en" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
 <noscript>
     <style>
         #theme-toggle,
@@ -75,8 +75,8 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
         }
 
     </style>
-</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
-  <meta property="og:site_name" content="blog.moozeh">
+</noscript><meta property="og:url" content="https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+  <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="[Spring] Spring Stereotype 어노테이션들에 대해 알아보자">
   <meta property="og:description" content=" @Component 기본적으로 스프링의 @Bean 을 나타내며, 범용적으로 사용된다.
 모든 스프링의 Stereotype Annotation 의 토대가 된다.
@@ -89,9 +89,9 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
     <meta property="article:published_time" content="2025-01-25T16:58:09+09:00">
     <meta property="article:modified_time" content="2025-01-25T16:58:09+09:00">
     <meta property="article:tag" content="Spring">
-      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+      <meta property="og:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:title" content="[Spring] Spring Stereotype 어노테이션들에 대해 알아보자">
 <meta name="twitter:description" content="
 @Component
@@ -125,13 +125,13 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://blog.moozeh.org/posts/"
+      "item": "https://blog.blu3fishez.org/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "[Spring] Spring Stereotype 어노테이션들에 대해 알아보자",
-      "item": "https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
+      "item": "https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
     }
   ]
 }
@@ -149,22 +149,22 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
   "articleBody": " @Component 기본적으로 스프링의 @Bean 을 나타내며, 범용적으로 사용된다.\n모든 스프링의 Stereotype Annotation 의 토대가 된다.\n@Service 비즈니스 로직을 표시할 때 사용되는 @Component이다.\n클래스에 특정 비즈니스 로직을 작성했다면, 이 어노테이션을 사용하자!\n@Service public class BusinessCalculationService { private final DataService dataService; // write access modifier every time. public BusinessCalculationService(DataService dataService) { this.dataService = dataService; } public int findMax() { return Arrays.stream(dataService.retrieveData()).max().orElse(0); } } @Controller REST API 에서 컨트롤러를 정의하는데 쓰인다.\n@Repository 어떤 Bean 이 데이터 베이스 내 데이터를 조작하는 경우, @Repository 라고 표시하여 이를 알릴 수 있다.\nMongoDBService 의 목적이 데이터베이스와 통신하여 데이터를 조작하는 것이 목적임을 이를 알려주는 것이다.\n@Repository @Primary public class MongoDbDataService implements DataService { @Override public int[] retrieveData() { return new int[] {1, 2, 3}; } } 그 외 실제로 @Component 이외에도 이렇게 따로 정의된 어노테이션이 많다는 것이다.\n최대한 구체적인 어노테이션을 쓰는 게 좋다.\n그 이유는, 각각의 클래스가 어떤 역할을 하는지 명시하여 내가 어떤 의도를 가지고 했는지 알려줄 수 있기 때문이다. 즉, 정보가 추가되는 것이다.\n나중에 AOP 를 사용하여 부가적인 동작을 내려줄 수 있다.\n예를들어, @Repository 어노테이션이 있다면 이후에 JDBC 예외 변환이 가능하다.\n",
   "wordCount" : "174",
   "inLanguage": "en",
-  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2025-01-25T16:58:09+09:00",
+  "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2025-01-25T16:58:09+09:00",
   "dateModified": "2025-01-25T16:58:09+09:00",
   "author":{
     "@type": "Person",
-    "name": "moozeh"
+    "name": "blu3fishez"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://blog.moozeh.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
+    "@id": "https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "blog.moozeh",
+    "name": "blog.blu3fishez",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.moozeh.org/favicon.ico"
+      "url": "https://blog.blu3fishez.org/favicon.ico"
     }
   }
 }
@@ -186,7 +186,7 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <a href="https://blog.blu3fishez.org/" accesskey="h" title="blog.blu3fishez (Alt + H)">blog.blu3fishez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -212,17 +212,17 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                <a href="https://blog.blu3fishez.org/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.blu3fishez.org/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                <a href="https://blog.blu3fishez.org/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -233,11 +233,11 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://blog.blu3fishez.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.blu3fishez.org/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       [Spring] Spring Stereotype 어노테이션들에 대해 알아보자
     </h1>
-    <div class="post-meta"><span title='2025-01-25 16:58:09 +0900 KST'>January 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh
+    <div class="post-meta"><span title='2025-01-25 16:58:09 +0900 KST'>January 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez
 
 </div>
   </header> <div class="toc">
@@ -307,15 +307,15 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://blog.moozeh.org/tags/spring/">Spring</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/spring/">Spring</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://blog.moozeh.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/">
+  <a class="prev" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/">
     <span class="title">« Prev</span>
     <br>
     <span>몰랐던 HTML p 태그에 대한 사실</span>
   </a>
-  <a class="next" href="https://blog.moozeh.org/posts/2025/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+  <a class="next" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-erd-%EC%8A%88%ED%8D%BC%ED%83%80%EC%9E%85-%EC%84%9C%EB%B8%8C%ED%83%80%EC%9E%85%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
     <span class="title">Next »</span>
     <br>
     <span>ERD 슈퍼타입-서브타입 관계에 대해서 알아보자</span>
@@ -327,7 +327,7 @@ REST API 에서 컨트롤러를 정의하는데 쓰인다.">
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+        <span>© <a href="https://github.com/blu3fishez">blu3fishez</a></span> · 
 
     <span>
         Powered by

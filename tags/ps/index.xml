@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ps on blog.moozeh</title>
-    <link>https://blog.moozeh.org/tags/ps/</link>
-    <description>Recent content in Ps on blog.moozeh</description>
+    <title>Ps on blog.blu3fishez</title>
+    <link>https://blog.blu3fishez.org/tags/ps/</link>
+    <description>Recent content in Ps on blog.blu3fishez</description>
     <image>
-      <title>blog.moozeh</title>
-      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
-      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+      <title>blog.blu3fishez</title>
+      <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
+      <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <copyright>moozeh</copyright>
+    <copyright>blu3fishez</copyright>
     <lastBuildDate>Sun, 27 Oct 2024 20:34:24 +0900</lastBuildDate>
-    <atom:link href="https://blog.moozeh.org/tags/ps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.blu3fishez.org/tags/ps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[ 백준 6064 ] 카잉 달력 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</link>
+      <link>https://blog.blu3fishez.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</link>
       <pubDate>Sun, 27 Oct 2024 20:34:24 +0900</pubDate>
-      <guid>https://blog.moozeh.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/</guid>
       <description>&lt;h2 id=&#34;문제-링크&#34;&gt;문제 링크&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://boj.kr/6064&#34;&gt;이동하기!&lt;/a&gt;&lt;/li&gt;
@@ -73,37 +73,37 @@
     </item>
     <item>
       <title>[ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-12-26-boj1006/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-12-26-boj1006/</link>
       <pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-12-26-boj1006/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-12-26-boj1006/</guid>
       <description>백준 1006번 문제 풀이 입니다.</description>
     </item>
     <item>
       <title>[ 백준 26087 ] 피보나치와 마지막 수열과 쿼리 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-11-16-boj26087/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-11-16-boj26087/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-11-16-boj26087/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-11-16-boj26087/</guid>
       <description>백준 26087 풀이입니다.</description>
     </item>
     <item>
       <title>[ 백준 2818 ] 숙제하기 싫을 때 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-11-16-boj2818/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-11-16-boj2818/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-11-16-boj2818/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-11-16-boj2818/</guid>
       <description>백준 2818 풀이입니다.</description>
     </item>
     <item>
       <title>[ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-11-12-query-tree/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-11-12-query-tree/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-11-12-query-tree/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-11-12-query-tree/</guid>
       <description>트리의 특성을 이용한 연결그래프 탐색문제입니다.</description>
     </item>
     <item>
       <title>[ 백준 17298 ] 오큰수 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-25-boj17298/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-25-boj17298/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-25-boj17298/</guid>
       <description>&lt;h2 id=&#34;나의-접근&#34;&gt;나의 접근&lt;/h2&gt;
 &lt;p&gt;이분탐색도 생각해보고, 뒤에서부터 진행도 생각해봤는데
 도저히 감이 잡히질 않아서 주제를 봤더니 스택문제였습니다&amp;hellip;&lt;/p&gt;
@@ -123,16 +123,16 @@
     </item>
     <item>
       <title>[ 백준 13330 ] 유사 팰린드롬 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-24-boj13330/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-24-boj13330/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-24-boj13330/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-24-boj13330/</guid>
       <description>소스코드만 있습니다.</description>
     </item>
     <item>
       <title>[ 백준 3697 ] 정상 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-23-boj3697/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-23-boj3697/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-23-boj3697/</guid>
       <description>&lt;h2 id=&#34;접근&#34;&gt;접근&lt;/h2&gt;
 &lt;p&gt;처음 접근은 이랬습니다. 사실 제일 처음에 어려웠던 부분은 d-정상이 무엇인지 이해를 하는 것이였습니다.&lt;/p&gt;
 &lt;p&gt;d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생각을 해서 땅에서부터 그냥 bfs하면 되는것 아닌가 싶은데,
@@ -142,37 +142,37 @@
     </item>
     <item>
       <title>[ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-21-next-permutation/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-21-next-permutation/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-21-next-permutation/</guid>
       <description>알고리즘을 하다보면 저희가 모든 경우의 수를 뽑아서 봐야할 때가 있습니다.</description>
     </item>
     <item>
       <title>[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-20-boj18809/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-20-boj18809/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-20-boj18809/</guid>
       <description>소스코드만 있습니다.</description>
     </item>
     <item>
       <title>LIS 알고리즘 개념</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-14-lis/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-14-lis/</link>
       <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-14-lis/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-14-lis/</guid>
       <description>풀이는 제 이전 블로그에서 확인 가능합니다.</description>
     </item>
     <item>
       <title>[ 백준 11401 ] 이항 계수 3 : C&#43;&#43; 풀이</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-12-boj11401/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-12-boj11401/</link>
       <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-12-boj11401/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-12-boj11401/</guid>
       <description>일단 이 문제를 풀기 위해선 페르마의 소정리와 모듈러 역원을 구하는 연산을 할줄 알아야한다.</description>
     </item>
     <item>
       <title>분리 집합 구현 시 주의 점</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/</link>
       <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-10-11-disjoint-set/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/</guid>
       <description>분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.</description>
     </item>
   </channel>

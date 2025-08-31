@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linear_algebra on blog.moozeh</title>
-    <link>https://blog.moozeh.org/tags/linear_algebra/</link>
-    <description>Recent content in Linear_algebra on blog.moozeh</description>
+    <title>Linear_algebra on blog.blu3fishez</title>
+    <link>https://blog.blu3fishez.org/tags/linear_algebra/</link>
+    <description>Recent content in Linear_algebra on blog.blu3fishez</description>
     <image>
-      <title>blog.moozeh</title>
-      <url>https://blog.moozeh.org/images/papermod-cover.png</url>
-      <link>https://blog.moozeh.org/images/papermod-cover.png</link>
+      <title>blog.blu3fishez</title>
+      <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
+      <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <copyright>moozeh</copyright>
+    <copyright>blu3fishez</copyright>
     <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.moozeh.org/tags/linear_algebra/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.blu3fishez.org/tags/linear_algebra/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[ 선형대수 ] 1. 행렬</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-1/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-12-30-linear-algebra-1/</link>
       <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-1/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-12-30-linear-algebra-1/</guid>
       <description>선형 대수 독학하며 배운 정리 자료입니다.</description>
     </item>
     <item>
       <title>[ 선형대수 ] 2. 행렬 대수</title>
-      <link>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-2/</link>
+      <link>https://blog.blu3fishez.org/posts/2023/2023-12-30-linear-algebra-2/</link>
       <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.moozeh.org/posts/2023/2023-12-30-linear-algebra-2/</guid>
+      <guid>https://blog.blu3fishez.org/posts/2023/2023-12-30-linear-algebra-2/</guid>
       <description>선형 대수 독학하며 배운 정리 자료입니다.</description>
     </item>
   </channel>

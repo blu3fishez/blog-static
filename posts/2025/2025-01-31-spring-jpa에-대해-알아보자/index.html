@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>[Spring JPA] JPA에 대해 알아보자 | blog.moozeh</title>
+<title>[Spring JPA] JPA에 대해 알아보자 | blog.blu3fishez</title>
 <meta name="keywords" content="Spring">
 <meta name="description" content="
 JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.
@@ -15,17 +15,17 @@ JPA를 사용하는 이유는 쿼리를 수행하는 테이블의 개수가 복�
 Entity의 정의
 JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는데, 이때 이 Bean을 엔티티 라고 부르게 된다. 즉, Entity 는 Bean 이다.
 추가적으로 더 나아가면 Nest.js 에서 엔티티를 어떻게 정의할지 생각해볼 수 있을 것이다.  꼭 Database 코드에 있어야하는 이유가 없고, Bean 을 어떻게 활용할지 생각해보면 엔티티를 사용하는데 있어서 이해가 빠를 것이다.">
-<meta name="author" content="moozeh">
-<link rel="canonical" href="https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+<meta name="author" content="blu3fishez">
+<link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.blu3fishez.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.blu3fishez.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+<link rel="alternate" hreflang="en" href="https://blog.blu3fishez.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
 <noscript>
     <style>
         #theme-toggle,
@@ -62,8 +62,8 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
         }
 
     </style>
-</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
-  <meta property="og:site_name" content="blog.moozeh">
+</noscript><meta property="og:url" content="https://blog.blu3fishez.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
+  <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="[Spring JPA] JPA에 대해 알아보자">
   <meta property="og:description" content=" JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.
 JPA 를 사용하는 이유 JPA를 사용하는 이유는 쿼리를 수행하는 테이블의 개수가 복잡해질수록 간단하게 코드 구현이 가능하기 때문이다.
@@ -75,9 +75,9 @@ Entity의 정의 JPA를 사용하면, Bean 데이터를 직접 테이블로 매�
     <meta property="article:published_time" content="2025-01-31T22:39:35+09:00">
     <meta property="article:modified_time" content="2025-01-31T22:39:35+09:00">
     <meta property="article:tag" content="Spring">
-      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+      <meta property="og:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:title" content="[Spring JPA] JPA에 대해 알아보자">
 <meta name="twitter:description" content="
 JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.
@@ -98,13 +98,13 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://blog.moozeh.org/posts/"
+      "item": "https://blog.blu3fishez.org/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "[Spring JPA] JPA에 대해 알아보자",
-      "item": "https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
+      "item": "https://blog.blu3fishez.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
     }
   ]
 }
@@ -122,22 +122,22 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
   "articleBody": " JPA 에 대해 기본적인 내용을 훑는다. 기본적인 내용을 알고 있다면 무시해도 좋다.\nJPA 를 사용하는 이유 JPA를 사용하는 이유는 쿼리를 수행하는 테이블의 개수가 복잡해질수록 간단하게 코드 구현이 가능하기 때문이다.\nEntity의 정의 JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는데, 이때 이 Bean을 엔티티 라고 부르게 된다. 즉, Entity 는 Bean 이다.\n추가적으로 더 나아가면 Nest.js 에서 엔티티를 어떻게 정의할지 생각해볼 수 있을 것이다. 꼭 Database 코드에 있어야하는 이유가 없고, Bean 을 어떻게 활용할지 생각해보면 엔티티를 사용하는데 있어서 이해가 빠를 것이다.\n기본적으로 나는 Nest.js부터 얕게 공부했기에 Entity 와 DTO 를 어떻게 써야할지 헷갈렸었다.\n이때, Entity는 데이터베이스와 매핑이 되는 Bean 이기 때문에, Primary Key 가 존재해야할 것이다. 이는 @Id 어노테이션으로 명시해줄 수 있다.\n각각의 컬럼과 속성을 연결해주는데 @Column 으로 명시적으로 연결해줄 수 있다. 자동 연결도 지원하니 편하다!\npackage org.moozeh.learn_spring.app16_jpa; import jakarta.persistence.*; /** * jakarta.persistence.Entity 도 있고, org.hibernate.annotations 도 있다. * 이는 결국 구현체가 hibernate 이기 때문이다. * * */ @Entity(name=\"courses\") public class Course { @Id private long id; @Column(name=\"name\") // 같은 이름으로 매칭된다면 이 값(annotation 전체)은 사실 불필요하다. private String name; // @Column(name=\"author\") private String author; public Course() {} public Course(long id, String name, String author) { this.id = id; this.name = name; this.author = author; } public long getId() { return id; } public String getName() { return name; } public String getAuthor() { return author; } @Override public String toString() { return \"Course{\" + \"id=\" + id + \", name='\" + name + '\\'' + \", author='\" + author + '\\'' + '}'; } } 이렇게 하여, 테이블 - 엔티티 간 ‘매핑’을 이용해서 값을 삽입하고 조작할 수 있게 되는 것이다.\nJPA Repository 정의하기 다음으로 엔티티가 정의되면, 이를 이용해 repository 를 정의할 수 있다.\nJPA에서는 Entity 와 레포지토리를 실제로 매핑시키려면, EntityManager 를 불러오면 된다. Entity 매니저는 말그대로 엔티티와 관련된 작업들이 수많이 정의되어있는 매니징 클래스이다.\n또한, 기본적으로 트랜잭션이 없으면 하면 에러가 생긴다.\n기본적으로 이를 해결하는 방법은 @Transactional 어노테이션을 정의하여 트랜잭션의 범위를 설정해주면 된다.\n즉, 기본적으로 JPA 레포지토리 코드는 트랜잭션을 기반으로 작동해야 함을 의미한다.\npackage org.moozeh.learn_spring.app16_jpa; import jakarta.persistence.EntityManager; import jakarta.persistence.PersistenceContext; import jakarta.transaction.Transactional; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Repository; @Repository @Transactional public class CourseJpaRepository { @PersistenceContext private EntityManager entityManager; /** * Entity 라고 해서, 데이터베이스에서만 만들 필요는 없다. * * 기존 Bean으로 사용하듯이 그냥 사용하면 되는 것이다. * @param course */ public void insert(Course course) { entityManager.merge(course); // 이렇게 하면, 엔티티 내 Bean과 매핑된 데이터베이스에 알아서 저장할 것이다! 정말 편하다. } public Course findById(long id) { return entityManager.find(Course.class, id); // 두번째 인자로 PK가 들어간다. // 그렇다면, PK가 아닌 다른 인덱싱된 레코드로 검색하려면..? } public void deleteById(long id) { Course course = entityManager.find(Course.class, id); entityManager.remove(course); } } setter 가 사라졌다. 하나 중요한 점은 setter 가 필요하지 않게 되었다는 점이다.\n이 뜻은 다시 말해 Bean이 초기화될 때, 값 Setting을 미리 전부 마칠 수 있게 된 것을 의미한다.\nJDBC로 직접할 때에는 setter 가 있어야 jdbcTemplate에서 정보를 받아올 수 있었다.\nJPA를 사용함으로써 Entity 생성 시점이 JPA 내에서 캡슐화되었다고 볼 수 있겠다. 이것이 Spring Data JPA의 특징이다.\n영속성 컨텍스트 단순히 Autowiring 하는 것보다 더 좋은 방식이 있는데, 이것이 Jpa의 바로 그 영속성 컨텍스트 이다.\n이에 관해서는 상세하게 다시 알아볼 예정이다.\n디버깅 수행하기 application.properties 값으로 아래와 같은 값을 추가하면, 생성된 SQL을 확인할 수 있다.\nspring.jpa.show-sql=true 그렇다면, CommandLineRunner 를 이용해서 스프링이 시작되자마자 특정 함수를 실행시켜서 확인해보자.\npackage org.moozeh.learn_spring.app16_jpa; import org.springframework.boot.CommandLineRunner; import org.springframework.stereotype.Component; @Component public class CourseJpaCommandLineRunner implements CommandLineRunner { private final CourseJpaRepository courseJpaRepository; public CourseJpaCommandLineRunner(CourseJpaRepository courseJpaRepository) { this.courseJpaRepository = courseJpaRepository; } @Override public void run(String... args) throws Exception { this.courseJpaRepository.insert(new Course(1, \"Learn AWS\", \"moozeh\")); this.courseJpaRepository.insert(new Course(2, \"Learn DevOps\", \"moozeh\")); this.courseJpaRepository.insert(new Course(3, \"Learn Spring\", \"moozeh\")); this.courseJpaRepository.deleteById(1); System.out.println(this.courseJpaRepository.findById(2)); } } 이렇게, insert 문 3개와 delete 문 1개, 그리고 select 문 1개를 실행시켜봤다. 아래처럼 실행되고 있다.\n이때, show-sql 값이 true 라면, 각각의 실제로 실행되는 쿼리문을 보여준다.\nHibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=? Hibernate: insert into courses (author,name,id) values (?,?,?) Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=? Hibernate: insert into courses (author,name,id) values (?,?,?) Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=? Hibernate: insert into courses (author,name,id) values (?,?,?) Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=? Hibernate: delete from courses where id=? Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=? 또한, 분명 스키마에서는 course 라는 테이블을 정의했는데, c1_0.id 와 같은 테이블에서 찾고 있다.\n이는 테이블의 별칭(alias) 으로, Hibernate 에서 자체적으로 테이블 명을 관리하고 있음을 알 수 있다.\n",
   "wordCount" : "695",
   "inLanguage": "en",
-  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2025-01-31T22:39:35+09:00",
+  "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2025-01-31T22:39:35+09:00",
   "dateModified": "2025-01-31T22:39:35+09:00",
   "author":{
     "@type": "Person",
-    "name": "moozeh"
+    "name": "blu3fishez"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://blog.moozeh.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
+    "@id": "https://blog.blu3fishez.org/posts/2025/2025-01-31-spring-jpa%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "blog.moozeh",
+    "name": "blog.blu3fishez",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.moozeh.org/favicon.ico"
+      "url": "https://blog.blu3fishez.org/favicon.ico"
     }
   }
 }
@@ -159,7 +159,7 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <a href="https://blog.blu3fishez.org/" accesskey="h" title="blog.blu3fishez (Alt + H)">blog.blu3fishez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,17 +185,17 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                <a href="https://blog.blu3fishez.org/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.blu3fishez.org/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                <a href="https://blog.blu3fishez.org/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -206,11 +206,11 @@ JPA를 사용하면, Bean 데이터를 직접 테이블로 매핑할 수 있는�
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://blog.blu3fishez.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.blu3fishez.org/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       [Spring JPA] JPA에 대해 알아보자
     </h1>
-    <div class="post-meta"><span title='2025-01-31 22:39:35 +0900 KST'>January 31, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;moozeh
+    <div class="post-meta"><span title='2025-01-31 22:39:35 +0900 KST'>January 31, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;blu3fishez
 
 </div>
   </header> <div class="toc">
@@ -392,15 +392,15 @@ Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://blog.moozeh.org/tags/spring/">Spring</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/spring/">Spring</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://blog.moozeh.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/">
+  <a class="prev" href="https://blog.blu3fishez.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/">
     <span class="title">« Prev</span>
     <br>
     <span>[Spring JPA] 테이블 상속에 관하여</span>
   </a>
-  <a class="next" href="https://blog.moozeh.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/">
+  <a class="next" href="https://blog.blu3fishez.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/">
     <span class="title">Next »</span>
     <br>
     <span>[Spring] Spring JDBC의 특징</span>
@@ -412,7 +412,7 @@ Hibernate: select c1_0.id,c1_0.author,c1_0.name from courses c1_0 where c1_0.id=
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+        <span>© <a href="https://github.com/blu3fishez">blu3fishez</a></span> · 
 
     <span>
         Powered by

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
- | blog.moozeh</title>
+ | blog.blu3fishez</title>
 <meta name="keywords" content="network">
 <meta name="description" content="🧵 HTTP, 그 다음은?
 HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으로 소통한다고 깨달았습니다.
@@ -16,17 +16,17 @@ HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으
 HTTPS 프로토콜
 그럼 HTTPS란 뭘까요?
 HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니다. 우리가 C언어에서 MSVC 에서 사용할 수 있는 scanf_s 와 같은 s 처럼 보안을 의식하여 보안 계층을 한층 더 감싼 HTTP 통신이라고 생각하면 됩니다.">
-<meta name="author" content="moozeh">
-<link rel="canonical" href="https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/">
+<meta name="author" content="blu3fishez">
+<link rel="canonical" href="https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.blu3fishez.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.blu3fishez.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/">
+<link rel="alternate" hreflang="en" href="https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/">
 <noscript>
     <style>
         #theme-toggle,
@@ -63,8 +63,8 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
         }
 
     </style>
-</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/">
-  <meta property="og:site_name" content="blog.moozeh">
+</noscript><meta property="og:url" content="https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/">
+  <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
 ">
   <meta property="og:description" content="🧵 HTTP, 그 다음은? HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으로 소통한다고 깨달았습니다.
@@ -79,9 +79,9 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
     <meta property="article:published_time" content="2024-10-06T21:57:00+09:00">
     <meta property="article:modified_time" content="2024-10-06T21:57:00+09:00">
     <meta property="article:tag" content="Network">
-      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+      <meta property="og:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:title" content="HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
 ">
 <meta name="twitter:description" content="🧵 HTTP, 그 다음은?
@@ -103,13 +103,13 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://blog.moozeh.org/posts/"
+      "item": "https://blog.blu3fishez.org/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝\n",
-      "item": "https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/"
+      "item": "https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/"
     }
   ]
 }
@@ -127,22 +127,22 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
   "articleBody": "🧵 HTTP, 그 다음은? HTTP 프로토콜을 직접 만들어보면서, 생각보다 간단한 방식으로 소통한다고 깨달았습니다.\n무언가 특수한 포맷팅을 이용해서..? 바이너리로 인코딩하여 전송할 줄 알았는데 문자였던 것이지요..\n그래서 이렇게 간단하게 문자열로 소통하니, 보안에 정말로 취약할 수 밖에 없음을 또 인지할 수 밖에 없었습니다. 역시 무언가를 사용할 때에는 보안을 의식할 수 밖에 없습니다.\n그래서 우리가 흔하게 사용하지만, 당연하다고 여기는 HTTPS 에 대해 더 공부를 하게 되었습니다.\nHTTPS 프로토콜 그럼 HTTPS란 뭘까요?\nHTTP + S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니다. 우리가 C언어에서 MSVC 에서 사용할 수 있는 scanf_s 와 같은 s 처럼 보안을 의식하여 보안 계층을 한층 더 감싼 HTTP 통신이라고 생각하면 됩니다.\n이때, 이 인증은 정확히 어떤 인증을 뜻할까요? 이 인증은 SSL, 이제는 TLS라고 불리는 프로토콜을 사용하여 암호화하여 통신합니다.\nHTTPS 통신 과정 간단합니다! 사전에 약속된 대칭키를 통해서 소통하는 형태입니다.\n하지만 그 앞과정이 살짝 복잡한데요, 그래서 기존 HTTP보다 오버헤드가 크다는 단점이 있습니다.\n하지만 보안이라는 장점앞에 그깟 오버헤드쯤이야… 싶습니다 ㅎㅎ\n클라이언트가 서버에 연결 요청 서버가 SSL/TLS 인증서를 클라이언트에게 보내줌 클라이언트가 인증서를 검증함 (인증기관, CA 로부터) TLS 핸드 셰이크를 통해 안전한 연결 설정 암호화된 데이터 통신 시작 ![[2024-10-06-tls-https-image.png]]\n출처 : https://brunch.co.kr/@growthminder/79\n🗒️ TLS 란? 사전적 정의는 다음과 같습니다.\n🔥 Transport Layer Security\nSSL 이라고도 불리며, 인터넷에서 안전하게 서로 통신할 수 있도록 하는 프로토콜을 뜻합니다.\n그래서 이는 비단 인터넷 사용 뿐만 아니라, 인터넷 연결 그 자체에도 적용되기도 합니다.\n예를 들어, 우리가 와이파이를 연결할 때에도 대학교의 경우, 특정 인증서를 통해 (PEM 키 등) 연결하기도 합니다.\n이러한 TLS를 사용하여 좋은 점은 무엇일까요? 크게 세가지 입니다.\nTLS의 장점 데이터의 기밀성(보안) 유지 가능 데이터의 무결성 보장 (변조 방지) 인증 제공 가능 (서버 인증서를 통해 우리 서버가 검증된 서버임을 알려줄 수 있음) 🔒 TLS 가 완전히 안전할까요? 일반적으로 안전합니다! 사실 그렇게 깊게까지 생각할 필욘 없지만, 왜 이렇게 안전한지 한번 TLS 과정을 통해 같이 생각해봅시다.\nTLS 통신(핸드 셰이크) 과정 Client Hello 클라이언트가 서버에 지원 가능한 암호 스위트 목록, SSL/TLS 버전을 전송해줍니다. Server Hello 서버가 선택한 암호 스위트와 SSL/TLS 버전을 클라이언트에 응답합니다. Certificate : 서버가 자신의 SSL 인증서를 클라이언트에 전송해줍니다. Server Key Exchange : 서버가 키 교환에 필요한 추가 정보를 전송합니다. Server Hello Done : 서버가 초기 메세지 전송을 완료했음을 알립니다. Client Key Exchange : 클라이언트가 대칭키 (세션 키) 생성에 필요한 정보를 암호화하여 서버에 전송합니다. Change Cipher Spec : 양측이 협상된 암호 스위트를 사용할 준비가 되었음을 알립니다. Finished : 핸드 셰이크를 완료하고, 암호화 통신을 시작합니다. 그 이후부터는 단순히 HTTP 메세지를 서로 인증된 암호화 정보를 통해 암호화하여 통신하는게 끝입니다! 간단하죠. 간단하지만 정말 강력하다고 생각합니다.\n하지만 몇가지 궁금점들이 있을 수 있는데, 저의 경우 이러한 궁금점들이 생겨서 더 자세하게 공부하게 되었습니다.\n아무것도 없는 클라이언트가 무엇으로부터 암호화를 할 수 있을까? 일단, 첫번째로 서버에 지원 가능한 암호 스위트 목록을 전송합니다.\n그리고 인증서에는 공개키가 포함되어있습니다! 이게 정말 중요한 정보입니다. 인증서가 없어서 HTTPS 연결을 사용할 수 없는 이유가 이것입니다.\n이 인증서는 서버의 공개키를 포함하고 있고, 이것을 CA가 보증해주는 구조입니다.\n그리고, 실제 데이터 암호화에는 이 공개키가 사용되지 않습니다. 인증서를 검증하는데에 사용되기 때문입니다.\n대칭키(세션키) 가 무엇인가요? 세션키란, 세션마다 동적으로 생성되어 해당 세션 동안 유효한 키 입니다.\n암호화와 복호화에 동일한 키를 사용하는 암호화 방식에서 사용되는 키를 뜻합니다.\n따라서 우리가 생각하는 비밀키 공개키 등등.. 과는 관련없는 키입니다.\n오히려 비밀키와 공개키를 사용하여 해당 세션키를 전달하고 받는데에 사용됩니다.\n하지만,, 클라이언트가 공개키로 암호화한 데이터를 어떻게 알게 될까요..?\n그러면, 대칭키를 어떻게 클라이언트가 알게 되나요? 그래서, 프리마스터 시크릿 이라는 임의의 값을 별도로 생성하여 클라이언트가 세션키를 안전하게 받는데 사용할 수 있습니다.\n클라이언트가 먼저 생성한 프리마스터 시크릿 이라는 임의의 값을 서버에게 먼저 전달합니다. 서버는 이 프리마스터 시크릿 이라는 값을 받아서 알게 되는 거죠.\n결국, 세션 통신에 관한 키 생성은 클라이언트 가 하게 됩니다. 이 프리마스터 시크릿 이란 걸 가지고 각자 동일한 세션키를 생성하는 것이죠.\nTLS 중간자 공격 하지만 TLS 핸드셰이크 과정 자체에서 중간자 공격(MITM)이 일어날 수도 있는 것도 사실입니다.\n인증서 조작 공격자가 신뢰할 수 있는 인증서를 획득하거나 사용자의 시스템에 악의적인 루트 인증서를 설치할 경우, 중간자 공격(MITM) 공격이 가능할 수 있습니다\n프로토콜 다운그레이드 공격자가 클라이언트와 서버 간의 통신을 방해하여 더 취약한 이전 버전의 TLS를 사용하도록 강제할 수 있습니다.\n🧑‍⚕️ 중간자 공격을 완전히 방지하기 위한 방법 신뢰할 수 있는 CA (인증기관) 사용, 최신 TLS 버전 사용 Certificate authority\n신뢰할 수 있는 인증기관을 서버 도메인 / 인증서 내용을 비교하여 확인할 수 있다면, 우리는 인증하는 것 자체에는 큰 문제가 없는 이유가 이것입니다.\n우리가 자주 사용하는 Let's Encrypt 가 대표적인 인증기관입니다.\n하지만, 돈이 없거나, 이러한 인증 기관도 믿지 못하는 상황이 있을 수 있겠죠? 이러한 점에 대한 우려는 타당하다고 생각이 되고, 제 주변 지인과의 대화에서도 나온 주제이기도 합니다.\n진짜 그럼 매번 인증기관에 접속하나요..? 아뇨! 그건 또 아닙니다.\n대신 다음과 같은 방식으로 CA의 신뢰성을 확인할 수 있습니다.\n사전에 설치된 CA 인증서 애초부터 운영체제와 웹브라우저에서 신뢰할 수 있는 CA의 루트 인증서 목록이 미리 설치되어있습니다. 서버 인증서 검증 TLS 핸드 셰이크 중에는 자신의 인증서를 클라이언트에게 전송합니다. (원래 전송해옴) 로컬 검증 자신이 받은 서버 인증서와 자신이 가지고 있는 신뢰할 수 있는 CA 목록과 대조합니다. 인증서 체인 검증 필요할 경우, 루트 CA까지 검증을 수행할 수 있습니다. 이렇게 실시간 CA 접속 없음이 보장됩니다.\n이미 신뢰할 수 있는 CA 목록을 가지고 있기 때문에, 일반적으로 안전하다고 할 수 있는 겁니다.\n또한 최신 TLS 버전을 사용하는 것도 좋은 방법이 될 수 있습니다. 하지만 여기서 끝내면 섭섭하니 이러한 방법 외의 여러 방안 중 하나를 알아보고자 합니다.\n인증서 피닝 (공개키 피닝) 그 방법은 말 그대로 공개키 자체를 고정하는 방법입니다.\n서버와 클라이언트 간 공개키를 서로 가지고 있다면, CA 시스템을 변조됐더라도, 탈취할 수 없게 됩니다. (이미 서버에 대한 인증서정보(공개키)를 클라이언트가 가진 상태로 통신을 시작할 수 있습니다.)\n추가 : 인증 기관은 정확히 어떻게 등록되고 관리될까요? 인증기관이 신뢰할 수 있게 되는 과정에 대한 질문이 있었습니다.\n저도 그부분에 관련해서 미흡하게 알고 있었고 따로 공부하게 되었습니다.\n우선, 공개적인 인증기관이 되려면, 엄격한 검사과정을 거쳐야한다고 합니다. 우선, Let’s Encrypt 를 예시로 들면, 해당 기관은 비영리 인증 기관입니다. 이러한 인증기관은 WebTrust, ETSI 등의 엄격한 기준이 있다고 하는데, 이러한 조건을 충족해야한다고 합니다.\n해당 과정에서는 보안 정책, 키 관리, 인증서 발급 절차 등을 검사한다고 보시면 되겠습니다.\n그 후, 주요 브라우저와 운영체제 제조업체(마이크로소프트, 애플, 모질라) 등에서 운영하는 루트 인증서 프로그램이 따로 있습니다.\n이러한 루트 프로그램에 참여하여, 브라우저와 운영체제에 직접 인증기관의 서명을 발급해줄 수 있습니다.\n그 외에도 법적인 계약을 체결하거나, 지속적인 외부 감사를 받는 등 신뢰받을 수 있는 인증기관으로 거듭나려면 조건이 많이 필요합니다.\n",
   "wordCount" : "973",
   "inLanguage": "en",
-  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2024-10-06T21:57:00+09:00",
+  "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2024-10-06T21:57:00+09:00",
   "dateModified": "2024-10-06T21:57:00+09:00",
   "author":{
     "@type": "Person",
-    "name": "moozeh"
+    "name": "blu3fishez"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/"
+    "@id": "https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "blog.moozeh",
+    "name": "blog.blu3fishez",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.moozeh.org/favicon.ico"
+      "url": "https://blog.blu3fishez.org/favicon.ico"
     }
   }
 }
@@ -164,7 +164,7 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <a href="https://blog.blu3fishez.org/" accesskey="h" title="blog.blu3fishez (Alt + H)">blog.blu3fishez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -190,17 +190,17 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                <a href="https://blog.blu3fishez.org/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.blu3fishez.org/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                <a href="https://blog.blu3fishez.org/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -211,12 +211,12 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://blog.blu3fishez.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.blu3fishez.org/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
 
     </h1>
-    <div class="post-meta"><span title='2024-10-06 21:57:00 +0900 KST'>October 6, 2024</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;moozeh
+    <div class="post-meta"><span title='2024-10-06 21:57:00 +0900 KST'>October 6, 2024</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;blu3fishez
 
 </div>
   </header> <div class="toc">
@@ -412,15 +412,15 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://blog.moozeh.org/tags/network/">Network</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/network/">Network</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
+  <a class="prev" href="https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
     <span class="title">« Prev</span>
     <br>
     <span>[Nest.js] Nest.js 에서의 DTO</span>
   </a>
-  <a class="next" href="https://blog.moozeh.org/posts/2024/2024-09-01-api-response/">
+  <a class="next" href="https://blog.blu3fishez.org/posts/2024/2024-09-01-api-response/">
     <span class="title">Next »</span>
     <br>
     <span>API의 응답 바디는 커도 좋을까
@@ -433,7 +433,7 @@ HTTP &#43; S(ecure) 즉, 보안 계층을 더한 HTTP 라고 생각하면 됩니
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+        <span>© <a href="https://github.com/blu3fishez">blu3fishez</a></span> · 
 
     <span>
         Powered by

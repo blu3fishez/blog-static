@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>[Nest.js] Nest.js 에서의 DTO | blog.moozeh</title>
+<title>[Nest.js] Nest.js 에서의 DTO | blog.blu3fishez</title>
 <meta name="keywords" content="Nestjs">
 <meta name="description" content="DTO 란?
 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.
@@ -16,17 +16,17 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
 그 이유는 class 는 interface 와 달리, 런타임 내에 정의 되어 있기 때문에 pipe 등의 기능도 활용 가능하다고 한다.
 
 이는 반대로 얘기하면, 굳이 상태를 보존할 이유가 없다면 인터페이스를 쓰는게 낫다는 뜻으로도 해석할 수 있겠다.">
-<meta name="author" content="moozeh">
-<link rel="canonical" href="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
+<meta name="author" content="blu3fishez">
+<link rel="canonical" href="https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.moozeh.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.moozeh.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.moozeh.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.moozeh.org/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.moozeh.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.blu3fishez.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.blu3fishez.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
+<link rel="alternate" hreflang="en" href="https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
 <noscript>
     <style>
         #theme-toggle,
@@ -63,8 +63,8 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
         }
 
     </style>
-</noscript><meta property="og:url" content="https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
-  <meta property="og:site_name" content="blog.moozeh">
+</noscript><meta property="og:url" content="https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/">
+  <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="[Nest.js] Nest.js 에서의 DTO">
   <meta property="og:description" content="DTO 란? 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.
 여기에 더 나아가서, DTO란, 네트워크 를 통해 전송되는 방법 또한 정의할 수 있다.
@@ -78,9 +78,9 @@ Nest.js 에서의 DTO Nest.js 에서는 Class 를 이용하여 정의하는 것�
     <meta property="article:published_time" content="2024-10-23T18:46:23+09:00">
     <meta property="article:modified_time" content="2024-10-23T18:46:23+09:00">
     <meta property="article:tag" content="Nestjs">
-      <meta property="og:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+      <meta property="og:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.moozeh.org/images/papermod-cover.png">
+<meta name="twitter:image" content="https://blog.blu3fishez.org/images/papermod-cover.png">
 <meta name="twitter:title" content="[Nest.js] Nest.js 에서의 DTO">
 <meta name="twitter:description" content="DTO 란?
 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.
@@ -102,13 +102,13 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://blog.moozeh.org/posts/"
+      "item": "https://blog.blu3fishez.org/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "[Nest.js] Nest.js 에서의 DTO",
-      "item": "https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"
+      "item": "https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"
     }
   ]
 }
@@ -126,22 +126,22 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
   "articleBody": "DTO 란? 이전에 계층 간 데이터 교환을 위한 객체라고 배웠다.\n여기에 더 나아가서, DTO란, 네트워크 를 통해 전송되는 방법 또한 정의할 수 있다.\n말 그대로 데이터 전송 객체이다.\nNest.js 에서의 DTO Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으며, interface 로도 가능하다.\n그 이유는 class 는 interface 와 달리, 런타임 내에 정의 되어 있기 때문에 pipe 등의 기능도 활용 가능하다고 한다.\n이는 반대로 얘기하면, 굳이 상태를 보존할 이유가 없다면 인터페이스를 쓰는게 낫다는 뜻으로도 해석할 수 있겠다.\nDTO의 역할 DTO의 역할은 크게 두가지 이다.\n데이터의 유효성 체크 타입스크립트에서의 타입으로 활용 프로퍼티 변경의 단순화 여러 계층에서 여러개의 데이터를 보내는 형식이 될 때 이를 하나의 객체로 정의하여 프로퍼티의 변경이 필요할 때, 여러 계층에서 수정해야할 때 되게 귀찮은데, 이 문제를 해결해줄 수 있다.\n내가 이전에 배웠던 점과의 차이 이전에 내가 공부하기를 엔티티와 대응시켜 DB와 분리하는 쪽으로 DTO를 구현했지만,\n실제로 메서드마다 사용하는 DTO를 따로 정의할 수도 있다. 굳이 하나만 만들 필요는 없단 점을 생각 못했다.\n즉, 하나의 모듈(도메인) 내에서 DTO를 꼭 하나로 통일할 필요가 없다.\nDTO 사용하기 예시 DTO 자체도 단순히 모델을 정의하듯이 정의하면 된다.\nexport class CreateBoardDto { title: string; description: string; } 이 DTO를 실제 사용할 때에는 아래와 같이 사용하면 된다.\n@Post() @UsePipes(ValidationPipe) createBoard(@Body() createBoardDto: CreateBoardDto): Board { return this.boardsService.createBoard(createBoardDto); } ",
   "wordCount" : "199",
   "inLanguage": "en",
-  "image": "https://blog.moozeh.org/images/papermod-cover.png","datePublished": "2024-10-23T18:46:23+09:00",
+  "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2024-10-23T18:46:23+09:00",
   "dateModified": "2024-10-23T18:46:23+09:00",
   "author":{
     "@type": "Person",
-    "name": "moozeh"
+    "name": "blu3fishez"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://blog.moozeh.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"
+    "@id": "https://blog.blu3fishez.org/posts/2024/2024-10-23-nestjs-nestjs-%EC%97%90%EC%84%9C%EC%9D%98-dto/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "blog.moozeh",
+    "name": "blog.blu3fishez",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.moozeh.org/favicon.ico"
+      "url": "https://blog.blu3fishez.org/favicon.ico"
     }
   }
 }
@@ -163,7 +163,7 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://blog.moozeh.org/" accesskey="h" title="blog.moozeh (Alt + H)">blog.moozeh</a>
+            <a href="https://blog.blu3fishez.org/" accesskey="h" title="blog.blu3fishez (Alt + H)">blog.blu3fishez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -189,17 +189,17 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
         </div>
         <ul id="menu">
             <li>
-                <a href="https://blog.moozeh.org/archives/" title="Archive">
+                <a href="https://blog.blu3fishez.org/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://blog.blu3fishez.org/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://blog.moozeh.org/tags/" title="Tags">
+                <a href="https://blog.blu3fishez.org/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -210,11 +210,11 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.moozeh.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.moozeh.org/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://blog.blu3fishez.org/">Home</a>&nbsp;»&nbsp;<a href="https://blog.blu3fishez.org/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       [Nest.js] Nest.js 에서의 DTO
     </h1>
-    <div class="post-meta"><span title='2024-10-23 18:46:23 +0900 KST'>October 23, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;moozeh
+    <div class="post-meta"><span title='2024-10-23 18:46:23 +0900 KST'>October 23, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez
 
 </div>
   </header> <div class="toc">
@@ -283,15 +283,15 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://blog.moozeh.org/tags/nestjs/">Nestjs</a></li>
+      <li><a href="https://blog.blu3fishez.org/tags/nestjs/">Nestjs</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://blog.moozeh.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/">
+  <a class="prev" href="https://blog.blu3fishez.org/posts/2024/2024-10-24-%EC%A7%80%EC%86%8D-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-%ED%95%99%EC%8A%B5-%EC%8A%A4%ED%94%84%EB%A6%B0%ED%8A%B8-%ED%9A%8C%EA%B3%A0/">
     <span class="title">« Prev</span>
     <br>
     <span>지속 가능한 개발자란 무엇일까? - 학습 스프린트 회고</span>
   </a>
-  <a class="next" href="https://blog.moozeh.org/posts/2024/2024-10-06-tls-https/">
+  <a class="next" href="https://blog.blu3fishez.org/posts/2024/2024-10-06-tls-https/">
     <span class="title">Next »</span>
     <br>
     <span>HTTPS, TLS의 의미와 관련 보안 취약점과 인증서 피닝
@@ -304,7 +304,7 @@ Nest.js 에서는 Class 를 이용하여 정의하는 것을 추천하고 있으
     </main>
     
 <footer class="footer">
-        <span>© <a href="https://github.com/moozeh">moozeh</a></span> · 
+        <span>© <a href="https://github.com/blu3fishez">blu3fishez</a></span> · 
 
     <span>
         Powered by
