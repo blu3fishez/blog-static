@@ -129,11 +129,17 @@
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.blu3fishez.org/posts/2025/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Kolown-kr/porring-server/pull/9&#34;&gt;Porring 프로젝트를 진행하면서 엔티티 설정을 마치고,&lt;/a&gt; 복합키에 관한 지적을 받았다.&lt;/p&gt;
-&lt;p&gt;AI를 이용해서 만든 코드인데, 미처 검증하지 못한 부분에 대해서 다시 생각해보게 되었고, 복합 PK 키를 JPA 에서 어떻게 설정하는지 한번 알아보려고 한다.&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;h2 id=&#34;먼저-복합-키란&#34;&gt;먼저, 복합 키란?&lt;/h2&gt;
 &lt;p&gt;복합키는 말 그대로 여러 개의 컬럼들을 하나로 묶어서 키로 정의한 것을 복합키라고 한다.&lt;/p&gt;
-&lt;p&gt;기본적으로 복합 인덱스 라고 하면, 여러 컬럼에 대한 인덱스를 뜻할 것이고, 복합 키라고 하면, 외래 키 혹은 기본 키(PK) 에 대해서 복합적인 컬럼이 그 기준이 되는 것을 뜻한다.&lt;/p&gt;</description>
+&lt;p&gt;기본적으로 복합 인덱스 라고 하면, 여러 컬럼에 대한 인덱스를 뜻할 것이고, 복합 키라고 하면, 외래 키 혹은 기본 키(PK) 에 대해서 복합적인 컬럼이 그 기준이 되는 것을 뜻한다.&lt;/p&gt;
+&lt;h2 id=&#34;spring-에서-복합-pk를-설정하는-방법&#34;&gt;Spring 에서 복합 PK를 설정하는 방법&lt;/h2&gt;
+&lt;p&gt;일단 두가지 방식으로 접근할 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;@IdClass&lt;/code&gt; 사용하기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@EmbeddedId&lt;/code&gt; 사용하기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;주의할 점으로는 두 어노테이션 모두 JPA 1.0(JSR-220)부터 존재했다고 하며, 어느 쪽이 더 좋은 쪽은 아니다! 따라서 저마다의 방식이 있기 때문에 장단점을 살펴볼 필요가 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[Spring JPA] Converter 는 언제 써야하는가</title>
