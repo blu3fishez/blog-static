@@ -145,18 +145,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-02 00:00:00 +0000 UTC'>September 2, 2025</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to " href="https://blog.blu3fishez.org/posts/2025/20250902-%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98-db-%EA%B4%80%EB%A6%AC%EB%B0%A9%EB%B2%95/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[Spring JPA] 영속성 컨텍스트 시리즈 (2) - N:M 관계 엔티티로 풀어내기
     </h2>
   </header>
@@ -218,6 +206,23 @@ ENUM 을 쓰면 적절하지 않을 것 같다는 의견을 검색하다가 보�
   </div>
   <footer class="entry-footer"><span title='2025-02-07 00:23:30 +0900 KST'>February 7, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [Spring JPA] Converter 는 언제 써야하는가" href="https://blog.blu3fishez.org/posts/2025/2025-02-07-spring-jpa-converter-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%8D%A8%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[Spring JPA] 테이블 상속에 관하여
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Porring 백엔드를 구현하면서, OAuth 혹은 네이티브 로그인 계정에 대한 ERD 타입을 슈퍼타입과 서브타입으로 정의하였다.
+데이터베이스 상으로만 봤지만, 실제로 어떻게 구현을 해야할까? 단순 쿼리를 한다면 되겠지만, 복잡한 작업이 될 것이며, 쿼리 중간에 예상치 못한 버그가 있을 수 있다. JPA 에서는 어떻게 되는지 알아보자!
+@Inheritance 로 상속하기 다들 알겠지만, ERD 에서 슈퍼타입과 서브타입은 일종의 상속 관계 이다.
+JPA에서의 상속은 @Inheritance 로 구현될 수 있다.
+// SINGLE_TABLE 전략 @Entity @Inheritance(strategy = InheritanceType.SINGLE_TABLE) public abstract class Item { @Id @GeneratedValue private Long id; private String name; } // JOINED 전략 - @DiscriminatorColumn 선택사항 @Entity @Inheritance(strategy = InheritanceType.JOINED) public abstract class Vehicle { @Id @GeneratedValue private Long id; } @Entity public class Car extends Vehicle { private String model; } // TABLE_PER_CLASS 전략 - 자바에서 상속 관계 유지 @Entity @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) public abstract class Payment { @Id @GeneratedValue private Long id; } @Entity public class CardPayment extends Payment { private String cardNumber; } 일반적인 JoinedColumn 등과의 차이점은, PK 값을 공유한다는 점이다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-04 23:30:34 +0900 KST'>February 4, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [Spring JPA] 테이블 상속에 관하여" href="https://blog.blu3fishez.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

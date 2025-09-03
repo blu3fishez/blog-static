@@ -2,25 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.blu3fishez.org/posts/2025/20250902-%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98-db-%EA%B4%80%EB%A6%AC%EB%B0%A9%EB%B2%95/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.blu3fishez.org/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.blu3fishez.org/posts/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.blu3fishez.org/tags/spring/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.blu3fishez.org/tags/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.blu3fishez.org/posts/2025/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/20250828-%EC%B2%98%EC%9D%8C-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%A0%EA%B9%8C/</loc>
     <lastmod>2025-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.blu3fishez.org/tags/open_source/</loc>
+    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.blu3fishez.org/tags/</loc>
     <lastmod>2025-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.blu3fishez.org/posts/2025/20250827-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</loc>
@@ -48,6 +42,9 @@
     <lastmod>2025-03-07T17:00:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.blu3fishez.org/categories/spring/</loc>
+    <lastmod>2025-03-07T17:00:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.blu3fishez.org/tags/spring/</loc>
     <lastmod>2025-03-07T17:00:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.blu3fishez.org/posts/2025/2025-02-22-spring-jpa-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%80%EC%9E%A5%EB%90%A0%EA%B9%8C-1/</loc>

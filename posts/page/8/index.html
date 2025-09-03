@@ -160,22 +160,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">[ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>문제 접근 원형 타일채우기 DP 라고 생각하면 쉽다. 발상이 어려워서 플레티넘3 이 아닌가 조심스레 추측한다.
-해결방법 타일 채우기 문제와 같이 생각을 해보자. 타일을 채우거나 그렇지 않거나만을 따져서 DP 테이블을 잘 짰다면, 경계선에 대한 부분은 경우의 수로 아예 나누어 선형 DP 로 바꾸어 풀어보도록 하자. 타일을 나누는 법? 내가 이부분을 생각못해서, 다른 블로그를 참고했다.
-타일을 나누는 방법에는 총 3가지 경우의 수가 있을 것이다.
-현재 열을 기준으로 윗쪽만 채웠을 경우 (1행만) - a 현재 열을 기준으로 아랫쪽만 채웠을 경우 (2행만) - b 현재 열을 기준으로 윗쪽 아랫쪽 둘다 채웠을 경우 (둘다) - c 이런식으로 열을 1부터 N열 까지 채워나가다보면 선형적으로 풀 수가 있다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-12-26 00:00:00 +0000 UTC'>December 26, 2023</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [ 백준 1006 ] 습격자 초라기 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-12-26-boj1006/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">다크모드 테마 시 깜빡거리는 증상
     </h2>
   </header>
@@ -237,6 +221,24 @@ underline의 굵기 설정 text-decoration-thickness: 0; underline의 위치 조
   </div>
   <footer class="entry-footer"><span title='2023-11-15 00:00:00 +0000 UTC'>November 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [ CSS ] text underline 의 높이 조절, 굵기 설정하기" href="https://blog.blu3fishez.org/posts/2023/2023-11-15-text-underline/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>내가 생각한 솔루션 1. 분리집합 문제를 보자마자 일단 아! 분리집합 문제구나 라고 생각은 했음.
+각 영역의 분리집합을 구한 후, 분리집합의 개수 별로 nC2의 값을 표현하기 가 구현내용이 아닐지.. 하고.
+예를들면, 문제 예시의 트리와, K = 6, S_k = { 1,2,3,4,5,6 } 인 경우
+{ 1, 2, 3, 5 } 와 {4, 6}으로 두 영역이 나뉘므로,
+4C2 &#43; 2C2 = 6 &#43; 1 = 7 가 정답인 것이다.
+각 영역별로 수행한다고 치면 최악의 경우 O(N) 만큼 걸릴 것임.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-12 00:00:00 +0000 UTC'>November 12, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-11-12-query-tree/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
