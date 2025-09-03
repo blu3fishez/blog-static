@@ -160,6 +160,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">[ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>내가 생각한 솔루션 1. 분리집합 문제를 보자마자 일단 아! 분리집합 문제구나 라고 생각은 했음.
+각 영역의 분리집합을 구한 후, 분리집합의 개수 별로 nC2의 값을 표현하기 가 구현내용이 아닐지.. 하고.
+예를들면, 문제 예시의 트리와, K = 6, S_k = { 1,2,3,4,5,6 } 인 경우
+{ 1, 2, 3, 5 } 와 {4, 6}으로 두 영역이 나뉘므로,
+4C2 &#43; 2C2 = 6 &#43; 1 = 7 가 정답인 것이다.
+각 영역별로 수행한다고 치면 최악의 경우 O(N) 만큼 걸릴 것임.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-12 00:00:00 +0000 UTC'>November 12, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-11-12-query-tree/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">[ TS ] 타입스크립트에서 타이핑 하기 귀찮은데요 (Typescript as 키워드)
     </h2>
   </header>
@@ -218,22 +236,6 @@ eventlistener 를 삭제하려면 해당 함수가 무결해야 하고, 함수�
   </div>
   <footer class="entry-footer"><span title='2023-10-24 00:00:00 +0000 UTC'>October 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [ 백준 13330 ] 유사 팰린드롬 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-10-24-boj13330/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[ 백준 3697 ] 정상 : C&#43;&#43; 풀이
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>접근 처음 접근은 이랬습니다. 사실 제일 처음에 어려웠던 부분은 d-정상이 무엇인지 이해를 하는 것이였습니다.
-d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생각을 해서 땅에서부터 그냥 bfs하면 되는것 아닌가 싶은데, 잘못된 방법이였습니다.
-땅에서부터 d 만큼의 높이차가 존재하는 지역이 정상이라고 생각할 수 없는 이유는, 해당하는 높은 지역 사이에 그 지역보다 더 높은 지역이 있을지도 모르기 때문입니다.
-예를들어, 해당 지점이 땅이 아닌 지점이면서 (h-d)보다 더 낮은 지점이 방문 가능한 봉우리 h가 있다고 하면 어떻게 될까요?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-23 00:00:00 +0000 UTC'>October 23, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [ 백준 3697 ] 정상 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-10-23-boj3697/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
