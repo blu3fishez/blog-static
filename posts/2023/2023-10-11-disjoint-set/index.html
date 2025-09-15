@@ -103,8 +103,8 @@
   "keywords": [
     "ps", "algorithm"
   ],
-  "articleBody": "분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.\n문제를 풀다가 이번에도 같은 방식으로 틀려서 기록하게 되었다.\nparent[t1] = p2; 위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.\n따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.\nint t1 = edges[i - 1].first, t2 = edges[i - 1].second; int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 \u003c p2) { parent[p2] = p1; } else { parent[p1] = p2; } ",
-  "wordCount" : "101",
+  "articleBody": "분리집합의 구현에 관해서는 union-find 방식을 사용하여 구현할 수 있는데, 그 중 UNION 하는 과정에서 주의할 필요가 있다.\n문제를 풀다가 이번에도 같은 방식으로 틀려서 기록하게 되었다.\nparent[t1] = p2; 위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.\n따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.\nint getParent(int t) { if (parent[t] == t) return t; else return parent[t] = getParent(parent[t]); } int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 \u003c p2) { parent[p2] = p1; } else { parent[p1] = p2; } ",
+  "wordCount" : "106",
   "inLanguage": "en",
   "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2023-10-11T00:00:00Z",
   "dateModified": "2023-10-11T00:00:00Z",
@@ -206,7 +206,11 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">parent</span><span class="p">[</span><span class="n">t1</span><span class="p">]</span> <span class="o">=</span> <span class="n">p2</span><span class="p">;</span>
 </span></span></code></pre></div><p>위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.</p>
 <p>따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">first</span><span class="p">,</span> <span class="n">t2</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">getParent</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">parent</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">t</span><span class="p">)</span> <span class="k">return</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">return</span> <span class="n">parent</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">getParent</span><span class="p">(</span><span class="n">parent</span><span class="p">[</span><span class="n">t</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">getParent</span><span class="p">(</span><span class="n">t1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">getParent</span><span class="p">(</span><span class="n">t2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span><span class="p">)</span> <span class="p">{</span>

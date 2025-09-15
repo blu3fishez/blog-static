@@ -147,23 +147,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">[Spring JPA] @Embeddable 을 이용한 복합 PK 키 설정하기
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Porring 프로젝트를 진행하면서 엔티티 설정을 마치고, 복합키에 관한 지적을 받았다.
-먼저, 복합 키란? 복합키는 말 그대로 여러 개의 컬럼들을 하나로 묶어서 키로 정의한 것을 복합키라고 한다.
-기본적으로 복합 인덱스 라고 하면, 여러 컬럼에 대한 인덱스를 뜻할 것이고, 복합 키라고 하면, 외래 키 혹은 기본 키(PK) 에 대해서 복합적인 컬럼이 그 기준이 되는 것을 뜻한다.
-Spring 에서 복합 PK를 설정하는 방법 일단 두가지 방식으로 접근할 수 있다.
-@IdClass 사용하기 @EmbeddedId 사용하기 주의할 점으로는 두 어노테이션 모두 JPA 1.0(JSR-220)부터 존재했다고 하며, 어느 쪽이 더 좋은 쪽은 아니다! 따라서 저마다의 방식이 있기 때문에 장단점을 살펴볼 필요가 있다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-02-16 00:00:00 +0000 UTC'>February 16, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [Spring JPA] @Embeddable 을 이용한 복합 PK 키 설정하기" href="https://blog.blu3fishez.org/posts/2025/2025-02-16-spring-jpa-embeddable-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B3%B5%ED%95%A9-pk-%ED%82%A4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[Spring JPA] Converter 는 언제 써야하는가
     </h2>
   </header>
@@ -226,6 +209,25 @@ Spring JDBC란 Spring 개발팀이 Spring Framework 1.0 의 일부로 출시하�
   </div>
   <footer class="entry-footer"><span title='2025-01-29 13:35:24 +0900 KST'>January 29, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [Spring] Spring JDBC의 특징" href="https://blog.blu3fishez.org/posts/2025/2025-01-29-spring-jdbc%EC%9D%98-%ED%8A%B9%EC%A7%95/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[Spring] Spring 에서 사용하는 로거의 로깅 레벨
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.
+각 로그 단계 각 로그 단계는 아래와 같이 구성되어 있다.
+trace debug info warning error off 위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.
+스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.
+logging.level.org.springframework=trace trace 모든 로그를 출력한다.
+따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.
+하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-28 16:33:03 +0900 KST'>January 28, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [Spring] Spring 에서 사용하는 로거의 로깅 레벨" href="https://blog.blu3fishez.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

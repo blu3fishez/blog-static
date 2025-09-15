@@ -12,22 +12,8 @@
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
     <copyright>blu3fishez</copyright>
-    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.blu3fishez.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[오픈소스 기여 도전기] 처음하는데 어떻게 할까</title>
-      <link>https://blog.blu3fishez.org/posts/2025/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/20250828-%EC%B2%98%EC%9D%8C-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%A0%EA%B9%8C/</link>
-      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.blu3fishez.org/posts/2025/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/20250828-%EC%B2%98%EC%9D%8C-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%A0%EA%B9%8C/</guid>
-      <description>&lt;h2 id=&#34;계기&#34;&gt;계기&lt;/h2&gt;
-&lt;p&gt;![[오픈소스 기여 도전기 - 처음 하는데 어떻게 할까-1756368209011.webp]]&lt;/p&gt;
-&lt;p&gt;오랜만에 깃헙 프로필을 보았다. 내 소개문구 쪽에 지우긴 했지만, 내가 이전에 올려놓은 소개 문구에서 &amp;lsquo;오픈소스 기여에 관심이 있다&amp;rsquo;고 말해두었었다.&lt;/p&gt;
-&lt;p&gt;빈말이 아니라 정말로 오픈소스 쪽에 기여를 해보면서 &lt;code&gt;커뮤니티&lt;/code&gt; 경험을 쌓고 싶었고, 한번 이제 도전해보려고 한다. 백수(?)가 되기 전에 오픈소스에서라도 취업(?)을 해야하지 않을까?&lt;/p&gt;
-&lt;h2 id=&#34;처음은-아니다&#34;&gt;처음은 아니다&lt;/h2&gt;
-&lt;p&gt;사실 지인의 추천으로 간단하게 리액트의 전화번호 컴포넌트 라이브러리의 한국어 번역을 조금 도와주긴 했다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/jackocnr/intl-tel-input&#34;&gt;https://github.com/jackocnr/intl-tel-input&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;![[오픈소스 기여 도전기 &lt;em&gt;1&lt;/em&gt; - 처음 하는데 어떻게 할까-1756367033466.webp]]&lt;/p&gt;</description>
-    </item>
     <item>
       <title>2025년 상반기 회고</title>
       <link>https://blog.blu3fishez.org/posts/2025/20250827-%EC%83%81%EB%B0%98%EA%B8%B0-%ED%9A%8C%EA%B3%A0/</link>

@@ -180,7 +180,7 @@ while(lo &lt; hi) 가 아니라 while(lo &lt;= hi) 인지 7 4 5 6 1 2 3 4 정답
 문제를 풀다가 이번에도 같은 방식으로 틀려서 기록하게 되었다.
 parent[t1] = p2; 위와 같이 바꾸게 되면, t1의 부모까지 부모값이 p2로 갱신되지 않고 짤리므로 위와 같이 구현하면 안된다.
 따라서 아래와 같이 그냥 부모노드의 부모값을 바꿔주어야한다.
-int t1 = edges[i - 1].first, t2 = edges[i - 1].second; int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 &lt; p2) { parent[p2] = p1; } else { parent[p1] = p2; } </p>
+int getParent(int t) { if (parent[t] == t) return t; else return parent[t] = getParent(parent[t]); } int p1 = getParent(t1); int p2 = getParent(t2); if (p1 == p2) { // if point, memo it and break. point = i; break; } if (p1 &lt; p2) { parent[p2] = p1; } else { parent[p1] = p2; } </p>
   </div>
   <footer class="entry-footer"><span title='2023-10-11 00:00:00 +0000 UTC'>October 11, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to 분리 집합 구현 시 주의 점" href="https://blog.blu3fishez.org/posts/2023/2023-10-11-disjoint-set/"></a>
