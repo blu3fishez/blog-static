@@ -36,7 +36,7 @@
 &lt;p&gt;&lt;code&gt;Repository&lt;/code&gt; 에서 저장 될 때 기본적인 엔티티가 어떻게 저장되는지가 궁금했고, 이왕 알아보는 김에 &lt;code&gt;Hibernate&lt;/code&gt; 에서 정확하게 어떻게 구현이 되었는지 살펴보는 것까지 목표로 한다.&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
-&lt;p&gt;![[99 images/2025-02-22-spring-jpa-상속받은-엔티티는-어떻게-저장될까-20250222165542877.webp]]&lt;/p&gt;
+&lt;p&gt;![[2025-02-22-spring-jpa-상속받은-엔티티는-어떻게-저장될까-20250222165542877.webp]]&lt;/p&gt;
 &lt;p&gt;결국 문제는 단순 휴먼 에러였다. 왜냐하면, 보이는 것처럼 추측되는 &lt;code&gt;Account&lt;/code&gt; 엔티티를 저장하지 않은 채로,  &lt;code&gt;AUTO INCREMENT&lt;/code&gt; 값을 불러오지 않은채 바로 다른 곳에 사용했기 때문에 일어난 일이었다.&lt;/p&gt;</description>
     </item>
     <item>

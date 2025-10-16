@@ -9,7 +9,7 @@
 <meta name="keywords" content="HTML, Frontend">
 <meta name="description" content="
 Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
-![[99 images/Pasted image 20250125190702.png]]
+![[Pasted image 20250125190702.png]]
 즉, 직역해보면 실제로 &lt;p&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.
 실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.
 도대체 무슨 일일까?
@@ -67,7 +67,7 @@ Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적�
   <meta property="og:site_name" content="blog.blu3fishez">
   <meta property="og:title" content="몰랐던 HTML p 태그에 대한 사실">
   <meta property="og:description" content=" Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
-![[99 images/Pasted image 20250125190702.png]]
+![[Pasted image 20250125190702.png]]
 즉, 직역해보면 실제로 &lt;p&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.
 실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.
 도대체 무슨 일일까?
@@ -86,7 +86,7 @@ Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적�
 <meta name="twitter:title" content="몰랐던 HTML p 태그에 대한 사실">
 <meta name="twitter:description" content="
 Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
-![[99 images/Pasted image 20250125190702.png]]
+![[Pasted image 20250125190702.png]]
 즉, 직역해보면 실제로 &lt;p&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.
 실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.
 도대체 무슨 일일까?
@@ -121,12 +121,12 @@ Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적�
   "@type": "BlogPosting",
   "headline": "몰랐던 HTML p 태그에 대한 사실",
   "name": "몰랐던 HTML p 태그에 대한 사실",
-  "description": " Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.\n![[99 images/Pasted image 20250125190702.png]]\n즉, 직역해보면 실제로 \u0026lt;p\u0026gt; 태그를 연 적이 없는데 닫힌다는 의미이다.\n실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.\n도대체 무슨 일일까?\n원인 나는 몰랐던 사실인데, \u0026lt;p\u0026gt; 태그 안에 블록 레벨 요소(예: \u0026lt;div\u0026gt;, \u0026lt;table\u0026gt;, \u0026lt;h1\u0026gt;-\u0026lt;h6\u0026gt; 등)가 포함되면 브라우저는 자동으로 \u0026lt;p\u0026gt; 태그를 닫는다.\n이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 \u0026ldquo;No p element in scope but a p end tag seen\u0026rdquo; 오류가 발생할 수 있다.\n",
+  "description": " Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.\n![[Pasted image 20250125190702.png]]\n즉, 직역해보면 실제로 \u0026lt;p\u0026gt; 태그를 연 적이 없는데 닫힌다는 의미이다.\n실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.\n도대체 무슨 일일까?\n원인 나는 몰랐던 사실인데, \u0026lt;p\u0026gt; 태그 안에 블록 레벨 요소(예: \u0026lt;div\u0026gt;, \u0026lt;table\u0026gt;, \u0026lt;h1\u0026gt;-\u0026lt;h6\u0026gt; 등)가 포함되면 브라우저는 자동으로 \u0026lt;p\u0026gt; 태그를 닫는다.\n이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 \u0026ldquo;No p element in scope but a p end tag seen\u0026rdquo; 오류가 발생할 수 있다.\n",
   "keywords": [
     "HTML", "Frontend"
   ],
-  "articleBody": " Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.\n![[99 images/Pasted image 20250125190702.png]]\n즉, 직역해보면 실제로 태그를 연 적이 없는데 닫힌다는 의미이다.\n실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.\n도대체 무슨 일일까?\n원인 나는 몰랐던 사실인데, 태그 안에 블록 레벨 요소(예: , , - 등)가 포함되면 브라우저는 자동으로 태그를 닫는다.\n이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 “No p element in scope but a p end tag seen” 오류가 발생할 수 있다.\n해결 방법 태그를 로 대체하기\n블록 레벨 요소를 태그 밖으로 이동하기\n인라인 요소만 태그 내부에 사용하기\n예시 잘못된 코드:\n\u003cp\u003e \u003cdiv\u003e내용\u003c/div\u003e \u003c/p\u003e 올바른 코드:\n\u003cdiv\u003e \u003cp\u003e내용\u003c/p\u003e \u003c/div\u003e 이 문제는 MDX나 마크다운 컴파일 과정에서도 발생할 수 있다.\n따라서, 문서 작성 시 블록 레벨 요소를 사용할 땐 태그를 조심히 사용하도록 하자.\n",
-  "wordCount" : "145",
+  "articleBody": " Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.\n![[Pasted image 20250125190702.png]]\n즉, 직역해보면 실제로 태그를 연 적이 없는데 닫힌다는 의미이다.\n실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.\n도대체 무슨 일일까?\n원인 나는 몰랐던 사실인데, 태그 안에 블록 레벨 요소(예: , , - 등)가 포함되면 브라우저는 자동으로 태그를 닫는다.\n이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 “No p element in scope but a p end tag seen” 오류가 발생할 수 있다.\n해결 방법 태그를 로 대체하기\n블록 레벨 요소를 태그 밖으로 이동하기\n인라인 요소만 태그 내부에 사용하기\n예시 잘못된 코드:\n\u003cp\u003e \u003cdiv\u003e내용\u003c/div\u003e \u003c/p\u003e 올바른 코드:\n\u003cdiv\u003e \u003cp\u003e내용\u003c/p\u003e \u003c/div\u003e 이 문제는 MDX나 마크다운 컴파일 과정에서도 발생할 수 있다.\n따라서, 문서 작성 시 블록 레벨 요소를 사용할 땐 태그를 조심히 사용하도록 하자.\n",
+  "wordCount" : "144",
   "inLanguage": "en",
   "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2025-01-25T19:06:26+09:00",
   "dateModified": "2025-01-25T19:06:26+09:00",
@@ -239,7 +239,7 @@ Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적�
 </div>
 <div class="post-content"><!-- truncate -->
 <p><code>Docusaurus</code> 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.</p>
-<p>![[99 images/Pasted image 20250125190702.png]]</p>
+<img src="/assets/images/Pasted%20image%2020250125190702.png" alt="Pasted image 20250125190702" loading="lazy">
 <p>즉, 직역해보면 실제로 <code>&lt;p&gt;</code> 태그를 연 적이 없는데 닫힌다는 의미이다.</p>
 <p>실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.</p>
 <p>도대체 무슨 일일까?</p>

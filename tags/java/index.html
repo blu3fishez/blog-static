@@ -170,10 +170,11 @@ String 단순히 문자열 이라고 합니다. 문자들의 배열 을 줄여�
 기존 C&#43;&#43; 에서의 스트링 순회 방법 C&#43;&#43; 에서는 char 형으로 스트링을 순회할 수 있다.
 (std string 기준)
 for(char t : str1) cout&lt;&lt;t; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.
-![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
+![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
 위와같은 에러를 받지 않게 하려면 이렇게 해야한다.
 그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.
 기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.
+Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-19 15:22:10 +0900 KST'>January 19, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
