@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.148.2"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.151.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 <meta name="description" content="블피의 블로그 입니다">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
@@ -147,23 +147,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">[ React ] 이벤트 탈착할 때 주의 사항
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>드로우 온 웹 프로젝트를 현재 vite &#43; react &#43; typescript로 진행중입니다.
-하다가 문제점이 생긴게, 캔버스 토글을 animation을 주면서 껐다켰다하는 기능을 만드는 중인데 여기서 문제가 생기더라고요
-eventlistener 를 삭제하려면 해당 함수가 무결해야 하고, 함수가 특정 변수에 정의되어 있어 지정할 수 있어야합니다..
-그런데, 제가 마우스 이벤트를 사용하던 함수들은 모두 리액트 훅으로 반환되는 ref 객체를 사용하고 있었습니다…
-이렇게 되면 해당 함수들을 모두 toggleCanvas 내에 정의를 해야하는데, 그렇게되면 함수가 너무 길어져서 코드의 가독성이 작살나버리더라고요.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-31 00:00:00 +0000 UTC'>October 31, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [ React ] 이벤트 탈착할 때 주의 사항" href="https://blog.blu3fishez.org/posts/2023/2023-10-31-remove-event/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">[ 백준 17298 ] 오큰수 : C&#43;&#43; 풀이
     </h2>
   </header>
@@ -222,12 +205,24 @@ d만큼의 높이차가 존재하는 정상들은 모두 정상이다라고 생�
   <footer class="entry-footer"><span title='2023-10-21 00:00:00 +0000 UTC'>October 21, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [ C&#43;&#43; ] 조합, 순열 을 next_permutation() 으로 순회하기" href="https://blog.blu3fishez.org/posts/2023/2023-10-21-next-permutation/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>소스코드 #include&lt;iostream&gt; #include&lt;algorithm&gt; #include&lt;cstring&gt; #include&lt;queue&gt; using namespace std; int n, m; int r, g; int board[52][52]; // 맵 vector&lt;pair&lt;int, int&gt;&gt; able_list; // 배양액 뿌릴 수 있는 땅 정보 int dir[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} }; int flowers; // 꽃의 개수 void bfs(vector&lt;pair&lt;int, int&gt;&gt;&amp; gv, vector&lt;pair&lt;int, int&gt;&gt;&amp; rv) { int visit[52][52] = { 0, }; // 빨간색 -t 값. 초록색 t 값으로 시간을 표현. 1초부터 시작. 0이면 닿지않은 경우임. int f = 0; // 현재 꽃 queue&lt;pair&lt;int, pair&lt;int, int&gt;&gt;&gt; q; // bfs q for (auto t : gv) { visit[t.first][t.second] = -1; q.push({ -1, t }); } for (auto t : rv) { visit[t.first][t.second] = 1; q.push({ 1, t }); } while (!q.empty()) { int time = q.front().first; pair&lt;int, int&gt; node = q.front().second; q.pop(); int y = node.first; int x = node.second; if (visit[y][x] == 9999) continue; // 꽃은 퍼지지 않음. visit[y][x] = time; if (time &gt; 0) time&#43;&#43;; else time--; for (int i = 0; i &lt; 4; &#43;&#43;i) { int dy = y &#43; dir[i][0]; int dx = x &#43; dir[i][1]; if (visit[dy][dx] &#43; time == 0) { visit[dy][dx] = 9999; f&#43;&#43;; continue; } if (board[dy][dx] &amp;&amp; visit[dy][dx] == 0) { q.push({ time, {dy, dx} }); visit[dy][dx] = time; } } } flowers = flowers &lt; f ? f : flowers; } int main() { ios::sync_with_stdio(0); cin.tie(0); cin &gt;&gt; n &gt;&gt; m &gt;&gt; r &gt;&gt; g; for (int i = 1; i &lt;= n; &#43;&#43;i) { for (int j = 1; j &lt;= m; &#43;&#43;j) { cin &gt;&gt; board[i][j]; if (board[i][j] == 2) { able_list.push_back({ i, j }); } } } vector&lt;int&gt; p; for (int i = 0; i &lt; able_list.size() - r - g; &#43;&#43;i) p.push_back(0); for (int i = 0; i &lt; r; &#43;&#43;i) p.push_back(1); for (int i = 0; i &lt; g; &#43;&#43;i) p.push_back(2); do { vector&lt;pair&lt;int, int&gt;&gt; r_list; vector&lt;pair&lt;int, int&gt;&gt; g_list; for (int i = 0; i &lt; p.size(); &#43;&#43;i) { if (p[i] == 1) r_list.push_back(able_list[i]); if (p[i] == 2) g_list.push_back(able_list[i]); } bfs(g_list, r_list); } while (next_permutation(p.begin(), p.end())); cout &lt;&lt; flowers; } </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-20 00:00:00 +0000 UTC'>October 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [ 백준 18809 ] Gaaaaarden : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-10-20-boj18809/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.blu3fishez.org/page/8/">
-      «&nbsp;Prev&nbsp;8/11
+      «&nbsp;Prev&nbsp;8/10
     </a>
-    <a class="next" href="https://blog.blu3fishez.org/page/10/">Next&nbsp;10/11&nbsp;»
+    <a class="next" href="https://blog.blu3fishez.org/page/10/">Next&nbsp;10/10&nbsp;»
     </a>
   </nav>
 </footer>

@@ -14,14 +14,13 @@ C&#43;&#43; 에서는 char 형으로 스트링을 순회할 수 있다.
 for(char t : str1) cout&lt;&lt;t;
 Java 에서 단순히 for-each를 할 경우
 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.
-![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
+![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
 위와같은 에러를 받지 않게 하려면 이렇게 해야한다.
 그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.
-기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.
-Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.">
+기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.580d5c4b37c6350e62c76a9e39ccff4785bf5e515b18b3cb0605dea4cc5f5376.css" integrity="sha256-WA1cSzfGNQ5ix2qeOcz/R4W/XlFbGLPLBgXepMxfU3Y=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
@@ -73,11 +72,10 @@ Java에서는 String 클래스는 내부적으로 문자들의 배열을 private
 기존 C&#43;&#43; 에서의 스트링 순회 방법 C&#43;&#43; 에서는 char 형으로 스트링을 순회할 수 있다.
 (std string 기준)
 for(char t : str1) cout&lt;&lt;t; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.
-![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
+![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
 위와같은 에러를 받지 않게 하려면 이렇게 해야한다.
 그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.
-기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.
-Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.">
+기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -95,11 +93,10 @@ C&#43;&#43; 에서는 char 형으로 스트링을 순회할 수 있다.
 for(char t : str1) cout&lt;&lt;t;
 Java 에서 단순히 for-each를 할 경우
 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.
-![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
+![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]
 위와같은 에러를 받지 않게 하려면 이렇게 해야한다.
 그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.
-기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.
-Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.">
+기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.">
 
 
 <script type="application/ld+json">
@@ -128,12 +125,12 @@ Java에서는 String 클래스는 내부적으로 문자들의 배열을 private
   "@type": "BlogPosting",
   "headline": "[Java] String for-each 순회 방법",
   "name": "[Java] String for-each 순회 방법",
-  "description": "Java에서는 스트링 순회를 어떻게 할까?\n기존 C++ 에서의 스트링 순회 방법 C++ 에서는 char 형으로 스트링을 순회할 수 있다.\n(std string 기준)\nfor(char t : str1) cout\u0026lt;\u0026lt;t; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.\n![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]\n위와같은 에러를 받지 않게 하려면 이렇게 해야한다.\n그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.\n기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.\nJava에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.\n",
+  "description": "Java에서는 스트링 순회를 어떻게 할까?\n기존 C++ 에서의 스트링 순회 방법 C++ 에서는 char 형으로 스트링을 순회할 수 있다.\n(std string 기준)\nfor(char t : str1) cout\u0026lt;\u0026lt;t; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.\n![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]\n위와같은 에러를 받지 않게 하려면 이렇게 해야한다.\n그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.\n기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.\n",
   "keywords": [
     "Java"
   ],
-  "articleBody": "Java에서는 스트링 순회를 어떻게 할까?\n기존 C++ 에서의 스트링 순회 방법 C++ 에서는 char 형으로 스트링을 순회할 수 있다.\n(std string 기준)\nfor(char t : str1) cout\u003c\u003ct; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.\n![[2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]\n위와같은 에러를 받지 않게 하려면 이렇게 해야한다.\n그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.\n기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.\nJava에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.\nJava 9 이전에는 char[] 배열을 사용했고, Java 9 이후에는 byte[] 배열과 인코딩 정보를 저장하는 coder 필드를 사용합니다.\nString에서 for-each 문 사용불가능한 이유 String 클래스는 Iterable 인터페이스를 구현하지 않았기 때문에 for-each 문법을 직접 사용할 수 없습니다. 즉, 위에서 언급한대로, Iterable 에 대한 행동 구현이 명시되지 않아서 그렇습니다.\n또한, String은 String Pool이라는 특별한 메모리 영역에서 관리되며, 문자열 리터럴을 재사용하여 메모리를 최적화합니다\nString str1 = \"Hello\"; String str2 = \"Hello\"; // 같은 문자열은 String Pool에서 재사용 가령 위와같은 str1 이 동일한 문자열을 가지고 있다면, String Pool 에서 같은 객체를 참조하게 함으로써 메모리를 절약합니다.\n그렇기 때문에, Java에서는 문자들의 배열을 불변객체로 저장하고 있습니다.\nJava에서 스트링 순회 방법 따라서, Iterable 이 가능한 객체를 새로 만들어주어야합니다.\nString.toCharArray() 메소드를 사용하여 새롭게 객체를 생성하는 식으로 하면 문제를 해결할 수 있습니다.\nfor (char c : str.toCharArray()) { System.out.print(c); } ",
-  "wordCount" : "217",
+  "articleBody": "Java에서는 스트링 순회를 어떻게 할까?\n기존 C++ 에서의 스트링 순회 방법 C++ 에서는 char 형으로 스트링을 순회할 수 있다.\n(std string 기준)\nfor(char t : str1) cout\u003c\u003ct; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.\n![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]\n위와같은 에러를 받지 않게 하려면 이렇게 해야한다.\n그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.\n기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.\nJava에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.\nJava 9 이전에는 char[] 배열을 사용했고, Java 9 이후에는 byte[] 배열과 인코딩 정보를 저장하는 coder 필드를 사용합니다.\nString에서 for-each 문 사용불가능한 이유 String 클래스는 Iterable 인터페이스를 구현하지 않았기 때문에 for-each 문법을 직접 사용할 수 없습니다. 즉, 위에서 언급한대로, Iterable 에 대한 행동 구현이 명시되지 않아서 그렇습니다.\n또한, String은 String Pool이라는 특별한 메모리 영역에서 관리되며, 문자열 리터럴을 재사용하여 메모리를 최적화합니다\nString str1 = \"Hello\"; String str2 = \"Hello\"; // 같은 문자열은 String Pool에서 재사용 가령 위와같은 str1 이 동일한 문자열을 가지고 있다면, String Pool 에서 같은 객체를 참조하게 함으로써 메모리를 절약합니다.\n그렇기 때문에, Java에서는 문자들의 배열을 불변객체로 저장하고 있습니다.\nJava에서 스트링 순회 방법 따라서, Iterable 이 가능한 객체를 새로 만들어주어야합니다.\nString.toCharArray() 메소드를 사용하여 새롭게 객체를 생성하는 식으로 하면 문제를 해결할 수 있습니다.\nfor (char c : str.toCharArray()) { System.out.print(c); } ",
+  "wordCount" : "218",
   "inLanguage": "en",
   "image": "https://blog.blu3fishez.org/images/papermod-cover.png","datePublished": "2025-01-19T15:22:10+09:00",
   "dateModified": "2025-01-19T15:22:10+09:00",
@@ -253,7 +250,7 @@ Java에서는 String 클래스는 내부적으로 문자들의 배열을 private
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">char</span> <span class="nl">t</span> <span class="p">:</span> <span class="n">str1</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">t</span><span class="p">;</span>
 </span></span></code></pre></div><h2 id="java-에서-단순히-for-each를-할-경우">Java 에서 단순히 for-each를 할 경우<a hidden class="anchor" aria-hidden="true" href="#java-에서-단순히-for-each를-할-경우">#</a></h2>
 <p>하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.</p>
-<img src="/assets/images/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95-20250119234458860.webp" alt="2025-01-19-java-string-for-each-순회-방법-20250119234458860" loading="lazy">
+<p>![[99 images/2025-01-19-java-string-for-each-순회-방법-20250119234458860.webp]]</p>
 <p>위와같은 에러를 받지 않게 하려면 이렇게 해야한다.</p>
 <p>그 이유는 <code>const char*</code> 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.</p>
 <p>기본적으로 <code>std::string</code> 에서 제공하는 <code>Iterable</code> 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.</p>

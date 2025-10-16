@@ -9,7 +9,7 @@
       <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
       <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.148.2</generator>
+    <generator>Hugo -- 0.151.0</generator>
     <language>en</language>
     <copyright>blu3fishez</copyright>
     <lastBuildDate>Sun, 29 Dec 2024 13:42:48 +0900</lastBuildDate>
@@ -19,12 +19,11 @@
       <link>https://blog.blu3fishez.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</link>
       <pubDate>Sun, 29 Dec 2024 13:42:48 +0900</pubDate>
       <guid>https://blog.blu3fishez.org/posts/2024/2024-12-29-%EB%AA%85%EC%84%B8%EC%84%9C%EB%A5%BC-%ED%98%84%EB%AA%85%ED%95%98%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%A0%A4%EB%A9%B4/</guid>
-      <description>&lt;p&gt;![[Pasted image 20241229134612.webp]]&lt;/p&gt;
+      <description>&lt;p&gt;![[99 images/Pasted image 20241229134612.webp]]&lt;/p&gt;
 &lt;h2 id=&#34;문제-상황&#34;&gt;문제 상황&lt;/h2&gt;
 &lt;p&gt;웹소켓의 이벤트 명세를 바꾸게 되었는데, 프론트 - 백 간의 연동 과정에서 엄청난 실수를 저지르고 말았습니다. 바로 반환되는 데이터를 바꿔버린 것입니다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;반환되는 데이터만 바뀌면, 그냥 알려주면 되는 것 아닌가?&lt;/code&gt; 라는 생각이 드실 수 있습니다. 그런데 문제는, &lt;code&gt;반환되는 데이터의 기준&lt;/code&gt; 을 바꿔버렸던 것입니다.&lt;/p&gt;
-&lt;p&gt;API를 정의할때 &lt;code&gt;입력&lt;/code&gt; 과 &lt;code&gt;출력&lt;/code&gt; 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.&lt;/p&gt;
-&lt;p&gt;“바뀐 명세를 확인해주세요!” 라고 말하고 너무 프론트 분에게 맡겼던 것이 큰 실책이었던 것입니다. 바뀐 명세가 제대로 작동되지 않거나, 충분히 설명되지 않았습니다. 글을 쓰는 것이 많이 어려웠는데, 계속된 문서화랑 코딩으로 인해 체력이 바닥이 나서 제대로 글을 못쓴 것도 원인 같습니다. 이런 상황에서도 문서를 잘 쓸 수 있어야 개발자일까.. 고민하게 됐습니다.&lt;/p&gt;</description>
+&lt;p&gt;API를 정의할때 &lt;code&gt;입력&lt;/code&gt; 과 &lt;code&gt;출력&lt;/code&gt; 값만 나오면 된다곤 하지만, 결국엔 어떤 값을 넣으면 서버에 저장되는 데이터가 어떻게 바뀌는지에 대해서는 명세가 안되었던 것 입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JWT 토큰 파싱 변경 과정과 협업의 가치에 대한 고민</title>

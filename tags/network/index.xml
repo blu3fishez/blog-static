@@ -9,7 +9,7 @@
       <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
       <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.148.2</generator>
+    <generator>Hugo -- 0.151.0</generator>
     <language>en</language>
     <copyright>blu3fishez</copyright>
     <lastBuildDate>Sat, 26 Oct 2024 14:58:10 +0900</lastBuildDate>
@@ -23,7 +23,7 @@
 &lt;p&gt;Nest.js 를 배우다가 데이터베이스를 사용할 일이 생겼다.&lt;/p&gt;
 &lt;p&gt;보통 나는 환경이 분리되는 걸 선호한다. 그래서 전역적으로 설치되는걸 좋아하지 않는다. &lt;code&gt;pip&lt;/code&gt; 같은 것들 말이다.&lt;/p&gt;
 &lt;p&gt;그래서 찾아보니, &lt;code&gt;Docker&lt;/code&gt; 위에 &lt;code&gt;MySQL&lt;/code&gt; 컨테이너를 올려서 사용하면 환경 분리가 된다고 하더라.&lt;/p&gt;
-&lt;p&gt;![[2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]&lt;/p&gt;
+&lt;p&gt;![[99 images/2024-10-26-network-127001-과-localhost-의-차이-20241026161720760.webp|428]]&lt;/p&gt;
 &lt;p&gt;도커와 관련해서는 &lt;code&gt;CLI&lt;/code&gt; 환경에서 결국엔 다루는게 맞다고 생각했다. 그런데, 일단은 도커가 처음이기에 아직 내가 많이 몰라서 &lt;code&gt;Docker Desktop&lt;/code&gt; 을 이용해서 문제를 해결하려고 한다.&lt;/p&gt;
 &lt;h3 id=&#34;mysql-에-접속이-안되는-문제&#34;&gt;MySQL 에 접속이 안되는 문제&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mysql -u root -p&amp;#39;root&amp;#39; -h 172.17.0.2

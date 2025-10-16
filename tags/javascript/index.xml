@@ -9,18 +9,11 @@
       <url>https://blog.blu3fishez.org/images/papermod-cover.png</url>
       <link>https://blog.blu3fishez.org/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.148.2</generator>
+    <generator>Hugo -- 0.151.0</generator>
     <language>en</language>
     <copyright>blu3fishez</copyright>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.blu3fishez.org/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[ TS ] 타입스크립트에서 타이핑 하기 귀찮은데요 (Typescript as 키워드)</title>
-      <link>https://blog.blu3fishez.org/posts/2023/2023-11-03-typescript-interface/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.blu3fishez.org/posts/2023/2023-11-03-typescript-interface/</guid>
-      <description>TypeScript에서 as 키워드는 타입 단언(type assertion)을 사용하기 위한 것입니다.</description>
-    </item>
     <item>
       <title>[ React ] 이벤트 탈착할 때 주의 사항</title>
       <link>https://blog.blu3fishez.org/posts/2023/2023-10-31-remove-event/</link>
