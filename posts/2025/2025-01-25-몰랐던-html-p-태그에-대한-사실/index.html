@@ -7,15 +7,14 @@
 <meta name="robots" content="index, follow">
 <title>몰랐던 HTML p 태그에 대한 사실 | blog.blu3fishez</title>
 <meta name="keywords" content="HTML, Frontend">
-<meta name="description" content="
-Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
-![[Pasted image 20250125190702.png]]
+
+<meta name="description" content=" Docusaurus 문서블로그를 만들고 있는데, 빌드 설정 성능 최적화를 하다가, 아래와 같은 오류를 찾을 수 있었다.
 즉, 직역해보면 실제로 &lt;p&gt; 태그를 연 적이 없는데 닫힌다는 의미이다.
 실제로 내 프로젝트에서는 열리고 닫히는 태그는 모두 코드 에디터가 확인해서 오류가 없던 상황이었다.
 도대체 무슨 일일까?
-원인
-나는 몰랐던 사실인데, &lt;p&gt; 태그 안에 블록 레벨 요소(예: &lt;div&gt;, &lt;table&gt;, &lt;h1&gt;-&lt;h6&gt; 등)가 포함되면 브라우저는 자동으로 &lt;p&gt; 태그를 닫는다.
-이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 &ldquo;No p element in scope but a p end tag seen&rdquo; 오류가 발생할 수 있다.">
+원인 나는 몰랐던 사실인데, &lt;p&gt; 태그 안에 블록 레벨 요소(예: &lt;div&gt;, &lt;table&gt;, &lt;h1&gt;-&lt;h6&gt; 등)가 포함되면 브라우저는 자동으로 &lt;p&gt; 태그를 닫는다.
+이로 인해 실제로 닫는 태그가 있더라도 HTML 파서는 이미 닫힌 것으로 간주하여 &ldquo;No p element in scope but a p end tag seen&rdquo; 오류가 발생할 수 있다.
+">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-%EB%AA%B0%EB%9E%90%EB%8D%98-html-p-%ED%83%9C%EA%B7%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EC%8B%A4/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">

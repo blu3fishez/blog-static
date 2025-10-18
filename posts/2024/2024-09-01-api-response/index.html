@@ -8,10 +8,11 @@
 <title>API의 응답 바디는 커도 좋을까
  | blog.blu3fishez</title>
 <meta name="keywords" content="network">
-<meta name="description" content="서론 : API 설계 시 든 의문
-API 응답과 요청 과정에서의 오버헤드는 얼마나 성능에 영향을 끼칠까요?
+
+<meta name="description" content="서론 : API 설계 시 든 의문 API 응답과 요청 과정에서의 오버헤드는 얼마나 성능에 영향을 끼칠까요?
 예를 들어 여러 카테고리 열에 담긴 카드 정보를 불러오는 API를 작성해야할 때가 있었는데, 저는 전체 데이터를 한번에 가져오는게 아니라, 열의 인덱스 번호를 URL에 담아서 보내고, 해당 열에 대응하는 카드들을 가져오는 API 로 설계를 했었습니다.
-이렇게 설계를 했던 이유는 사실 REST 원칙에서 &ldquo;API 계층적으로 구성해야한다&quot;는 원칙에 따라 구성을 하였기 때문입니다. 사실 카드 인덱싱을 하는데 있어서 계층적으로 구성하려면 URL 파라미터를 /columns/cards 이런식으로 불러오도록 만드는게 좋지 않았을까 하는 생각이 듭니다.">
+이렇게 설계를 했던 이유는 사실 REST 원칙에서 &ldquo;API 계층적으로 구성해야한다&quot;는 원칙에 따라 구성을 하였기 때문입니다. 사실 카드 인덱싱을 하는데 있어서 계층적으로 구성하려면 URL 파라미터를 /columns/cards 이런식으로 불러오도록 만드는게 좋지 않았을까 하는 생각이 듭니다.
+">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2024/2024-09-01-api-response/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">

@@ -7,27 +7,13 @@
 <meta name="robots" content="index, follow">
 <title>[Spring] Spring Stereotype 어노테이션들에 대해 알아보자 | blog.blu3fishez</title>
 <meta name="keywords" content="spring">
-<meta name="description" content="
-@Component
-기본적으로 스프링의 @Bean 을 나타내며, 범용적으로 사용된다.
+
+<meta name="description" content=" @Component 기본적으로 스프링의 @Bean 을 나타내며, 범용적으로 사용된다.
 모든 스프링의 Stereotype Annotation 의 토대가 된다.
-@Service
-비즈니스 로직을 표시할 때 사용되는 @Component이다.
+@Service 비즈니스 로직을 표시할 때 사용되는 @Component이다.
 클래스에 특정 비즈니스 로직을 작성했다면, 이 어노테이션을 사용하자!
-@Service
-public class BusinessCalculationService {
-    private final DataService dataService; // write access modifier every time.
-
-    public BusinessCalculationService(DataService dataService) {
-        this.dataService = dataService;
-    }
-
-    public int findMax() {
-        return Arrays.stream(dataService.retrieveData()).max().orElse(0);
-    }
-}
-@Controller
-REST API 에서 컨트롤러를 정의하는데 쓰인다.">
+@Service public class BusinessCalculationService { private final DataService dataService; // write access modifier every time. public BusinessCalculationService(DataService dataService) { this.dataService = dataService; } public int findMax() { return Arrays.stream(dataService.retrieveData()).max().orElse(0); } } @Controller REST API 에서 컨트롤러를 정의하는데 쓰인다.
+">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-01-25-spring-stereotype-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EB%93%A4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">

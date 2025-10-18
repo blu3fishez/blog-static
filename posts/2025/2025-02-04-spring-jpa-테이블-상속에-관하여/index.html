@@ -7,49 +7,13 @@
 <meta name="robots" content="index, follow">
 <title>[Spring JPA] 테이블 상속에 관하여 | blog.blu3fishez</title>
 <meta name="keywords" content="spring">
+
 <meta name="description" content="Porring 백엔드를 구현하면서, OAuth 혹은 네이티브 로그인 계정에 대한 ERD 타입을 슈퍼타입과 서브타입으로 정의하였다.
 데이터베이스 상으로만 봤지만, 실제로 어떻게 구현을 해야할까? 단순 쿼리를 한다면 되겠지만, 복잡한 작업이 될 것이며, 쿼리 중간에 예상치 못한 버그가 있을 수 있다. JPA 에서는 어떻게 되는지 알아보자!
-
-@Inheritance 로 상속하기
-다들 알겠지만, ERD 에서 슈퍼타입과 서브타입은 일종의 상속 관계 이다.
+@Inheritance 로 상속하기 다들 알겠지만, ERD 에서 슈퍼타입과 서브타입은 일종의 상속 관계 이다.
 JPA에서의 상속은 @Inheritance 로 구현될 수 있다.
-
-// SINGLE_TABLE 전략
-@Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Item {
-    @Id @GeneratedValue
-    private Long id;
-    private String name;
-}
-
-
-// JOINED 전략 - @DiscriminatorColumn 선택사항
-@Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Vehicle {
-    @Id @GeneratedValue
-    private Long id;
-}
-
-@Entity
-public class Car extends Vehicle {
-    private String model;
-}
-
-// TABLE_PER_CLASS 전략 - 자바에서 상속 관계 유지
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Payment {
-    @Id @GeneratedValue
-    private Long id;
-}
-
-@Entity
-public class CardPayment extends Payment {
-    private String cardNumber;
-}
-일반적인 JoinedColumn 등과의 차이점은, PK 값을 공유한다는 점이다.">
+// SINGLE_TABLE 전략 @Entity @Inheritance(strategy = InheritanceType.SINGLE_TABLE) public abstract class Item { @Id @GeneratedValue private Long id; private String name; } // JOINED 전략 - @DiscriminatorColumn 선택사항 @Entity @Inheritance(strategy = InheritanceType.JOINED) public abstract class Vehicle { @Id @GeneratedValue private Long id; } @Entity public class Car extends Vehicle { private String model; } // TABLE_PER_CLASS 전략 - 자바에서 상속 관계 유지 @Entity @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) public abstract class Payment { @Id @GeneratedValue private Long id; } @Entity public class CardPayment extends Payment { private String cardNumber; } 일반적인 JoinedColumn 등과의 차이점은, PK 값을 공유한다는 점이다.
+">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2025/2025-02-04-spring-jpa-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%83%81%EC%86%8D%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">
