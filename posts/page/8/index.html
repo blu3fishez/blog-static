@@ -161,6 +161,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">다크모드 테마 시 깜빡거리는 증상
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>증상 원인 내 마크다운 블로그를 개발하던 중 이게 왠일?
+블로그에 테마 토글 기능을 추가해서 다크모드를 사용할 때에도 라이트 모드를, 또는 그 반대를 활용할 수 있도록 만들었는데, 내가 시스템에서 설정한 테마 색이 시스템 설정을 따라 가다보니 시스템 테마가 먼저 적용이 되고, 그 다음에 토글 기능으로 설정된 테마가 나중에 적용된다.
+일명 깜빡거리는 증상인데 어떻게 된일인지 생각해봤다.
+HTML Blocking 보통 DOM 이 생성될 때, 중간에 script 태그를 만나게 되면 DOM 생성 과정이 중단됩니다.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-12-25 00:00:00 +0000 UTC'>December 25, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to 다크모드 테마 시 깜빡거리는 증상" href="https://blog.blu3fishez.org/posts/2023/2023-12-25-darkmode-flickering/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">[ 백준 26087 ] 피보나치와 마지막 수열과 쿼리 : C&#43;&#43; 풀이
     </h2>
   </header>
@@ -225,29 +241,12 @@ underline의 굵기 설정 text-decoration-thickness: 0; underline의 위치 조
   <footer class="entry-footer"><span title='2023-11-12 00:00:00 +0000 UTC'>November 12, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to [ 백준 25402 ] 트리와 쿼리 : C&#43;&#43; 풀이" href="https://blog.blu3fishez.org/posts/2023/2023-11-12-query-tree/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[ React ] 이벤트 탈착할 때 주의 사항
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>드로우 온 웹 프로젝트를 현재 vite &#43; react &#43; typescript로 진행중입니다.
-하다가 문제점이 생긴게, 캔버스 토글을 animation을 주면서 껐다켰다하는 기능을 만드는 중인데 여기서 문제가 생기더라고요
-eventlistener 를 삭제하려면 해당 함수가 무결해야 하고, 함수가 특정 변수에 정의되어 있어 지정할 수 있어야합니다..
-그런데, 제가 마우스 이벤트를 사용하던 함수들은 모두 리액트 훅으로 반환되는 ref 객체를 사용하고 있었습니다…
-이렇게 되면 해당 함수들을 모두 toggleCanvas 내에 정의를 해야하는데, 그렇게되면 함수가 너무 길어져서 코드의 가독성이 작살나버리더라고요.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-31 00:00:00 +0000 UTC'>October 31, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [ React ] 이벤트 탈착할 때 주의 사항" href="https://blog.blu3fishez.org/posts/2023/2023-10-31-remove-event/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.blu3fishez.org/posts/page/7/">
-      «&nbsp;Prev&nbsp;7/10
+      «&nbsp;Prev&nbsp;7/11
     </a>
-    <a class="next" href="https://blog.blu3fishez.org/posts/page/9/">Next&nbsp;9/10&nbsp;»
+    <a class="next" href="https://blog.blu3fishez.org/posts/page/9/">Next&nbsp;9/11&nbsp;»
     </a>
   </nav>
 </footer>

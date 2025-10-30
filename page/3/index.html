@@ -148,6 +148,25 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">[Spring] Spring 에서 사용하는 로거의 로깅 레벨
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>스프링에서 사용하는 로깅 레벨에 대해서 간략히 알아보자.
+각 로그 단계 각 로그 단계는 아래와 같이 구성되어 있다.
+trace debug info warning error off 위에서부터 출력을 많이하고, 가장 아래가 출력을 적게한다고 생각하면 쉽다.
+스프링에서는 해당 로그 단계를 출력 설정하려면, application.properties 에 아래와 같이 설정값을 추가한다.
+logging.level.org.springframework=trace trace 모든 로그를 출력한다.
+따라서, 어떤 시나리오의 전체 로깅을 보고 싶다면, trace 레벨로 설정하자.
+하지만, trace는 애플리케이션의 가장 낮은 수준의 로그까지 출력하기에 성능에 영향을 줄 수 있음을 인지하자.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-28 16:33:03 +0900 KST'>January 28, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;blu3fishez</footer>
+  <a class="entry-link" aria-label="post link to [Spring] Spring 에서 사용하는 로거의 로깅 레벨" href="https://blog.blu3fishez.org/posts/2025/2025-01-28-spring-%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A1%9C%EA%B1%B0%EC%9D%98-%EB%A1%9C%EA%B9%85-%EB%A0%88%EB%B2%A8/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">몰랐던 HTML p 태그에 대한 사실
     </h2>
   </header>
@@ -215,32 +234,12 @@ String 단순히 문자열 이라고 합니다. 문자들의 배열 을 줄여�
   <footer class="entry-footer"><span title='2025-01-24 19:31:37 +0900 KST'>January 24, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;blu3fishez</footer>
   <a class="entry-link" aria-label="post link to 문자열 뒤에 문자를 추가하는 가장 효율적인 방법은" href="https://blog.blu3fishez.org/posts/2025/2025-01-24-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%92%A4%EC%97%90-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B0%A9%EB%B2%95%EC%9D%80/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">[Java] String for-each 순회 방법
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Java에서는 스트링 순회를 어떻게 할까?
-기존 C&#43;&#43; 에서의 스트링 순회 방법 C&#43;&#43; 에서는 char 형으로 스트링을 순회할 수 있다.
-(std string 기준)
-for(char t : str1) cout&lt;&lt;t; Java 에서 단순히 for-each를 할 경우 하지만 위와 같은 방법을 사용한다면 아래와같은 에러를 받게 된다.
-위와같은 에러를 받지 않게 하려면 이렇게 해야한다.
-그 이유는 const char* 형으로 저장되는 C 기존 문자열 구현과 연관이 있습니다.
-기본적으로 std::string 에서 제공하는 Iterable 옵션을 Java에서 지원해주지 않으므로 생기는 문제입니다.
-Java에서는 String 클래스는 내부적으로 문자들의 배열을 private 필드로 가지고 있으며, 이는 불변(immutable) 속성으로 저장되어 있습니다.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-19 15:22:10 +0900 KST'>January 19, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;blu3fishez</footer>
-  <a class="entry-link" aria-label="post link to [Java] String for-each 순회 방법" href="https://blog.blu3fishez.org/posts/2025/2025-01-19-java-string-for-each-%EC%88%9C%ED%9A%8C-%EB%B0%A9%EB%B2%95/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://blog.blu3fishez.org/page/2/">
-      «&nbsp;Prev&nbsp;2/10
+      «&nbsp;Prev&nbsp;2/11
     </a>
-    <a class="next" href="https://blog.blu3fishez.org/page/4/">Next&nbsp;4/10&nbsp;»
+    <a class="next" href="https://blog.blu3fishez.org/page/4/">Next&nbsp;4/11&nbsp;»
     </a>
   </nav>
 </footer>

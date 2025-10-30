@@ -12,8 +12,22 @@
     <generator>Hugo -- 0.151.0</generator>
     <language>en</language>
     <copyright>blu3fishez</copyright>
-    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.blu3fishez.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BaseChest</title>
+      <link>https://blog.blu3fishez.org/tags/basechest/</link>
+      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.blu3fishez.org/tags/basechest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://blog.blu3fishez.org/tags/network/</link>
+      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.blu3fishez.org/tags/network/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Retrospect</title>
       <link>https://blog.blu3fishez.org/tags/retrospect/</link>
@@ -103,13 +117,6 @@
       <link>https://blog.blu3fishez.org/tags/ps/</link>
       <pubDate>Sun, 27 Oct 2024 20:34:24 +0900</pubDate>
       <guid>https://blog.blu3fishez.org/tags/ps/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Network</title>
-      <link>https://blog.blu3fishez.org/tags/network/</link>
-      <pubDate>Sat, 26 Oct 2024 14:58:10 +0900</pubDate>
-      <guid>https://blog.blu3fishez.org/tags/network/</guid>
       <description></description>
     </item>
     <item>
