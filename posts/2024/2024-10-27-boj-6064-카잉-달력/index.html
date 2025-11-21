@@ -13,7 +13,7 @@
 소스 코드 #include&lt;iostream&gt; using namespace std; int gcd(int a, int b) { int tmp; if(b &gt; a) { tmp = a; a = b; b = tmp; } while(b != 0) { tmp = a % b; a = b; b = tmp; } return a; } int main() { cout.tie(0); cin.tie(0)-&gt;sync_with_stdio(0); int t; cin&gt;&gt;t; while(t--) { int m,n,x,y; cin&gt;&gt;m&gt;&gt;n&gt;&gt;x&gt;&gt;y; int larger = m &gt; n ? m : n; int larger_remain = m &gt; n ? x : y; int max_num = m*n / gcd(m, n); bool found = false; for(int i=larger_remain; i&lt;=max_num; i &#43;= larger) { if (i%m == x%m &amp;&amp; i%n == y%n) { found = true; cout&lt;&lt;i&lt;&lt;&#39;\n&#39;; break; } } if(!found) cout&lt;&lt;&#34;-1\n&#34;; } } ">
 <meta name="author" content="blu3fishez">
 <link rel="canonical" href="https://blog.blu3fishez.org/posts/2024/2024-10-27-boj-6064-%EC%B9%B4%EC%9E%89-%EB%8B%AC%EB%A0%A5/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d3f251795b1b2227fec87dbd9339a39a72025c1e2678c7b78fdbf5213fbef45d.css" integrity="sha256-0/JReVsbIif&#43;yH29kzmjmnICXB4meMe3j9v1IT&#43;&#43;9F0=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2a3c3dadf78fa52bc15ad583d65cf2a76e7e6ebb9868619ed1f1900288da44c8.css" integrity="sha256-Kjw9rfePpSvBWtWD1lzyp25&#43;bruYaGGe0fGQAojaRMg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://blog.blu3fishez.org/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://blog.blu3fishez.org/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://blog.blu3fishez.org/favicon-32x32.png">
